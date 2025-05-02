@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6388781B2DC4D6E100028C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638878172DC4D6E100028C5C /* Assets.xcassets */; };
-		6388781C2DC4D6E100028C5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878182DC4D6E100028C5C /* ContentView.swift */; };
+		6388781C2DC4D6E100028C5C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878182DC4D6E100028C5C /* MainView.swift */; };
 		6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878192DC4D6E100028C5C /* TicketTerminalApp.swift */; };
+		638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878252DC4DB7C00028C5C /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		638878092DC4D6D200028C5C /* TicketTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638878172DC4D6E100028C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		638878182DC4D6E100028C5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		638878182DC4D6E100028C5C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		638878192DC4D6E100028C5C /* TicketTerminalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTerminalApp.swift; sourceTree = "<group>"; };
+		638878252DC4DB7C00028C5C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,11 +51,68 @@
 		6388781A2DC4D6E100028C5C /* TicketTerminal */ = {
 			isa = PBXGroup;
 			children = (
-				638878182DC4D6E100028C5C /* ContentView.swift */,
-				638878192DC4D6E100028C5C /* TicketTerminalApp.swift */,
-				638878172DC4D6E100028C5C /* Assets.xcassets */,
+				6388781E2DC4D8CD00028C5C /* Application */,
+				6388781F2DC4D9D400028C5C /* Modules */,
+				638878232DC4DA3300028C5C /* Extensions */,
+				638878222DC4DA1B00028C5C /* SupportFiles */,
 			);
 			path = TicketTerminal;
+			sourceTree = "<group>";
+		};
+		6388781E2DC4D8CD00028C5C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				638878192DC4D6E100028C5C /* TicketTerminalApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6388781F2DC4D9D400028C5C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				638878202DC4D9E100028C5C /* MainModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		638878202DC4D9E100028C5C /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				638878212DC4D9ED00028C5C /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		638878212DC4D9ED00028C5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				638878182DC4D6E100028C5C /* MainView.swift */,
+				638878242DC4DACB00028C5C /* Subviews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		638878222DC4DA1B00028C5C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				638878172DC4D6E100028C5C /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		638878232DC4DA3300028C5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				638878252DC4DB7C00028C5C /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		638878242DC4DACB00028C5C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6388781C2DC4D6E100028C5C /* ContentView.swift in Sources */,
+				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
+				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
 				6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

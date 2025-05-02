@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 02/05/2025.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
+struct MainView: View {
+    internal var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
