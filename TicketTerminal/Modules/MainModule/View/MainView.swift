@@ -9,11 +9,25 @@ import SwiftUI
 
 struct MainView: View {
     internal var body: some View {
+        ZStack {
+            content
+                .padding()
+        }
+        .background(
+            background
+        )
+    }
+    
+    private var background: some View {
+        Color.BackColors.backDefault
+            .ignoresSafeArea()
+    }
+    
+    private var content: some View {
         VStack {
             MainNavBar()
             Spacer()
         }
-        .padding()
     }
 }
 

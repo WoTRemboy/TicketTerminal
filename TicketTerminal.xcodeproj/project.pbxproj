@@ -14,6 +14,7 @@
 		6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878292DC4DDE500028C5C /* MainNavBar.swift */; };
 		6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388782B2DC4DE1900028C5C /* ImageExtension.swift */; };
 		6388782E2DC52E9E00028C5C /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388782D2DC52E9900028C5C /* Texts.swift */; };
+		638878312DC5379800028C5C /* MainPageButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878302DC5378A00028C5C /* MainPageButtonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		638878292DC4DDE500028C5C /* MainNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBar.swift; sourceTree = "<group>"; };
 		6388782B2DC4DE1900028C5C /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		6388782D2DC52E9900028C5C /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		638878302DC5378A00028C5C /* MainPageButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageButtonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		638878202DC4D9E100028C5C /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				6388782F2DC5378500028C5C /* Model */,
 				638878212DC4D9ED00028C5C /* View */,
 			);
 			path = MainModule;
@@ -114,6 +117,14 @@
 				6388782D2DC52E9900028C5C /* Texts.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6388782F2DC5378500028C5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				638878302DC5378A00028C5C /* MainPageButtonModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
+				638878312DC5379800028C5C /* MainPageButtonModel.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,

@@ -12,7 +12,6 @@ extension Image {
         static let logo = Image("MainPageLogo")
         static let info = Image("MainPageInfo")
         static let special = Image("MainPageSpecial")
-        static let russian = Image("MainRussianButton")
-        static let person = Image(systemName: "person")
+        static let language = Image("MainRussianButton")
     }
 }
