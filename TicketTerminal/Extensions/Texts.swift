@@ -16,5 +16,11 @@ struct Texts {
             static let title = "18°C"
             static let content = "Москва"
         }
+        
+        enum Trip {
+            static let pearl = "Жемчужина Кавказа"
+            static let lotus = "В долину лотосов"
+            static let express = "Байкальский экспресс"
+        }
     }
 }

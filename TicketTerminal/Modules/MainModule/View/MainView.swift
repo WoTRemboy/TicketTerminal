@@ -11,7 +11,6 @@ struct MainView: View {
     internal var body: some View {
         ZStack {
             content
-                .padding()
         }
         .background(
             background
@@ -24,10 +23,14 @@ struct MainView: View {
     }
     
     private var content: some View {
-        VStack {
+        VStack(spacing: 0) {
             MainNavBar()
+                .padding([.top, .horizontal])
             AssistantWeatherButtons()
-                .padding(.top, 24)
+                .padding(.top, 44)
+            
+            TripScroll()
+                .padding(.top, 10)
             
             Spacer()
         }

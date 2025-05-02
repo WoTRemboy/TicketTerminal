@@ -14,4 +14,10 @@ extension Image {
         static let special = Image("MainPageSpecial")
         static let language = Image("MainRussianButton")
     }
+    
+    enum Trip {
+        static let pearl = Image("TripPearl")
+        static let lotus = Image("TripLotus")
+        static let express = Image("TripExpress")
+    }
 }
