@@ -8,6 +8,10 @@
 import SwiftUI
 
 extension Image {
+    enum Onboarding {
+        static let logo = Image("SplashScreenLogo")
+    }
+    
     enum MainPage {
         static let logo = Image("MainPageLogo")
         static let info = Image("MainPageInfo")

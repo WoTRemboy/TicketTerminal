@@ -5,7 +5,13 @@
 //  Created by Roman Tverdokhleb on 02/05/2025.
 //
 
+import Foundation
+
 struct Texts {
+    enum AppInfo {
+        static let title = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Ticket Terminal"
+    }
+    
     enum MainPage {
         enum Assistant {
             static let title = "Попутчик"

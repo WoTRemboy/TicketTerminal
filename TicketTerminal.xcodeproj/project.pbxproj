@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD52DC564F1001BD921 /* SplashScreen.swift */; };
 		6388781B2DC4D6E100028C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638878172DC4D6E100028C5C /* Assets.xcassets */; };
 		6388781C2DC4D6E100028C5C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878182DC4D6E100028C5C /* MainView.swift */; };
 		6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878192DC4D6E100028C5C /* TicketTerminalApp.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6316ADD52DC564F1001BD921 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		638878092DC4D6D200028C5C /* TicketTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638878172DC4D6E100028C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638878182DC4D6E100028C5C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6316ADD42DC564D8001BD921 /* OpeningModule */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADD52DC564F1001BD921 /* SplashScreen.swift */,
+			);
+			path = OpeningModule;
+			sourceTree = "<group>";
+		};
 		638878002DC4D6D200028C5C = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		6388781F2DC4D9D400028C5C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6316ADD42DC564D8001BD921 /* OpeningModule */,
 				638878202DC4D9E100028C5C /* MainModule */,
 			);
 			path = Modules;
@@ -237,6 +248,7 @@
 				638878392DC54AC000028C5C /* TripCell.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
 				638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */,
+				6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6388783D2DC553DC00028C5C /* TripScroll.swift in Sources */,
@@ -390,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.avoqode.TicketTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -424,7 +436,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.avoqode.TicketTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
