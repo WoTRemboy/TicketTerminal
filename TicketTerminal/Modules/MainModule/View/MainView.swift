@@ -10,10 +10,8 @@ import SwiftUI
 struct MainView: View {
     internal var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            MainNavBar()
+            Spacer()
         }
         .padding()
     }

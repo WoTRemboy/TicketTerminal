@@ -30,4 +30,10 @@ extension Color {
         static let labelReversed = Color("LabelReversed")
         static let labelBlack = Color("LabelBlack")
     }
+    
+    // MARK: - Symbol Colors
+    
+    enum SymbolColors {
+        static let red = Color("SymbolRed")
+    }
 }
