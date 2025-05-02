@@ -6,8 +6,15 @@
 //
 
 struct Texts {
-    
     enum MainPage {
-        static let login = "Войти в аккаунт"
+        enum Assistant {
+            static let title = "Попутчик"
+            static let content = "Твой голосовой помощник"
+        }
+        
+        enum Weather {
+            static let title = "18°C"
+            static let content = "Москва"
+        }
     }
 }

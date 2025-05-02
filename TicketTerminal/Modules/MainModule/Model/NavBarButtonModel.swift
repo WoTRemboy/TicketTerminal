@@ -1,5 +1,5 @@
 //
-//  MainPageButtonModel.swift
+//  NavBarButtonModel.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 02/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum MainPageButton {
+enum NavBarButton {
     case info
     case special
     case language

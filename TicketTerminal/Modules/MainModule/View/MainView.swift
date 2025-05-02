@@ -26,6 +26,9 @@ struct MainView: View {
     private var content: some View {
         VStack {
             MainNavBar()
+            AssistantWeatherButtons()
+                .padding(.top, 24)
+            
             Spacer()
         }
     }

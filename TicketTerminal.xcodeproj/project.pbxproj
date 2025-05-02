@@ -14,7 +14,9 @@
 		6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878292DC4DDE500028C5C /* MainNavBar.swift */; };
 		6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388782B2DC4DE1900028C5C /* ImageExtension.swift */; };
 		6388782E2DC52E9E00028C5C /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388782D2DC52E9900028C5C /* Texts.swift */; };
-		638878312DC5379800028C5C /* MainPageButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878302DC5378A00028C5C /* MainPageButtonModel.swift */; };
+		638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878302DC5378A00028C5C /* NavBarButtonModel.swift */; };
+		638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878332DC53EAA00028C5C /* AssistantWeatherButtons.swift */; };
+		638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878352DC5444200028C5C /* DetailedButtonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,9 @@
 		638878292DC4DDE500028C5C /* MainNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBar.swift; sourceTree = "<group>"; };
 		6388782B2DC4DE1900028C5C /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		6388782D2DC52E9900028C5C /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
-		638878302DC5378A00028C5C /* MainPageButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageButtonModel.swift; sourceTree = "<group>"; };
+		638878302DC5378A00028C5C /* NavBarButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtonModel.swift; sourceTree = "<group>"; };
+		638878332DC53EAA00028C5C /* AssistantWeatherButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantWeatherButtons.swift; sourceTree = "<group>"; };
+		638878352DC5444200028C5C /* DetailedButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedButtonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				638878182DC4D6E100028C5C /* MainView.swift */,
-				638878292DC4DDE500028C5C /* MainNavBar.swift */,
+				638878322DC53E7300028C5C /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,9 +126,19 @@
 		6388782F2DC5378500028C5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				638878302DC5378A00028C5C /* MainPageButtonModel.swift */,
+				638878352DC5444200028C5C /* DetailedButtonModel.swift */,
+				638878302DC5378A00028C5C /* NavBarButtonModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		638878322DC53E7300028C5C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				638878292DC4DDE500028C5C /* MainNavBar.swift */,
+				638878332DC53EAA00028C5C /* AssistantWeatherButtons.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +214,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
-				638878312DC5379800028C5C /* MainPageButtonModel.swift in Sources */,
+				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
+				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
+				638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */,

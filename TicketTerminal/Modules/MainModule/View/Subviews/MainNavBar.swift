@@ -26,7 +26,7 @@ struct MainNavBar: View {
             .frame(width: 175, height: 84)
     }
     
-    private func button(type: MainPageButton) -> some View {
+    private func button(type: NavBarButton) -> some View {
         Button {
             // Button Action
         } label: {
