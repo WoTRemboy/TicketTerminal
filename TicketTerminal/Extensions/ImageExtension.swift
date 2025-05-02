@@ -24,4 +24,11 @@ extension Image {
         static let lotus = Image("TripLotus")
         static let express = Image("TripExpress")
     }
+    
+    enum Management {
+        static let buy = Image("ManagementBuy")
+        static let refund = Image("ManagementRefund")
+        static let recomendations = Image("ManagementRecomendations")
+        static let print = Image("ManagementPrint")
+    }
 }

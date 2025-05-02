@@ -28,5 +28,13 @@ struct Texts {
             static let lotus = "В долину лотосов"
             static let express = "Байкальский экспресс"
         }
+        
+        enum Management {
+            static let buy = "Купить билет"
+            static let refund = "Вернуть билет"
+            static let recomendation = "Рекомендации"
+            static let hot = "Горячие\nпути"
+            static let print = "Распечатать\nбилет"
+        }
     }
 }

@@ -27,10 +27,13 @@ struct MainView: View {
             MainNavBar()
                 .padding([.top, .horizontal])
             AssistantWeatherButtons()
-                .padding(.top, 44)
+                .padding(.top, 36)
             
-            TripScroll()
-                .padding(.top, 10)
+            TripScroller()
+                .padding(.top, 16)
+            
+            TicketManagementView()
+                .padding(.top, 16)
             
             Spacer()
         }

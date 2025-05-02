@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Recomendations.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

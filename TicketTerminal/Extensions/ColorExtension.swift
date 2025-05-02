@@ -38,5 +38,7 @@ extension Color {
         static let red = Color("SymbolRed")
         static let yellow = Color("SymbolYellow")
         static let blue = Color("SymbolBlue")
+        static let orange = Color("SymbolOrange")
+        static let brown = Color("SymbolBrown")
     }
 }

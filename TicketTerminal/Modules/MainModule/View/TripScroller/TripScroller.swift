@@ -1,5 +1,5 @@
 //
-//  TripScroll.swift
+//  TripScroller.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 02/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TripScroll: View {
+struct TripScroller: View {
     
     @State private var currentIndex = 0
     private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
@@ -62,5 +62,5 @@ struct TripScroll: View {
     }
 }
 #Preview {
-    TripScroll()
+    TripScroller()
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AssistantWeatherButtons: View {
     internal var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 16) {
             button(type: .assistant)
             button(type: .weather)
         }
