@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct AboutAppView: View {
+struct AboutAppView: View {    
     internal var body: some View {
         VStack(spacing: 0) {
             CustomNavBarView(type: .about, onDismiss: {})
@@ -65,4 +65,5 @@ struct AboutAppView: View {
 
 #Preview {
     AboutAppView()
+        .environmentObject(AboutAppViewModel())
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AboutAppCellView: View {
+    @EnvironmentObject private var viewModel: AboutAppViewModel
     
     private let type: AboutAppCell
     
@@ -17,7 +18,7 @@ struct AboutAppCellView: View {
     
     internal var body: some View {
         Button {
-            // Button Action
+            viewModel.buttonAction(for: type)
         } label: {
             content
         }

@@ -54,7 +54,8 @@ struct Texts {
         
         enum Number {
             static let title = "Номер тех.поддержки"
-            static let content = "8 800 775-00-00"
+            static let content = "+7 (800) 775-00-00"
+            static let linkTel = "+78007750000"
         }
         
         enum Address {

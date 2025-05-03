@@ -17,6 +17,7 @@
 		6316ADEB2DC63614001BD921 /* AboutAppCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADEA2DC6360E001BD921 /* AboutAppCellModel.swift */; };
 		6316ADED2DC638C0001BD921 /* AboutAppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADEC2DC638C0001BD921 /* AboutAppCellView.swift */; };
 		6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */; };
+		6316ADF72DC64FDF001BD921 /* AboutAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADF62DC64FDA001BD921 /* AboutAppViewModel.swift */; };
 		6388781B2DC4D6E100028C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638878172DC4D6E100028C5C /* Assets.xcassets */; };
 		6388781C2DC4D6E100028C5C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878182DC4D6E100028C5C /* MainView.swift */; };
 		6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878192DC4D6E100028C5C /* TicketTerminalApp.swift */; };
@@ -43,6 +44,7 @@
 		6316ADEA2DC6360E001BD921 /* AboutAppCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppCellModel.swift; sourceTree = "<group>"; };
 		6316ADEC2DC638C0001BD921 /* AboutAppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppCellView.swift; sourceTree = "<group>"; };
 		6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinateExtension.swift; sourceTree = "<group>"; };
+		6316ADF62DC64FDA001BD921 /* AboutAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewModel.swift; sourceTree = "<group>"; };
 		638878092DC4D6D200028C5C /* TicketTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638878172DC4D6E100028C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638878182DC4D6E100028C5C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -90,19 +92,11 @@
 		6316ADDE2DC62BC1001BD921 /* AboutModule */ = {
 			isa = PBXGroup;
 			children = (
-				6316ADEA2DC6360E001BD921 /* AboutAppCellModel.swift */,
-				6316ADDF2DC62BDA001BD921 /* AboutAppView.swift */,
-				6316ADE12DC62BF7001BD921 /* Subviews */,
+				6316ADF12DC64F59001BD921 /* Model */,
+				6316ADF02DC64F47001BD921 /* View */,
+				6316ADF52DC64FD5001BD921 /* ViewModel */,
 			);
 			path = AboutModule;
-			sourceTree = "<group>";
-		};
-		6316ADE12DC62BF7001BD921 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				6316ADEC2DC638C0001BD921 /* AboutAppCellView.swift */,
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 		6316ADE62DC62C4D001BD921 /* Helpers */ = {
@@ -120,6 +114,31 @@
 				6316ADE42DC62C47001BD921 /* CustomNavBarView.swift */,
 			);
 			path = CustomNavBar;
+			sourceTree = "<group>";
+		};
+		6316ADF02DC64F47001BD921 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADDF2DC62BDA001BD921 /* AboutAppView.swift */,
+				6316ADEC2DC638C0001BD921 /* AboutAppCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6316ADF12DC64F59001BD921 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADEA2DC6360E001BD921 /* AboutAppCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6316ADF52DC64FD5001BD921 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADF62DC64FDA001BD921 /* AboutAppViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		638878002DC4D6D200028C5C = {
@@ -315,6 +334,7 @@
 				6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
 				638878392DC54AC000028C5C /* TripCell.swift in Sources */,
+				6316ADF72DC64FDF001BD921 /* AboutAppViewModel.swift in Sources */,
 				6316ADE92DC62D90001BD921 /* CustomNavBarModel.swift in Sources */,
 				6316ADEB2DC63614001BD921 /* AboutAppCellModel.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,

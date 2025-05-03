@@ -58,7 +58,7 @@ enum AboutAppCell {
         case .version, .info, .address:
             return 90
         case .number:
-            return 90
+            return 50
         }
     }
 }
