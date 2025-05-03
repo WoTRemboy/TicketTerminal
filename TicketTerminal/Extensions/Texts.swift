@@ -37,4 +37,34 @@ struct Texts {
             static let print = "Распечатать\nбилет"
         }
     }
+    
+    enum NavBar {
+        static let about = "О терминале"
+        static let special = "Специальные возможности"
+        static let buy = "Купить билет"
+    }
+    
+    enum About {
+        static let headquaters = "Штаб-квартира"
+        
+        enum Version {
+            static let title = "Версия"
+            static let content = "v \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0") (\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"))"
+        }
+        
+        enum Number {
+            static let title = "Номер тех.поддержки"
+            static let content = "8 800 775-00-00"
+        }
+        
+        enum Address {
+            static let title = "Адрес нахождения"
+            static let content = "107174, г. Москва, вн. тер. г. муниципальный округ Басманный, ул. Новая Басманная, д. 2/1, стр. 1"
+        }
+        
+        enum Info {
+            static let title = "Юридическая информация"
+            static let content = "Ссылка"
+        }
+    }
 }

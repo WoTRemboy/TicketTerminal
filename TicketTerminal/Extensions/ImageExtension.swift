@@ -31,4 +31,11 @@ extension Image {
         static let recomendations = Image("ManagementRecomendations")
         static let print = Image("ManagementPrint")
     }
+    
+    enum NavBar {
+        static let back = Image("NavBarBack")
+        static let about = Image("NavBarInfo")
+        static let special = Image("NavBarSpecial")
+        static let buy = Image("NavBarBuy")
+    }
 }
