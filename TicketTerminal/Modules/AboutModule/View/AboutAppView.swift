@@ -12,6 +12,7 @@ struct AboutAppView: View {
     internal var body: some View {
         VStack(spacing: 0) {
             CustomNavBarView(type: .about)
+                .padding(.top)
             
             versionNumber
                 .padding(.top, 40)

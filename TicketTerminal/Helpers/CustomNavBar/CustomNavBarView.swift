@@ -34,7 +34,6 @@ struct CustomNavBarView: View {
                 .foregroundStyle(Color.SymbolColors.red)
         }
         .frame(maxWidth: .infinity)
-        .padding(.top, 20)
     }
     
     private var backButton: some View {
