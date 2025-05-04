@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TripCell: View {
     
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     private let trip: Trip
     
     init(trip: Trip) {
@@ -29,10 +31,15 @@ struct TripCell: View {
     }
     
     private var tripContent: some View {
-        ZStack(alignment: trip.alignment) {
-            trip.image
-                .resizable()
-                .scaledToFit()
+        ZStack(alignment: trip.alignment(scheme: accessibilityManager.fontColor)) {
+            if accessibilityManager.fontColor == .defaultValue {
+                trip.image
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                Color.SymbolColors.grey
+            }
+            
             
             Text(trip.title)
                 .font(.system(size: 40, weight: .medium))
@@ -48,4 +55,5 @@ struct TripCell: View {
 
 #Preview {
     TripCell(trip: .pearl)
+        .environmentObject(AccessibilityManager())
 }

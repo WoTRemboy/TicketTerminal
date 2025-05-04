@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AssistantWeatherButtons: View {
+    
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     internal var body: some View {
         HStack(spacing: 16) {
             button(type: .assistant)
@@ -34,7 +37,10 @@ struct AssistantWeatherButtons: View {
                 .font(.system(size: 30,
                               weight: .medium))
         }
-        .foregroundStyle(Color.LabelColors.labelWhite)
+        .foregroundStyle(Color.blackVariant(
+            color: Color.LabelColors.labelWhite,
+            scheme: accessibilityManager.fontColor)
+        )
         .padding(.horizontal, type == .assistant ? 40 : 21)
         
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -45,10 +51,18 @@ struct AssistantWeatherButtons: View {
             switch type {
             case .assistant:
                 RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(type.color)
+                    .stroke(Color.blackVariant(
+                        color: .clear,
+                        scheme: accessibilityManager.fontColor),
+                            lineWidth: 4)
+                    .fill(type.color(scheme: accessibilityManager.fontColor))
             case .weather:
                 RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(gradient)
+                    .stroke(Color.blackVariant(
+                        color: .clear,
+                        scheme: accessibilityManager.fontColor),
+                            lineWidth: 4)
+                    .fill(gradient)
             }
         }
     }
@@ -56,8 +70,12 @@ struct AssistantWeatherButtons: View {
     private var gradient: LinearGradient {
         LinearGradient(
             gradient: Gradient(
-                colors: [Color.SymbolColors.yellow,
-                         Color.SymbolColors.blue]
+                colors: [Color.whiteVariant(
+                            color: .SymbolColors.yellow,
+                            scheme: accessibilityManager.fontColor),
+                         Color.whiteVariant(
+                            color: .SymbolColors.blue,
+                            scheme: accessibilityManager.fontColor)]
             ),
             startPoint: .topTrailing,
             endPoint: .bottomLeading
@@ -67,4 +85,5 @@ struct AssistantWeatherButtons: View {
 
 #Preview {
     AssistantWeatherButtons()
+        .environmentObject(AccessibilityManager())
 }

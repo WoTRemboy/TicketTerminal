@@ -26,7 +26,7 @@ struct AccessibilityParamCellView: View {
     private var background: some View {
         RoundedRectangle(cornerRadius: 50)
             .stroke(Color.blackVariant(
-                color: .BackColors.backDefault,
+                color: .clear,
                 scheme: accessibilityManager.fontColor),
                     lineWidth: 3)
             .background {

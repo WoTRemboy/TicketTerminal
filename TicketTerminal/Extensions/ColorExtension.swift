@@ -40,6 +40,20 @@ extension Color {
         static let blue = Color("SymbolBlue")
         static let orange = Color("SymbolOrange")
         static let brown = Color("SymbolBrown")
+        
+        static let black = Color("SymbolBlack")
+        static let lightGrey = Color("SymbolLightGrey")
+        static let grey = Color("SymbolGrey")
+        static let white = Color("SymbolWhite")
+    }
+    
+    static func alterColor(normal: Color, alter: Color, scheme: AccessibilityFontColor) -> Color {
+        switch scheme {
+        case .defaultValue:
+            normal
+        case .whiteBlack:
+            alter
+        }
     }
     
     static func blackVariant(color: Color, scheme: AccessibilityFontColor) -> Color {
@@ -47,7 +61,16 @@ extension Color {
         case .defaultValue:
             color
         case .whiteBlack:
-            Color("SymbolBlack")
+            Color.SymbolColors.black
+        }
+    }
+    
+    static func greyVariant(color: Color, scheme: AccessibilityFontColor) -> Color {
+        switch scheme {
+        case .defaultValue:
+            color
+        case .whiteBlack:
+            Color.SymbolColors.grey
         }
     }
     
@@ -56,7 +79,7 @@ extension Color {
         case .defaultValue:
             color
         case .whiteBlack:
-            Color("SymbolWhite")
+            Color.SymbolColors.white
         }
     }
 }

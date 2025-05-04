@@ -13,10 +13,24 @@ extension Image {
     }
     
     enum MainPage {
-        static let logo = Image("MainPageLogo")
-        static let info = Image("MainPageInfo")
-        static let special = Image("MainPageSpecial")
-        static let language = Image("MainRussianButton")
+        enum Logo {
+            static let normal = Image("MainPageLogo")
+            static let black = Image("MainPageLogoBlack")
+        }
+        
+        enum Info {
+            static let normal = Image("MainPageInfo")
+        }
+        
+        enum Special {
+            static let normal = Image("MainPageSpecial")
+            static let black = Image("MainPageSpecialBlack")
+        }
+        
+        enum Language {
+            static let normal = Image("MainRussianLogo")
+            static let black = Image("MainRussianLogoBlack")
+        }
     }
     
     enum Trip {

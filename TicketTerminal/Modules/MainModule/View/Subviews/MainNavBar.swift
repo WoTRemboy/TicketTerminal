@@ -8,42 +8,51 @@
 import SwiftUI
 
 struct MainNavBar: View {
+    
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     internal var body: some View {
         HStack(spacing: 45) {
             logo
             Spacer()
             
-            button(type: .language)
-            button(type: .info)
-            button(type: .special)
+            ForEach(NavBarButton.allCases, id: \.self) { type in
+                button(type: type)
+            }
         }
         .padding()
     }
     
     private var logo: some View {
-        Image.MainPage.logo
-            .resizable()
-            .frame(width: 175, height: 84)
+        Image.alterColored(
+            normal: Image.MainPage.Logo.normal,
+            alter: Image.MainPage.Logo.black,
+            scheme: accessibilityManager.fontColor)
+        
+        .resizable()
+        .frame(width: 175, height: 84)
     }
     
     private func button(type: NavBarButton) -> some View {
         CustomNavLink(destination: type.destination) {
             Circle()
-                .stroke(Color.SymbolColors.red,
+                .stroke(type.strokeColor(scheme: accessibilityManager.fontColor),
                         lineWidth: 10)
                 .background {
                     ZStack {
-                        Color.SymbolColors.red
-                        type.image
+                        type.backgroundColor(scheme: accessibilityManager.fontColor)
+                        type.image(scheme: accessibilityManager.fontColor)
                     }
                 }
                 .mask(Circle())
                 .frame(width: 60)
         }
-            .buttonStyle(.plain)
+        .contentShape(.circle)
+        .buttonStyle(.plain)
     }
 }
 
 #Preview {
     MainNavBar()
+        .environmentObject(AccessibilityManager())
 }

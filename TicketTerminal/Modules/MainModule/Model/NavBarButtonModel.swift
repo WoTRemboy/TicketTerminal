@@ -7,19 +7,25 @@
 
 import SwiftUI
 
-enum NavBarButton {
+enum NavBarButton: CaseIterable {
     case info
     case special
     case language
     
-    internal var image: Image {
+    internal func image(scheme: AccessibilityFontColor) -> Image {
         switch self {
         case .info:
-            Image.MainPage.info
+            Image.MainPage.Info.normal
         case .special:
-            Image.MainPage.special
+            Image.alterColored(
+                normal: Image.MainPage.Special.normal,
+                alter: Image.MainPage.Special.black,
+                scheme: scheme)
         case .language:
-            Image.MainPage.language
+            Image.alterColored(
+                normal: Image.MainPage.Language.normal,
+                alter: Image.MainPage.Language.black,
+                scheme: scheme)
         }
     }
     
@@ -34,6 +40,38 @@ enum NavBarButton {
                 .environmentObject(AccessibilityViewModel())
         case .language:
             AccessibilityView()
+        }
+    }
+    
+    internal func backgroundColor(scheme: AccessibilityFontColor) -> Color {
+        switch self {
+        case .info:
+            Color.greyVariant(
+                color: Color.SymbolColors.red,
+                scheme: scheme)
+        case .special:
+            Color.alterColor(
+                normal: Color.SymbolColors.red,
+                alter: Color.SymbolColors.lightGrey,
+                scheme: scheme)
+        case .language:
+            Color.clear
+        }
+    }
+    
+    internal func strokeColor(scheme: AccessibilityFontColor) -> Color {
+        switch self {
+        case .info:
+            Color.greyVariant(
+                color: Color.SymbolColors.red,
+                scheme: scheme)
+        case .special:
+            Color.SymbolColors.red
+        case .language:
+            Color.alterColor(
+                normal: Color.SymbolColors.red,
+                alter: Color.clear,
+                scheme: scheme)
         }
     }
 }
