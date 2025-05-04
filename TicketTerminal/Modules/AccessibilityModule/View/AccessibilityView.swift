@@ -40,4 +40,5 @@ struct AccessibilityView: View {
 #Preview {
     AccessibilityView()
         .environmentObject(AccessibilityViewModel())
+        .environmentObject(FontSizeManager())
 }

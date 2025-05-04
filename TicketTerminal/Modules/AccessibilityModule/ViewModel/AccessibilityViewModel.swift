@@ -9,6 +9,9 @@ import SwiftUI
 
 final class AccessibilityViewModel: ObservableObject {
     
+    @AppStorage(Texts.UserDefaults.Accessibility.fontSizeManager)
+    private var fontSizeValue: Double = 1.0
+    
     @AppStorage(Texts.UserDefaults.Accessibility.fontColor)
     private var fontColor: AccessibilityFontColor = .defaultValue
     
@@ -40,6 +43,7 @@ final class AccessibilityViewModel: ObservableObject {
         guard size != fontSize else { return }
         withAnimation(.easeInOut(duration: 0.2)) {
             self.fontSize = size
+            self.fontSizeValue = size.scale
         }
     }
     

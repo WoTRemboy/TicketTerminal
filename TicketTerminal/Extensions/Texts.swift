@@ -71,7 +71,7 @@ struct Texts {
     
     enum Accessibility {
         enum FontColor {
-            static let title = "Цвет шрифта"
+            static let title = "Цветовая схема"
             static let firstVariation = "Фирменная палитра"
             static let secondVariation = "Чёрно-белый"
         }
@@ -98,6 +98,7 @@ struct Texts {
     
     enum UserDefaults {
         enum Accessibility {
+            static let fontSizeManager = "FontSizeManager"
             static let fontColor = "AccessibilityFontColor"
             static let fontSize = "AccessibilityFontSize"
             static let imparedMode = "AccessibilityImparedMode"

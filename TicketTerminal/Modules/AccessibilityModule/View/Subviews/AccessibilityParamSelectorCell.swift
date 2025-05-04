@@ -24,12 +24,8 @@ struct AccessibilityParamSelectorCell: View {
     }
     
     internal var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 20) {
             icon
-            if let title {
-                Text(title)
-                    .font(.system(size: 20, weight: .regular))
-            }
             underline
         }
     }
