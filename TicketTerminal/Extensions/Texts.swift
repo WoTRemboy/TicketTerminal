@@ -68,4 +68,31 @@ struct Texts {
             static let content = "Ссылка"
         }
     }
+    
+    enum Accessibility {
+        enum FontColor {
+            static let title = "Цвет шрифта"
+            static let firstVariation = "Фирменная палитра"
+            static let secondVariation = "Чёрно-белый"
+        }
+        
+        enum FontSize {
+            static let title = "Размер шрифта"
+            static let firstVariation = "1x"
+            static let secondVariation = "1.25x"
+            static let thirdVariation = "1.5x"
+            static let fourthVariation = "1.75x"
+            static let fifthVariation = "2x"
+        }
+        
+        enum ImparedMode {
+            static let title = "Режим для слабовидящих"
+        }
+        
+        enum ScreenReader {
+            static let title = "Чтение с экрана"
+            static let firstVariation = "Включить"
+            static let secondVariation = "Выключить"
+        }
+    }
 }

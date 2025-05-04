@@ -42,8 +42,10 @@ struct AboutAppCellView: View {
             
             if type != .info {
                 Text(type.content)
-                    .font(.system(size: type == .address ? 30 : 50,
-                                  weight: type == .address ? .regular : .medium))
+                    .font(.system(
+                        size: type == .address ? 30 : 50,
+                        weight: type == .address ? .regular : .medium)
+                    )
             }
         }
         .padding(.leading, type.paddingValue)

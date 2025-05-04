@@ -27,8 +27,7 @@ struct MainNavBar: View {
     }
     
     private func button(type: NavBarButton) -> some View {
-        CustomNavLink(destination: AboutAppView()
-            .environmentObject(AboutAppViewModel())) {
+        CustomNavLink(destination: type.destination) {
             Circle()
                 .stroke(Color.SymbolColors.red,
                         lineWidth: 10)

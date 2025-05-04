@@ -38,4 +38,29 @@ extension Image {
         static let special = Image("NavBarSpecial")
         static let buy = Image("NavBarBuy")
     }
+    
+    enum Accessibility {
+        enum FontColor {
+            static let first = Image("FontColorRed")
+            static let second = Image("FontColorWhiteBlack")
+        }
+        
+        enum FontSize {
+            static let first = Image("FontSizeFirst")
+            static let second = Image("FontSizeSecond")
+            static let third = Image("FontSizeThird")
+            static let fourth = Image("FontSizeFourth")
+            static let fifth = Image("FontSizeFifth")
+        }
+        
+        enum ImparedMode {
+            static let on = Image("ImparedModeOn")
+            static let off = Image("ImparedModeOff")
+        }
+        
+        enum ScreenReader {
+            static let on = Image("ScreenReaderOn")
+            static let off = Image("ScreenReaderOff")
+        }
+    }
 }

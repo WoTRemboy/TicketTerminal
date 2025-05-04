@@ -22,4 +22,17 @@ enum NavBarButton {
             Image.MainPage.language
         }
     }
+    
+    @ViewBuilder
+    internal var destination: some View {
+        switch self {
+        case .info:
+            AboutAppView()
+                .environmentObject(AboutAppViewModel())
+        case .special:
+            AccessibilityView()
+        case .language:
+            AccessibilityView()
+        }
+    }
 }
