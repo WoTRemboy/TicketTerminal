@@ -95,4 +95,22 @@ struct Texts {
             static let secondVariation = "Выключить"
         }
     }
+    
+    enum UserDefaults {
+        enum Accessibility {
+            static let fontColor = "AccessibilityFontColor"
+            static let fontSize = "AccessibilityFontSize"
+            static let imparedMode = "AccessibilityImparedMode"
+            static let screenReader = "AccessibilityScreenReader"
+        }
+    }
+    
+    enum NamespaceID {
+        enum Accessibility {
+            static let fontColor = "FontColorParam"
+            static let fontSize = "FontSizeParam"
+            static let imparedMode = "ImparedModeParam"
+            static let screenReader = "ScreenReaderParam"
+        }
+    }
 }

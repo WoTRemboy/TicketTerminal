@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AccessibilityParamSelector: View {
     
+    @EnvironmentObject private var viewModel: AccessibilityViewModel
+    @Namespace private var namespace
+    
     private let type: AccessibilityParam
     
     init(type: AccessibilityParam) {
@@ -32,12 +35,15 @@ struct AccessibilityParamSelector: View {
         HStack(alignment: .bottom, spacing: 110) {
             ForEach(AccessibilityFontColor.allCases, id: \.self) { type in
                 Button {
-                    // Font Color Button Action
+                    viewModel.setFontColor(type)
                 } label: {
                     AccessibilityParamSelectorCell(
                         title: type.title,
                         icon: type.icon,
-                        selected: true)
+                        selected: viewModel.isSelectedFontColor(type),
+                        transitionID: Texts.NamespaceID.Accessibility.fontColor,
+                        namespace: namespace
+                    )
                 }
             }
         }
@@ -48,11 +54,14 @@ struct AccessibilityParamSelector: View {
         HStack(alignment: .bottom, spacing: 26) {
             ForEach(AccessibilityFontSize.allCases, id: \.self) { type in
                 Button {
-                    // Font Size Button Action
+                    viewModel.setFontSize(type)
                 } label: {
                     AccessibilityParamSelectorCell(
                         icon: type.icon,
-                        selected: true)
+                        selected: viewModel.isSelectedFontSize(type),
+                        transitionID: Texts.NamespaceID.Accessibility.fontSize,
+                        namespace: namespace
+                    )
                 }
             }
         }
@@ -63,11 +72,14 @@ struct AccessibilityParamSelector: View {
         HStack(alignment: .bottom, spacing: 145) {
             ForEach(AccessibilityImparedMode.allCases, id: \.self) { type in
                 Button {
-                    // Imapared Mode Button Action
+                    viewModel.setImparedMode(type)
                 } label: {
                     AccessibilityParamSelectorCell(
                         icon: type.icon,
-                        selected: true)
+                        selected: viewModel.isSelectedImparedMode(type),
+                        transitionID: Texts.NamespaceID.Accessibility.imparedMode,
+                        namespace: namespace
+                    )
                 }
             }
         }
@@ -78,11 +90,14 @@ struct AccessibilityParamSelector: View {
         HStack(alignment: .bottom, spacing: 145) {
             ForEach(AccessibilityScreenReader.allCases, id: \.self) { type in
                 Button {
-                    // Screen Reader Button Action
+                    viewModel.setScreenReader(type)
                 } label: {
                     AccessibilityParamSelectorCell(
                         icon: type.icon,
-                        selected: true)
+                        selected: viewModel.isSelectedScreenReader(type),
+                        transitionID: Texts.NamespaceID.Accessibility.screenReader,
+                        namespace: namespace
+                    )
                 }
             }
         }
@@ -91,5 +106,6 @@ struct AccessibilityParamSelector: View {
 }
 
 #Preview {
-    AccessibilityParamSelector(type: .imparedMode)
+    AccessibilityParamSelector(type: .screenReader)
+        .environmentObject(AccessibilityViewModel())
 }

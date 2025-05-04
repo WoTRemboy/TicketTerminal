@@ -8,15 +8,15 @@
 import SwiftUI
 
 enum AccessibilityScreenReader: String, CaseIterable {
-    case on = "AccessibilityScreenReaderOn"
     case off = "AccessibilityScreenReaderOff"
+    case on = "AccessibilityScreenReaderOn"
     
     internal var icon: Image {
         switch self {
-        case .on:
-            Image.Accessibility.ScreenReader.on
         case .off:
             Image.Accessibility.ScreenReader.off
+        case .on:
+            Image.Accessibility.ScreenReader.on
         }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AccessibilityParamCellView: View {
     
+    @Namespace private var namespace
+    
     private let type: AccessibilityParam
     
     init(type: AccessibilityParam) {
@@ -44,5 +46,6 @@ struct AccessibilityParamCellView: View {
 }
 
 #Preview {
-    AccessibilityParamCellView(type: .imparedMode)
+    AccessibilityParamCellView(type: .fontColor)
+        .environmentObject(AccessibilityViewModel())
 }

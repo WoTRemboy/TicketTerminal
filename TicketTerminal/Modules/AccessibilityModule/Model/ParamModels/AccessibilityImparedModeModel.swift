@@ -8,15 +8,15 @@
 import SwiftUI
 
 enum AccessibilityImparedMode: String, CaseIterable {
-    case on = "AccessibilityImparedModeOn"
     case off = "AccessibilityImparedModeOff"
+    case on = "AccessibilityImparedModeOn"
     
     internal var icon: Image {
         switch self {
-        case .on:
-            Image.Accessibility.ImparedMode.on
         case .off:
             Image.Accessibility.ImparedMode.off
+        case .on:
+            Image.Accessibility.ImparedMode.on
         }
     }
 }

@@ -31,6 +31,7 @@ enum NavBarButton {
                 .environmentObject(AboutAppViewModel())
         case .special:
             AccessibilityView()
+                .environmentObject(AccessibilityViewModel())
         case .language:
             AccessibilityView()
         }
