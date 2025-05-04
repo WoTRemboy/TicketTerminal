@@ -8,19 +8,17 @@
 import SwiftUI
 import MapKit
 
-struct AboutAppView: View {    
+struct AboutAppView: View {
     internal var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(type: .about, onDismiss: {})
+            CustomNavBarView(type: .about)
             
             versionNumber
                 .padding(.top, 40)
             infoAdress
                 .padding(.top, 24)
-            
             map
                 .padding(24)
-            
             
             Spacer()
         }
@@ -35,7 +33,9 @@ struct AboutAppView: View {
     private var versionNumber: some View {
         HStack(spacing: 24) {
             AboutAppCellView(type: .version)
+                .padding(.leading, -90)
             AboutAppCellView(type: .number)
+                .padding(.trailing, -90)
         }
     }
     

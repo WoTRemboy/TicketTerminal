@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-
 struct CustomNavBarView: View {
     
-    private let type: NavBar
-    private let onDismiss: () -> Void
+    @Environment(\.dismiss) private var dismiss
     
-    init(type: NavBar, onDismiss: @escaping () -> Void) {
+    private let type: NavBar
+    
+    init(type: NavBar) {
         self.type = type
-        self.onDismiss = onDismiss
     }
     
     internal var body: some View {
@@ -40,7 +39,7 @@ struct CustomNavBarView: View {
     
     private var backButton: some View {
         Button {
-            onDismiss()
+            dismiss()
         } label: {
             Image.NavBar.back
         }
@@ -49,5 +48,5 @@ struct CustomNavBarView: View {
 }
 
 #Preview {
-    CustomNavBarView(type: .about) {}
+    CustomNavBarView(type: .about)
 }

@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @EnvironmentObject private var viewModel: MainViewModel
+    
     internal var body: some View {
-        ZStack {
-            content
+        NavigationStack {
+            ZStack {
+                content
+            }
+            .background(
+                background
+            )
         }
-        .background(
-            background
-        )
     }
     
     private var background: some View {
@@ -42,4 +47,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(MainViewModel())
 }

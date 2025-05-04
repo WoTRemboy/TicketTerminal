@@ -25,7 +25,10 @@ struct SplashScreenView: View {
     internal var body: some View {
         if isActive {
             // Navigates to the main screen
-            MainView()
+            FullSwipeNavigationStack {
+                MainView()
+                    .environmentObject(MainViewModel())
+            }
         } else {
             // Displays splash screen content
             content
