@@ -8,17 +8,44 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @EnvironmentObject private var viewModel: MainViewModel
+    
     internal var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack {
+                content
+            }
+            .background(
+                background
+            )
         }
-        .padding()
+    }
+    
+    private var background: some View {
+        Color.BackColors.backDefault
+            .ignoresSafeArea()
+    }
+    
+    private var content: some View {
+        VStack(spacing: 0) {
+            MainNavBar()
+                .padding([.top, .horizontal])
+            AssistantWeatherButtons()
+                .padding(.top, 36)
+            
+            TripScroller()
+                .padding(.top, 16)
+            
+            TicketManagementView()
+                .padding(.top, 16)
+            
+            Spacer()
+        }
     }
 }
 
 #Preview {
     MainView()
+        .environmentObject(MainViewModel())
 }

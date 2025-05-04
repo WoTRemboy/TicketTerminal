@@ -29,5 +29,16 @@ extension Color {
         static let labelTertiary = Color("LabelTertiary")
         static let labelReversed = Color("LabelReversed")
         static let labelBlack = Color("LabelBlack")
+        static let labelWhite = Color("LabelWhite")
+    }
+    
+    // MARK: - Symbol Colors
+    
+    enum SymbolColors {
+        static let red = Color("SymbolRed")
+        static let yellow = Color("SymbolYellow")
+        static let blue = Color("SymbolBlue")
+        static let orange = Color("SymbolOrange")
+        static let brown = Color("SymbolBrown")
     }
 }
