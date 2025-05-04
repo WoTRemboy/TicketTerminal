@@ -11,12 +11,15 @@ enum AccessibilityScreenReader: String, CaseIterable {
     case off = "AccessibilityScreenReaderOff"
     case on = "AccessibilityScreenReaderOn"
     
-    internal var icon: Image {
+    internal func icon(scheme: AccessibilityFontColor) -> Image {
         switch self {
         case .off:
             Image.Accessibility.ScreenReader.off
         case .on:
-            Image.Accessibility.ScreenReader.on
+            Image.alterColored(
+                normal: Image.Accessibility.ScreenReader.on,
+                alter: Image.Accessibility.ScreenReader.onBlack,
+                scheme: scheme)
         }
     }
 }

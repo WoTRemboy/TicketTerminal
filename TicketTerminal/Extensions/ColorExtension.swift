@@ -41,4 +41,22 @@ extension Color {
         static let orange = Color("SymbolOrange")
         static let brown = Color("SymbolBrown")
     }
+    
+    static func blackVariant(color: Color, scheme: AccessibilityFontColor) -> Color {
+        switch scheme {
+        case .defaultValue:
+            color
+        case .whiteBlack:
+            Color("SymbolBlack")
+        }
+    }
+    
+    static func whiteVariant(color: Color, scheme: AccessibilityFontColor) -> Color {
+        switch scheme {
+        case .defaultValue:
+            color
+        case .whiteBlack:
+            Color("SymbolWhite")
+        }
+    }
 }

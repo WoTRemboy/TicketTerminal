@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomNavBarView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
     private let type: NavBar
     
@@ -27,11 +28,16 @@ struct CustomNavBarView: View {
     
     private var content: some View {
         VStack(spacing: 22) {
-            type.icon
+            type.icon(scheme: accessibilityManager.fontColor)
                 .frame(width: 182, height: 108)
             Text(type.title)
                 .font(.system(size: 48, weight: .semibold))
-                .foregroundStyle(Color.SymbolColors.red)
+                .foregroundStyle(
+                    Color.blackVariant(
+                        color: .SymbolColors.red,
+                        scheme: accessibilityManager.fontColor
+                    )
+                )
         }
         .frame(maxWidth: .infinity)
     }
@@ -40,7 +46,10 @@ struct CustomNavBarView: View {
         Button {
             dismiss()
         } label: {
-            Image.NavBar.back
+            Image.alterColored(
+                normal: Image.NavBar.Back.normal,
+                alter: Image.NavBar.Back.black,
+                scheme: accessibilityManager.fontColor)
         }
         .buttonStyle(.plain)
     }
@@ -48,4 +57,5 @@ struct CustomNavBarView: View {
 
 #Preview {
     CustomNavBarView(type: .about)
+        .environmentObject(AccessibilityManager())
 }

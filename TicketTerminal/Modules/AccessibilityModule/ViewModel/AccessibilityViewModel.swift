@@ -9,8 +9,11 @@ import SwiftUI
 
 final class AccessibilityViewModel: ObservableObject {
     
-    @AppStorage(Texts.UserDefaults.Accessibility.fontSizeManager)
-    private var fontSizeValue: Double = 1.0
+    @AppStorage(Texts.UserDefaults.AccessibilityManager.fontSize)
+    private var fontSizeValue: AccessibilityFontSize = .first
+    
+    @AppStorage(Texts.UserDefaults.AccessibilityManager.fontColor)
+    private var fontColorValue: AccessibilityFontColor = .defaultValue
     
     @AppStorage(Texts.UserDefaults.Accessibility.fontColor)
     private var fontColor: AccessibilityFontColor = .defaultValue
@@ -32,6 +35,9 @@ final class AccessibilityViewModel: ObservableObject {
         guard color != fontColor else { return }
         withAnimation(.easeInOut(duration: 0.2)) {
             self.fontColor = color
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.fontColorValue = color
+            }
         }
     }
     
@@ -43,7 +49,9 @@ final class AccessibilityViewModel: ObservableObject {
         guard size != fontSize else { return }
         withAnimation(.easeInOut(duration: 0.2)) {
             self.fontSize = size
-            self.fontSizeValue = size.scale
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.fontSizeValue = size
+            }
         }
     }
     

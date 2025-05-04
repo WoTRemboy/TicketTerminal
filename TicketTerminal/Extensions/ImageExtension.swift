@@ -33,10 +33,25 @@ extension Image {
     }
     
     enum NavBar {
-        static let back = Image("NavBarBack")
-        static let about = Image("NavBarInfo")
-        static let special = Image("NavBarSpecial")
-        static let buy = Image("NavBarBuy")
+        enum Back {
+            static let normal = Image("NavBarBack")
+            static let black = Image("NavBarBackBlack")
+        }
+        
+        enum About {
+            static let normal = Image("NavBarInfo")
+            static let black = Image("NavBarInfoBlack")
+        }
+        
+        enum Special {
+            static let normal = Image("NavBarSpecial")
+            static let black = Image("NavBarSpecialBlack")
+        }
+        
+        enum Buy {
+            static let normal = Image("NavBarBuy")
+            static let black = Image("NavBarBuyBlack")
+        }
     }
     
     enum Accessibility {
@@ -56,11 +71,22 @@ extension Image {
         enum ImparedMode {
             static let on = Image("ImparedModeOn")
             static let off = Image("ImparedModeOff")
+            static let onBlack = Image("ImparedModeOnBlack")
         }
         
         enum ScreenReader {
             static let on = Image("ScreenReaderOn")
             static let off = Image("ScreenReaderOff")
+            static let onBlack = Image("ScreenReaderOnBlack")
+        }
+    }
+    
+    static func alterColored(normal: Image, alter: Image, scheme: AccessibilityFontColor) -> Image {
+        switch scheme {
+        case .defaultValue:
+            normal
+        case .whiteBlack:
+            alter
         }
     }
 }

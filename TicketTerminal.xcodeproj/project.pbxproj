@@ -33,7 +33,7 @@
 		636EF4CA2DC79A6E004B259B /* AccessibilityScreenReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C92DC79A5E004B259B /* AccessibilityScreenReaderModel.swift */; };
 		636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4CC2DC79C1A004B259B /* AccessibilityViewModel.swift */; };
 		636EF4CF2DC7E43F004B259B /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4CE2DC7E43B004B259B /* FontExtension.swift */; };
-		636EF4D32DC7E8CC004B259B /* FontSizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4D22DC7E8C6004B259B /* FontSizeManager.swift */; };
+		636EF4D32DC7E8CC004B259B /* AccessibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4D22DC7E8C6004B259B /* AccessibilityManager.swift */; };
 		6388781B2DC4D6E100028C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638878172DC4D6E100028C5C /* Assets.xcassets */; };
 		6388781C2DC4D6E100028C5C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878182DC4D6E100028C5C /* MainView.swift */; };
 		6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878192DC4D6E100028C5C /* TicketTerminalApp.swift */; };
@@ -76,7 +76,7 @@
 		636EF4C92DC79A5E004B259B /* AccessibilityScreenReaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityScreenReaderModel.swift; sourceTree = "<group>"; };
 		636EF4CC2DC79C1A004B259B /* AccessibilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityViewModel.swift; sourceTree = "<group>"; };
 		636EF4CE2DC7E43B004B259B /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
-		636EF4D22DC7E8C6004B259B /* FontSizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeManager.swift; sourceTree = "<group>"; };
+		636EF4D22DC7E8C6004B259B /* AccessibilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityManager.swift; sourceTree = "<group>"; };
 		638878092DC4D6D200028C5C /* TicketTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638878172DC4D6E100028C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638878182DC4D6E100028C5C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				6316ADE72DC62D6E001BD921 /* CustomNavBar */,
-				636EF4D22DC7E8C6004B259B /* FontSizeManager.swift */,
+				636EF4D22DC7E8C6004B259B /* AccessibilityManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 				636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */,
 				6316ADED2DC638C0001BD921 /* AboutAppCellView.swift in Sources */,
 				6316ADDB2DC57B46001BD921 /* TicketManagementModel.swift in Sources */,
-				636EF4D32DC7E8CC004B259B /* FontSizeManager.swift in Sources */,
+				636EF4D32DC7E8CC004B259B /* AccessibilityManager.swift in Sources */,
 				6388783D2DC553DC00028C5C /* TripScroller.swift in Sources */,
 				6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */,
 				6388783B2DC54B8000028C5C /* TripModel.swift in Sources */,

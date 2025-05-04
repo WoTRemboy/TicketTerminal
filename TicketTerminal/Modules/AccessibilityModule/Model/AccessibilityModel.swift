@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AccessibilityParam {
+enum AccessibilityParam: CaseIterable {
     case fontColor
     case fontSize
     case imparedMode

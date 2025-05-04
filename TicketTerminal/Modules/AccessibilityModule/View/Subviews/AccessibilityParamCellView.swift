@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccessibilityParamCellView: View {
     
-    @EnvironmentObject private var fontManager: FontSizeManager
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @Namespace private var namespace
     
     private let type: AccessibilityParam
@@ -34,14 +34,16 @@ struct AccessibilityParamCellView: View {
     private var content: some View {
         VStack(spacing: type.spacing) {
             Text(type.title)
-                .font(.scalable(size: 40, weight: .regular, scale: fontManager.scale))
+                .font(.scalable(size: 40, weight: .regular, scale: accessibilityManager.fontScale.scale))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 8)
             
             AccessibilityParamSelector(type: type)
             Spacer()
         }
-        .animation(.easeInOut(duration: 0.2), value: fontManager.scale)
+        .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontScale)
+        .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontColor)
+        
         .padding(.leading, 90)
         .frame(width: 885,
                height: 197)
@@ -51,5 +53,5 @@ struct AccessibilityParamCellView: View {
 #Preview {
     AccessibilityParamCellView(type: .fontSize)
         .environmentObject(AccessibilityViewModel())
-        .environmentObject(FontSizeManager())
+        .environmentObject(AccessibilityManager())
 }

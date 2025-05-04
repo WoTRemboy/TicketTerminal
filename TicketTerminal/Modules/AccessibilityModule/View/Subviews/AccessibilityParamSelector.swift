@@ -10,6 +10,7 @@ import SwiftUI
 struct AccessibilityParamSelector: View {
     
     @EnvironmentObject private var viewModel: AccessibilityViewModel
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @Namespace private var namespace
     
     private let type: AccessibilityParam
@@ -75,7 +76,7 @@ struct AccessibilityParamSelector: View {
                     viewModel.setImparedMode(type)
                 } label: {
                     AccessibilityParamSelectorCell(
-                        icon: type.icon,
+                        icon: type.icon(scheme: accessibilityManager.fontColor),
                         selected: viewModel.isSelectedImparedMode(type),
                         transitionID: Texts.NamespaceID.Accessibility.imparedMode,
                         namespace: namespace
@@ -93,7 +94,7 @@ struct AccessibilityParamSelector: View {
                     viewModel.setScreenReader(type)
                 } label: {
                     AccessibilityParamSelectorCell(
-                        icon: type.icon,
+                        icon: type.icon(scheme: accessibilityManager.fontColor),
                         selected: viewModel.isSelectedScreenReader(type),
                         transitionID: Texts.NamespaceID.Accessibility.screenReader,
                         namespace: namespace
@@ -108,4 +109,5 @@ struct AccessibilityParamSelector: View {
 #Preview {
     AccessibilityParamSelector(type: .screenReader)
         .environmentObject(AccessibilityViewModel())
+        .environmentObject(AccessibilityManager())
 }

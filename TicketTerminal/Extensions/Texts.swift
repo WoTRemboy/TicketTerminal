@@ -98,11 +98,15 @@ struct Texts {
     
     enum UserDefaults {
         enum Accessibility {
-            static let fontSizeManager = "FontSizeManager"
             static let fontColor = "AccessibilityFontColor"
             static let fontSize = "AccessibilityFontSize"
             static let imparedMode = "AccessibilityImparedMode"
             static let screenReader = "AccessibilityScreenReader"
+        }
+        
+        enum AccessibilityManager {
+            static let fontSize = "FontSizeManager"
+            static let fontColor = "FontColorManager"
         }
     }
     

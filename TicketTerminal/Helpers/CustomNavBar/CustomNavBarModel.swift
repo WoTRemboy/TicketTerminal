@@ -23,14 +23,23 @@ enum NavBar {
         }
     }
     
-    internal var icon: Image {
+    internal func icon(scheme: AccessibilityFontColor) -> Image {
         switch self {
         case .about:
-            Image.NavBar.about
+            Image.alterColored(
+                normal: Image.NavBar.About.normal,
+                alter: Image.NavBar.About.black,
+                scheme: scheme)
         case .special:
-            Image.NavBar.special
+            Image.alterColored(
+                normal: Image.NavBar.Special.normal,
+                alter: Image.NavBar.Special.black,
+                scheme: scheme)
         case .buy:
-            Image.NavBar.buy
+            Image.alterColored(
+                normal: Image.NavBar.Buy.normal,
+                alter: Image.NavBar.Buy.black,
+                scheme: scheme)
         }
     }
 }

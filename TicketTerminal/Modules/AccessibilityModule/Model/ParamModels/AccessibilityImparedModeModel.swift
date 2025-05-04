@@ -11,12 +11,15 @@ enum AccessibilityImparedMode: String, CaseIterable {
     case off = "AccessibilityImparedModeOff"
     case on = "AccessibilityImparedModeOn"
     
-    internal var icon: Image {
+    internal func icon(scheme: AccessibilityFontColor) -> Image {
         switch self {
         case .off:
             Image.Accessibility.ImparedMode.off
         case .on:
-            Image.Accessibility.ImparedMode.on
+            Image.alterColored(
+                normal: Image.Accessibility.ImparedMode.on,
+                alter: Image.Accessibility.ImparedMode.onBlack,
+                scheme: scheme)
         }
     }
 }
