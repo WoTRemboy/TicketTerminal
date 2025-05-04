@@ -12,6 +12,7 @@ struct TicketTerminalApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
+                .environmentObject(AccessibilityManager())
         }
     }
 }

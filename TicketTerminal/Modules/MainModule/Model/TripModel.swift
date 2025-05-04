@@ -34,14 +34,15 @@ enum Trip: CaseIterable {
         }
     }
     
-    internal var alignment: Alignment {
+    internal func alignment(scheme: AccessibilityFontColor) -> Alignment {
+        guard scheme != .whiteBlack else { return .center }
         switch self {
         case .pearl:
-            Alignment.topTrailing
+            return Alignment.topTrailing
         case .lotus:
-            Alignment.topLeading
+            return Alignment.topLeading
         case .express:
-            Alignment.topLeading
+            return Alignment.topLeading
         }
     }
 }

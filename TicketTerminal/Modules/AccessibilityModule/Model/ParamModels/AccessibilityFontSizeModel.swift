@@ -28,4 +28,19 @@ enum AccessibilityFontSize: String, CaseIterable {
             Image.Accessibility.FontSize.fifth
         }
     }
+    
+    internal var scale: Double {
+        switch self {
+        case .first:
+            return 1.0
+        case .second:
+            return 1.25
+        case .third:
+            return 1.5
+        case .fourth:
+            return 1.75
+        case .fifth:
+            return 2.0
+        }
+    }
 }

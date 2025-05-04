@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AccessibilityParamSelectorCell: View {
     
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     private let title: String?
     private let icon: Image
     private let selected: Bool
@@ -24,12 +26,8 @@ struct AccessibilityParamSelectorCell: View {
     }
     
     internal var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 20) {
             icon
-            if let title {
-                Text(title)
-                    .font(.system(size: 20, weight: .regular))
-            }
             underline
         }
     }
@@ -38,14 +36,16 @@ struct AccessibilityParamSelectorCell: View {
         Group {
             if selected {
                 RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.SymbolColors.red)
+                    .fill(Color.blackVariant(
+                        color: .SymbolColors.red,
+                        scheme: accessibilityManager.fontColor)
+                    )
                     .matchedGeometryEffect(id: transitionID, in: namespace)
             } else {
                 RoundedRectangle(cornerRadius: 30)
                     .fill(Color.clear)
             }
         }
-        
         .frame(width: 34, height: 10)
     }
 }
@@ -58,4 +58,5 @@ struct AccessibilityParamSelectorCell: View {
         transitionID: "transitionID",
         namespace: Namespace().wrappedValue
     )
+    .environmentObject(AccessibilityManager())
 }

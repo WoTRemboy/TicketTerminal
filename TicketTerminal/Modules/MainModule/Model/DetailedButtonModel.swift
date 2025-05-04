@@ -38,12 +38,16 @@ enum DetailedButton {
         }
     }
     
-    internal var color: Color {
+    internal func color(scheme: AccessibilityFontColor) -> Color {
         switch self {
         case .assistant:
-                .SymbolColors.red
+            Color.whiteVariant(
+                color: .SymbolColors.red,
+                scheme: scheme)
         case .weather:
-                .SymbolColors.yellow
+            Color.whiteVariant(
+                color: .SymbolColors.yellow,
+                scheme: scheme)
         }
     }
 }

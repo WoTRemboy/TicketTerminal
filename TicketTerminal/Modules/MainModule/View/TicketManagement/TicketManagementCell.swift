@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TicketManagementCell: View {
     
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     private let type: TicketManagement
     
     init(type: TicketManagement) {
@@ -55,6 +57,37 @@ struct TicketManagementCell: View {
             height: type.cellFrame.height)
     }
     
+    private var background: some View {
+        Group {
+            if type == .hot {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(gradient)
+            } else {
+                shadowBackground
+            }
+        }
+    }
+    
+    private var shadowBackground: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .stroke(Color.blackVariant(
+                color: .clear,
+                scheme: accessibilityManager.fontColor),
+                    lineWidth: 3)
+            .background {
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundStyle(Color.BackColors.backDefault)
+                    .shadow(
+                        color: Color.alterColor(
+                            normal: .LabelColors.labelBlack.opacity(0.25),
+                            alter: .clear,
+                            scheme: accessibilityManager.fontColor),
+                        radius: 4,
+                        x: 0,
+                        y: 1)
+            }
+    }
+    
     private var horizontalLayout: some View {
         HStack {
             Text(type.title)
@@ -89,23 +122,15 @@ struct TicketManagementCell: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    private var background: some View {
-        Group {
-            if type == .hot {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(gradient)
-            } else {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.BackColors.backDefault)
-            }
-        }
-    }
-    
     private var gradient: LinearGradient {
         LinearGradient(
             gradient: Gradient(
-                colors: [Color.SymbolColors.brown,
-                    Color.SymbolColors.orange]
+                colors: [Color.greyVariant(
+                            color: .SymbolColors.brown,
+                            scheme: accessibilityManager.fontColor),
+                         Color.greyVariant(
+                            color: .SymbolColors.orange,
+                            scheme: accessibilityManager.fontColor)]
             ),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
@@ -115,4 +140,5 @@ struct TicketManagementCell: View {
 
 #Preview {
     TicketManagementCell(type: .print)
+        .environmentObject(AccessibilityManager())
 }
