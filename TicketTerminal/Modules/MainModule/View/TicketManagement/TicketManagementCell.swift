@@ -91,33 +91,52 @@ struct TicketManagementCell: View {
     private var horizontalLayout: some View {
         HStack {
             Text(type.title)
-                .font(.system(size: 40, weight: .medium))
+                .font(.scalable(
+                    size: 40,
+                    weight: .medium,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .minimumScaleFactor(0.7)
+                .lineLimit(1)
             
             Spacer()
-            type.image
-                .frame(
-                    width: type.imageFrame.width,
-                    height: type.imageFrame.height)
+            if type.showIcon(scheme: accessibilityManager.fontScale) {
+                type.image
+                    .frame(
+                        width: type.imageFrame.width,
+                        height: type.imageFrame.height)
+            }
         }
     }
     
     private var verticalLayout: some View {
-        VStack {
-            type.image
-                .frame(
-                    width: type.imageFrame.width,
-                    height: type.imageFrame.height)
+        VStack(spacing: 28) {
+            if type.showIcon(scheme: accessibilityManager.fontScale) {
+                type.image
+                    .frame(
+                        width: type.imageFrame.width,
+                        height: type.imageFrame.height)
+            }
             
-            Spacer()
             Text(type.title)
-                .font(.system(size: 40, weight: .medium))
+                .font(.scalable(
+                    size: 40,
+                    weight: .medium,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .minimumScaleFactor(0.7)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
     
     private var hotLayout: some View {
         Text(type.title)
-            .font(.system(size: 40, weight: .medium))
+            .font(.scalable(
+                size: 40,
+                weight: .medium,
+                scale: accessibilityManager.fontScale.scale)
+            )
+            .minimumScaleFactor(0.7)
             .foregroundStyle(Color.LabelColors.labelWhite)
             .frame(maxWidth: .infinity, alignment: .leading)
     }

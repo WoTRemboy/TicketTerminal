@@ -63,4 +63,13 @@ enum TicketManagement {
             (width: 289, height: 274)
         }
     }
+    
+    internal func showIcon(scheme: AccessibilityFontSize) -> Bool {
+        switch scheme {
+        case .first, .second:
+            true
+        case .third, .fourth, .fifth:
+            false
+        }
+    }
 }

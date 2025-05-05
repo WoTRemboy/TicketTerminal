@@ -30,12 +30,21 @@ struct AssistantWeatherButtons: View {
     private func buttonContent(type: DetailedButton) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(type.title)
-                .font(.system(size: 64,
-                              weight: .semibold))
+                .font(.scalable(
+                    size: 64,
+                    weight: .semibold,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .minimumScaleFactor(type.scaleFactor(scheme: accessibilityManager.fontScale))
             
-            Text(type.content)
-                .font(.system(size: 30,
-                              weight: .medium))
+            if type.scaleDescriprion(scheme: accessibilityManager.fontScale) {
+                Text(type.content)
+                    .font(.scalable(
+                        size: 30,
+                        weight: .medium,
+                        scale: accessibilityManager.fontScale.scale)
+                    )
+            }
         }
         .foregroundStyle(Color.blackVariant(
             color: Color.LabelColors.labelWhite,
