@@ -46,29 +46,11 @@ struct TicketManagementCell: View {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(gradient)
             } else {
-                shadowBackground
+                Background(
+                    radius: 20,
+                    scheme: accessibilityManager.fontColor)
             }
         }
-    }
-    
-    private var shadowBackground: some View {
-        RoundedRectangle(cornerRadius: 20)
-            .stroke(Color.blackVariant(
-                color: .clear,
-                scheme: accessibilityManager.fontColor),
-                    lineWidth: 3)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(Color.BackColors.backDefault)
-                    .shadow(
-                        color: Color.alterColor(
-                            normal: .LabelColors.labelBlack.opacity(0.25),
-                            alter: .clear,
-                            scheme: accessibilityManager.fontColor),
-                        radius: 4,
-                        x: 0,
-                        y: 1)
-            }
     }
     
     private var horizontalLayout: some View {

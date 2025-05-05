@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AboutAppCellView: View {
+    
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @EnvironmentObject private var viewModel: AboutAppViewModel
     
     private let type: AboutAppCell
@@ -25,13 +27,9 @@ struct AboutAppCellView: View {
         .buttonStyle(.plain)
         
         .background {
-            RoundedRectangle(cornerRadius: 50)
-                .foregroundStyle(Color.BackColors.backDefault)
-                .shadow(
-                    color: .LabelColors.labelBlack.opacity(0.25),
-                    radius: 4,
-                    x: 0,
-                    y: 1)
+            Background(
+                radius: 50,
+                scheme: accessibilityManager.fontColor)
         }
     }
     
@@ -68,4 +66,6 @@ struct AboutAppCellView: View {
 
 #Preview {
     AboutAppCellView(type: .version)
+        .environmentObject(AccessibilityManager())
+        .environmentObject(AboutAppViewModel())
 }

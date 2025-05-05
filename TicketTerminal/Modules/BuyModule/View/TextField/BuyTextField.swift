@@ -28,27 +28,9 @@ struct BuyTextField: View {
             }
         }
         .padding(20)
-        .background(background)
-    }
-    
-    private var background: some View {
-        RoundedRectangle(cornerRadius: 143)
-            .stroke(Color.blackVariant(
-                color: .clear,
-                scheme: accessibilityManager.fontColor),
-                    lineWidth: 3)
-            .background {
-                RoundedRectangle(cornerRadius: 143)
-                    .fill(Color.BackColors.backDefault)
-                    .shadow(
-                        color: Color.alterColor(
-                            normal: .LabelColors.labelBlack.opacity(0.25),
-                            alter: .clear,
-                            scheme: accessibilityManager.fontColor),
-                        radius: 4,
-                        x: 0,
-                        y: 1)
-            }
+        .background(Background(
+            radius: 143,
+            scheme: accessibilityManager.fontColor))
     }
     
     private var fromContent: some View {

@@ -17,13 +17,16 @@ struct BuyDateSelector: View {
     init(type: BuyDate) {
         self.type = type
     }
-        
+    
     internal var body: some View {
-        background
-            .frame(height: 200)
-            .overlay(alignment: .topLeading) {
-                overlay
-            }
+        Background(
+            radius: 40,
+            scheme: accessibilityManager.fontColor
+        )
+        .frame(height: 200)
+        .overlay(alignment: .topLeading) {
+            overlay
+        }
     }
     
     private var overlay: some View {
@@ -64,26 +67,6 @@ struct BuyDateSelector: View {
             String(),
             selection: $viewModel.returnDate,
             displayedComponents: .date)
-    }
-    
-    private var background: some View {
-        RoundedRectangle(cornerRadius: 40)
-            .stroke(Color.blackVariant(
-                color: .clear,
-                scheme: accessibilityManager.fontColor),
-                    lineWidth: 3)
-            .background {
-                RoundedRectangle(cornerRadius: 40)
-                    .fill(Color.BackColors.backDefault)
-                    .shadow(
-                        color: Color.alterColor(
-                            normal: .LabelColors.labelBlack.opacity(0.25),
-                            alter: .clear,
-                            scheme: accessibilityManager.fontColor),
-                        radius: 4,
-                        x: 0,
-                        y: 1)
-            }
     }
 }
 

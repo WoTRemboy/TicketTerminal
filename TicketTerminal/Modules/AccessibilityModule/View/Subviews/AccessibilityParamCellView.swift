@@ -20,24 +20,9 @@ struct AccessibilityParamCellView: View {
     
     internal var body: some View {
         content
-            .background(background)
-    }
-    
-    private var background: some View {
-        RoundedRectangle(cornerRadius: 50)
-            .stroke(Color.blackVariant(
-                color: .clear,
-                scheme: accessibilityManager.fontColor),
-                    lineWidth: 3)
-            .background {
-                RoundedRectangle(cornerRadius: 50)
-                    .foregroundStyle(Color.BackColors.backDefault)
-                    .shadow(
-                        color: .LabelColors.labelBlack.opacity(0.25),
-                        radius: 4,
-                        x: 0,
-                        y: 1)
-            }
+            .background(Background(
+                radius: 50,
+                scheme: accessibilityManager.fontColor))
     }
     
     private var content: some View {
