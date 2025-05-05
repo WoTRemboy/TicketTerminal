@@ -1,5 +1,5 @@
 //
-//  AssistantView.swift
+//  BuyView.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 05/05/2025.
@@ -7,25 +7,28 @@
 
 import SwiftUI
 
-struct AssistantView: View {
+struct BuyView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
-    private let namespace: Namespace.ID
-    
-    init(namespace: Namespace.ID) {
-        self.namespace = namespace
-    }
     
     internal var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(type: .assistant)
+            CustomNavBarView(type: .buy)
                 .padding(.top)
             
+            BuyTextFieldsView()
+                .padding(.top, 40)
+            
+            BuyDateBlockView()
+                .padding(.top, 34)
+            
+            BuyButtonView(type: .search)
+                .padding(.top, 34)
+                
             Spacer()
+            BuyButtonBlockView()
+                .padding(.bottom, 34 / accessibilityManager.fontScale.scale)
         }
-        .navigationTransition(.zoom(
-            sourceID: Texts.NamespaceID.Assistant.zoomTransition,
-            in: namespace))
         .background(background)
     }
     
@@ -38,6 +41,7 @@ struct AssistantView: View {
 }
 
 #Preview {
-    AssistantView(namespace: Namespace().wrappedValue)
+    BuyView()
         .environmentObject(AccessibilityManager())
+        .environmentObject(BuyViewModel())
 }

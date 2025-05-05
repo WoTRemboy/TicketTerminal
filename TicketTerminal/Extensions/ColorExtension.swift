@@ -31,6 +31,7 @@ extension Color {
         static let labelReversed = Color("LabelReversed")
         static let labelBlack = Color("LabelBlack")
         static let labelWhite = Color("LabelWhite")
+        static let labelPlaceholder = Color("LabelPlaceholder")
     }
     
     // MARK: - Symbol Colors
@@ -41,6 +42,8 @@ extension Color {
         static let blue = Color("SymbolBlue")
         static let orange = Color("SymbolOrange")
         static let brown = Color("SymbolBrown")
+        static let pink = Color("SymbolPink")
+        static let purple = Color("SymbolPurple")
         
         static let black = Color("SymbolBlack")
         static let lightGrey = Color("SymbolLightGrey")

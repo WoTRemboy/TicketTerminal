@@ -41,8 +41,13 @@ struct Texts {
     enum NavBar {
         static let about = "О терминале"
         static let special = "Специальные возможности"
-        static let buy = "Купить билет"
         static let assistant = "Попутчик"
+        
+        static let buy = "Купить билет"
+        static let refund = "Вернуть билет"
+        static let recomendation = "Рекомендации"
+        static let hot = "Горячие пути"
+        static let print = "Распечатать билет"
     }
     
     enum Language {
@@ -98,6 +103,21 @@ struct Texts {
             static let title = "Чтение с экрана"
             static let firstVariation = "Включить"
             static let secondVariation = "Выключить"
+        }
+    }
+    
+    enum Buy {
+        enum Placeholder {
+            static let from = "Откуда..."
+            static let destination = "Куда..."
+            static let dateOfDeparture = "Туда"
+            static let dateOfReturn = "Обратно"
+        }
+        
+        enum Buttons {
+            static let search = "Поиск"
+            static let trips = "Туристические пути"
+            static let hot = "Горячие пути"
         }
     }
     

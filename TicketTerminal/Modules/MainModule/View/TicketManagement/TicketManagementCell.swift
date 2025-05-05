@@ -18,15 +18,6 @@ struct TicketManagementCell: View {
     }
     
     internal var body: some View {
-        Button {
-            // Ticket Management Action
-        } label: {
-            content
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var content: some View {
         Group {
             switch type {
             case .buy, .refund, .recomendations:

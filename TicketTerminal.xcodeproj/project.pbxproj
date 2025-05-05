@@ -16,6 +16,18 @@
 		6304907B2DC77D6D002E9AAA /* AccessibilityParamSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304907A2DC77D6D002E9AAA /* AccessibilityParamSelector.swift */; };
 		6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */; };
 		631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635DC2DC8D9C60024EE2D /* AssistantView.swift */; };
+		631635E52DC90C300024EE2D /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E42DC90C300024EE2D /* BuyView.swift */; };
+		631635E72DC9106B0024EE2D /* BuyTextFieldBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */; };
+		631635E92DC910800024EE2D /* BuyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E82DC910800024EE2D /* BuyTextField.swift */; };
+		631635EB2DC913670024EE2D /* BuyTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635EA2DC9131B0024EE2D /* BuyTargetModel.swift */; };
+		631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F02DC9142E0024EE2D /* BuyViewModel.swift */; };
+		631635F42DC91F6D0024EE2D /* BuyDateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */; };
+		631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F52DC920A50024EE2D /* BuyDateSelectorModel.swift */; };
+		631635F82DC927870024EE2D /* BuyDateBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F72DC927870024EE2D /* BuyDateBlockView.swift */; };
+		631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FA2DC92B0A0024EE2D /* BuyButtonView.swift */; };
+		631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FC2DC92B170024EE2D /* BuyButtonModel.swift */; };
+		631635FF2DC92C2E0024EE2D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FE2DC92C2E0024EE2D /* Background.swift */; };
+		631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631636002DC92F1F0024EE2D /* BuyButtonBlockView.swift */; };
 		6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD52DC564F1001BD921 /* SplashScreen.swift */; };
 		6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD82DC57AF3001BD921 /* TicketManagementCell.swift */; };
 		6316ADDB2DC57B46001BD921 /* TicketManagementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADDA2DC57B40001BD921 /* TicketManagementModel.swift */; };
@@ -60,6 +72,18 @@
 		6304907A2DC77D6D002E9AAA /* AccessibilityParamSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityParamSelector.swift; sourceTree = "<group>"; };
 		6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityParamSelectorCell.swift; sourceTree = "<group>"; };
 		631635DC2DC8D9C60024EE2D /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
+		631635E42DC90C300024EE2D /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTextFieldBlockView.swift; sourceTree = "<group>"; };
+		631635E82DC910800024EE2D /* BuyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTextField.swift; sourceTree = "<group>"; };
+		631635EA2DC9131B0024EE2D /* BuyTargetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTargetModel.swift; sourceTree = "<group>"; };
+		631635F02DC9142E0024EE2D /* BuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewModel.swift; sourceTree = "<group>"; };
+		631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelector.swift; sourceTree = "<group>"; };
+		631635F52DC920A50024EE2D /* BuyDateSelectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelectorModel.swift; sourceTree = "<group>"; };
+		631635F72DC927870024EE2D /* BuyDateBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateBlockView.swift; sourceTree = "<group>"; };
+		631635FA2DC92B0A0024EE2D /* BuyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonView.swift; sourceTree = "<group>"; };
+		631635FC2DC92B170024EE2D /* BuyButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonModel.swift; sourceTree = "<group>"; };
+		631635FE2DC92C2E0024EE2D /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		631636002DC92F1F0024EE2D /* BuyButtonBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonBlockView.swift; sourceTree = "<group>"; };
 		6316ADD52DC564F1001BD921 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		6316ADD82DC57AF3001BD921 /* TicketManagementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketManagementCell.swift; sourceTree = "<group>"; };
 		6316ADDA2DC57B40001BD921 /* TicketManagementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketManagementModel.swift; sourceTree = "<group>"; };
@@ -178,6 +202,72 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		631635E12DC90BDE0024EE2D /* BuyModule */ = {
+			isa = PBXGroup;
+			children = (
+				631635EC2DC913F90024EE2D /* Model */,
+				631635ED2DC9140A0024EE2D /* View */,
+				631635EF2DC914220024EE2D /* ViewModel */,
+			);
+			path = BuyModule;
+			sourceTree = "<group>";
+		};
+		631635EC2DC913F90024EE2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				631635FC2DC92B170024EE2D /* BuyButtonModel.swift */,
+				631635EA2DC9131B0024EE2D /* BuyTargetModel.swift */,
+				631635F52DC920A50024EE2D /* BuyDateSelectorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		631635ED2DC9140A0024EE2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				631635E42DC90C300024EE2D /* BuyView.swift */,
+				631635EE2DC914160024EE2D /* TextField */,
+				631635F22DC91F4E0024EE2D /* DateSelector */,
+				631635F92DC92AE00024EE2D /* Buttons */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		631635EE2DC914160024EE2D /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				631635E82DC910800024EE2D /* BuyTextField.swift */,
+				631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		631635EF2DC914220024EE2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				631635F02DC9142E0024EE2D /* BuyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		631635F22DC91F4E0024EE2D /* DateSelector */ = {
+			isa = PBXGroup;
+			children = (
+				631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */,
+				631635F72DC927870024EE2D /* BuyDateBlockView.swift */,
+			);
+			path = DateSelector;
+			sourceTree = "<group>";
+		};
+		631635F92DC92AE00024EE2D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				631635FA2DC92B0A0024EE2D /* BuyButtonView.swift */,
+				631636002DC92F1F0024EE2D /* BuyButtonBlockView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		6316ADD42DC564D8001BD921 /* OpeningModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +300,7 @@
 			children = (
 				6316ADE72DC62D6E001BD921 /* CustomNavBar */,
 				636EF4D22DC7E8C6004B259B /* AccessibilityManager.swift */,
+				631635FE2DC92C2E0024EE2D /* Background.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -320,6 +411,7 @@
 				6316ADDE2DC62BC1001BD921 /* AboutModule */,
 				630490712DC77864002E9AAA /* AccessibilityModule */,
 				631635D92DC8D98B0024EE2D /* AssistantModule */,
+				631635E12DC90BDE0024EE2D /* BuyModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -466,17 +558,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */,
+				631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */,
+				631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */,
+				631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */,
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
 				630490732DC778A9002E9AAA /* AccessibilityView.swift in Sources */,
 				6316ADDD2DC58165001BD921 /* TicketManagementView.swift in Sources */,
 				631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */,
 				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
+				631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */,
 				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				630490752DC778DD002E9AAA /* AccessibilityParamCellView.swift in Sources */,
 				636EF4CF2DC7E43F004B259B /* FontExtension.swift in Sources */,
+				631635E92DC910800024EE2D /* BuyTextField.swift in Sources */,
 				6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
 				636EF4C52DC79986004B259B /* AccessibilityImparedModeModel.swift in Sources */,
+				631635E52DC90C300024EE2D /* BuyView.swift in Sources */,
+				631635EB2DC913670024EE2D /* BuyTargetModel.swift in Sources */,
 				630490792DC778F7002E9AAA /* AccessibilityModel.swift in Sources */,
 				6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */,
 				636EF4C32DC79846004B259B /* AccessibilityFontSizeModel.swift in Sources */,
@@ -489,6 +589,7 @@
 				638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */,
 				636EF4C12DC796AC004B259B /* AccessibilityFontColorModel.swift in Sources */,
 				6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */,
+				631635F42DC91F6D0024EE2D /* BuyDateSelector.swift in Sources */,
 				6304907B2DC77D6D002E9AAA /* AccessibilityParamSelector.swift in Sources */,
 				6316ADE02DC62BDA001BD921 /* AboutAppView.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,
@@ -496,12 +597,15 @@
 				6316ADE52DC62C47001BD921 /* CustomNavBarView.swift in Sources */,
 				6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */,
 				636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */,
+				631635FF2DC92C2E0024EE2D /* Background.swift in Sources */,
 				6316ADED2DC638C0001BD921 /* AboutAppCellView.swift in Sources */,
+				631635F82DC927870024EE2D /* BuyDateBlockView.swift in Sources */,
 				6316ADDB2DC57B46001BD921 /* TicketManagementModel.swift in Sources */,
 				636EF4D32DC7E8CC004B259B /* AccessibilityManager.swift in Sources */,
 				6388783D2DC553DC00028C5C /* TripScroller.swift in Sources */,
 				6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */,
 				6388783B2DC54B8000028C5C /* TripModel.swift in Sources */,
+				631635E72DC9106B0024EE2D /* BuyTextFieldBlockView.swift in Sources */,
 				6304906E2DC77603002E9AAA /* CustomNavBarContainerView.swift in Sources */,
 				6304906F2DC77603002E9AAA /* FullSwipeNavigationStack.swift in Sources */,
 				630490702DC77603002E9AAA /* CustomNavLink.swift in Sources */,

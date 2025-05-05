@@ -73,6 +73,10 @@ extension Image {
         }
     }
     
+    enum Buy {
+        static let switchIcon = Image("SwitchButtonIcon")
+    }
+    
     enum Accessibility {
         enum FontColor {
             static let first = Image("FontColorRed")
