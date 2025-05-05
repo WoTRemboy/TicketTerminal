@@ -22,12 +22,16 @@ struct AccessibilityView: View {
             Spacer()
         }
         .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontColor)
+        .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontScale)
+        
         .background(background)
     }
     
     private var background: some View {
-        Color.BackColors.backDefault
-            .ignoresSafeArea()
+        Color.whiteVariant(
+            color: .BackColors.backPage,
+            scheme: accessibilityManager.fontColor)
+        .ignoresSafeArea()
     }
     
     private var params: some View {

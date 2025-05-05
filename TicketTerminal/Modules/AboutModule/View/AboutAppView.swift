@@ -9,6 +9,9 @@ import SwiftUI
 import MapKit
 
 struct AboutAppView: View {
+    
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
     internal var body: some View {
         VStack(spacing: 0) {
             CustomNavBarView(type: .about)
@@ -27,8 +30,10 @@ struct AboutAppView: View {
     }
     
     private var background: some View {
-        Color.BackColors.backDefault
-            .ignoresSafeArea()
+        Color.whiteVariant(
+            color: .BackColors.backPage,
+            scheme: accessibilityManager.fontColor)
+        .ignoresSafeArea()
     }
     
     private var versionNumber: some View {
@@ -67,4 +72,5 @@ struct AboutAppView: View {
 #Preview {
     AboutAppView()
         .environmentObject(AboutAppViewModel())
+        .environmentObject(AccessibilityManager())
 }

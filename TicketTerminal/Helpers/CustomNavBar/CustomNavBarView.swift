@@ -31,7 +31,7 @@ struct CustomNavBarView: View {
             type.icon(scheme: accessibilityManager.fontColor)
                 .frame(width: 182, height: 108)
             Text(type.title)
-                .font(.system(size: 48, weight: .semibold))
+                .font(.scalable(size: 48, weight: .semibold, scale: accessibilityManager.fontScale.scale))
                 .foregroundStyle(
                     Color.blackVariant(
                         color: .SymbolColors.red,

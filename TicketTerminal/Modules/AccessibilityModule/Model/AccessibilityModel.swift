@@ -13,6 +13,10 @@ enum AccessibilityParam: CaseIterable {
     case imparedMode
     case screenReader
     
+    static internal var allCases: [AccessibilityParam] {
+        [.fontColor, .fontSize, .screenReader]
+    }
+    
     internal var title: String {
         switch self {
         case .fontColor:

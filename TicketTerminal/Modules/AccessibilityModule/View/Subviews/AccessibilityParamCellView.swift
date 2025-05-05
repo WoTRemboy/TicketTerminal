@@ -50,9 +50,6 @@ struct AccessibilityParamCellView: View {
             AccessibilityParamSelector(type: type)
             Spacer()
         }
-        .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontScale)
-        .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontColor)
-        
         .padding(.leading, 90)
         .frame(width: 885,
                height: 197)

@@ -10,21 +10,22 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject private var viewModel: MainViewModel
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
     internal var body: some View {
         NavigationStack {
             ZStack {
                 content
             }
-            .background(
-                background
-            )
+            .background(background)
         }
     }
     
     private var background: some View {
-        Color.BackColors.backDefault
-            .ignoresSafeArea()
+        Color.whiteVariant(
+            color: .BackColors.backPage,
+            scheme: accessibilityManager.fontColor)
+        .ignoresSafeArea()
     }
     
     private var content: some View {
@@ -48,4 +49,5 @@ struct MainView: View {
 #Preview {
     MainView()
         .environmentObject(MainViewModel())
+        .environmentObject(AccessibilityManager())
 }
