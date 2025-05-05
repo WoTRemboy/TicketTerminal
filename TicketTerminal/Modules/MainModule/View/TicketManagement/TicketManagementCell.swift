@@ -61,6 +61,7 @@ struct TicketManagementCell: View {
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale)
                 )
+                .foregroundStyle(Color.LabelColors.labelPrimary)
                 .minimumScaleFactor(0.7)
                 .lineLimit(1)
             
@@ -89,6 +90,7 @@ struct TicketManagementCell: View {
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale)
                 )
+                .foregroundStyle(Color.LabelColors.labelPrimary)
                 .minimumScaleFactor(0.7)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }

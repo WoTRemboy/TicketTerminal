@@ -53,4 +53,13 @@ enum BuyButton {
             (begin: .SymbolColors.brown, end: .SymbolColors.orange)
         }
     }
+    
+    static internal func showButtons(scheme: AccessibilityFontSize) -> Bool {
+        switch scheme {
+        case .first, .second, .third:
+            true
+        case .fourth, .fifth:
+            false
+        }
+    }
 }

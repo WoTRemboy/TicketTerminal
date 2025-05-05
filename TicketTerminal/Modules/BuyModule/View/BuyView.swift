@@ -12,23 +12,27 @@ struct BuyView: View {
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
     internal var body: some View {
-        VStack(spacing: 0) {
+        ScrollView {
             CustomNavBarView(type: .buy)
                 .padding(.top)
             
             BuyTextFieldsView()
-                .padding(.top, 40)
+                .padding(.top, 40 / accessibilityManager.fontScale.scale)
             
             BuyDateBlockView()
                 .padding(.top, 34)
             
             BuyButtonView(type: .search)
                 .padding(.top, 34)
-                
-            Spacer()
-            BuyButtonBlockView()
-                .padding(.bottom, 34 / accessibilityManager.fontScale.scale)
         }
+        .safeAreaInset(edge: .bottom) {
+            if BuyButton.showButtons(scheme: accessibilityManager.fontScale) {
+                BuyButtonBlockView()
+                    .padding(.bottom, 34 / accessibilityManager.fontScale.scale)
+            }
+        }
+        .ignoresSafeArea(.keyboard)
+        .scrollDisabled(true)
         .background(background)
     }
     

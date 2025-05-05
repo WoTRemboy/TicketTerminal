@@ -29,6 +29,7 @@ struct AccessibilityParamCellView: View {
         VStack(spacing: type.spacing) {
             Text(type.title)
                 .font(.scalable(size: 40, weight: .regular, scale: accessibilityManager.fontScale.scale))
+                .foregroundStyle(Color.LabelColors.labelPrimary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 8)
             

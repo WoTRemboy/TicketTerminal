@@ -37,6 +37,7 @@ struct AboutAppCellView: View {
         VStack(alignment: alignment, spacing: 12) {
             Text(type.title)
                 .font(.system(size: 40, weight: .regular))
+                .foregroundStyle(Color.LabelColors.labelPrimary)
             
             if type != .info {
                 Text(type.content)
@@ -44,6 +45,7 @@ struct AboutAppCellView: View {
                         size: type == .address ? 30 : 50,
                         weight: type == .address ? .regular : .medium)
                     )
+                    .foregroundStyle(Color.LabelColors.labelPrimary)
             }
         }
         .padding(.leading, type.paddingValue)

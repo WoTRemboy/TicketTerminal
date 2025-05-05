@@ -39,6 +39,7 @@ struct BuyTextField: View {
                 size: 32,
                 weight: .medium,
                 scale: accessibilityManager.fontScale.scale))
+            .foregroundStyle(Color.LabelColors.labelPrimary)
     }
     
     private var destinationContent: some View {
@@ -47,6 +48,7 @@ struct BuyTextField: View {
                 size: 32,
                 weight: .medium,
                 scale: accessibilityManager.fontScale.scale))
+            .foregroundStyle(Color.LabelColors.labelPrimary)
     }
 }
 
