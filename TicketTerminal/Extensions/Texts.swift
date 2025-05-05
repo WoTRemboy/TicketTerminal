@@ -44,6 +44,10 @@ struct Texts {
         static let buy = "Купить билет"
     }
     
+    enum Language {
+        static let title = "Выберите язык"
+    }
+    
     enum About {
         static let headquaters = "Штаб-квартира"
         

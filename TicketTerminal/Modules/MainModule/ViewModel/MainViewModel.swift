@@ -9,9 +9,9 @@ import SwiftUI
 
 final class MainViewModel: ObservableObject {
     
-    @Published internal var isShowingAboutPage: Bool = false
+    @Published internal var isShowingLanguagePage: Bool = false
     
-    internal func isShowingAboutPageToggle() {
-        isShowingAboutPage.toggle()
+    internal func isShowingLanguagePageToggle() {
+        isShowingLanguagePage.toggle()
     }
 }

@@ -12,6 +12,10 @@ enum NavBarButton: CaseIterable {
     case special
     case language
     
+    static internal var allCases: [NavBarButton] {
+        [.info, .special]
+    }
+    
     internal func image(scheme: AccessibilityFontColor) -> Image {
         switch self {
         case .info:

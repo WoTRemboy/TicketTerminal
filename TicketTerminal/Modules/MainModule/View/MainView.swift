@@ -19,6 +19,9 @@ struct MainView: View {
             }
             .background(background)
         }
+        .sheet(isPresented: $viewModel.isShowingLanguagePage) {
+            Text(Texts.Language.title)
+        }
     }
     
     private var background: some View {
