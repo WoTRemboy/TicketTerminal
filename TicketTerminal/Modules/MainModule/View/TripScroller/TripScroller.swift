@@ -10,7 +10,7 @@ import SwiftUI
 struct TripScroller: View {
     
     @State private var currentIndex = 0
-    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    @State private var timer: Timer?
     
     internal var body: some View {
         TabView(selection: $currentIndex) {
@@ -21,11 +21,21 @@ struct TripScroller: View {
         }
         .frame(height: 279)
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .onReceive(timer) { _ in
-            withAnimation {
-                currentIndex = (currentIndex + 1) % Trip.allCases.count
-            }
+        .onAppear {
+            startTimer()
         }
+        .onDisappear {
+            stopTimer()
+        }
+        .gesture(
+            DragGesture()
+                .onChanged { _ in
+                    stopTimer()
+                }
+                .onEnded { _ in
+                    startTimer()
+                }
+        )
         
         .overlay(alignment: .bottom) {
             progressCircles
@@ -60,6 +70,21 @@ struct TripScroller: View {
         .animation(.easeInOut, value: currentIndex)
         .padding(.bottom, 8)
     }
+    
+    private func startTimer() {
+        stopTimer()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+            withAnimation {
+                currentIndex = (currentIndex + 1) % Trip.allCases.count
+            }
+        }
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
 }
 #Preview {
     TripScroller()
