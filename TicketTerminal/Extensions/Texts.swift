@@ -42,6 +42,7 @@ struct Texts {
         static let about = "О терминале"
         static let special = "Специальные возможности"
         static let buy = "Купить билет"
+        static let assistant = "Попутчик"
     }
     
     enum Language {
@@ -120,6 +121,10 @@ struct Texts {
             static let fontSize = "FontSizeParam"
             static let imparedMode = "ImparedModeParam"
             static let screenReader = "ScreenReaderParam"
+        }
+        
+        enum Assistant {
+            static let zoomTransition = "AssistantZoomTransition"
         }
     }
 }

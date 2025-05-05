@@ -15,6 +15,7 @@
 		630490792DC778F7002E9AAA /* AccessibilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630490782DC778F2002E9AAA /* AccessibilityModel.swift */; };
 		6304907B2DC77D6D002E9AAA /* AccessibilityParamSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304907A2DC77D6D002E9AAA /* AccessibilityParamSelector.swift */; };
 		6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */; };
+		631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635DC2DC8D9C60024EE2D /* AssistantView.swift */; };
 		6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD52DC564F1001BD921 /* SplashScreen.swift */; };
 		6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD82DC57AF3001BD921 /* TicketManagementCell.swift */; };
 		6316ADDB2DC57B46001BD921 /* TicketManagementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADDA2DC57B40001BD921 /* TicketManagementModel.swift */; };
@@ -58,6 +59,7 @@
 		630490782DC778F2002E9AAA /* AccessibilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityModel.swift; sourceTree = "<group>"; };
 		6304907A2DC77D6D002E9AAA /* AccessibilityParamSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityParamSelector.swift; sourceTree = "<group>"; };
 		6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityParamSelectorCell.swift; sourceTree = "<group>"; };
+		631635DC2DC8D9C60024EE2D /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		6316ADD52DC564F1001BD921 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		6316ADD82DC57AF3001BD921 /* TicketManagementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketManagementCell.swift; sourceTree = "<group>"; };
 		6316ADDA2DC57B40001BD921 /* TicketManagementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketManagementModel.swift; sourceTree = "<group>"; };
@@ -142,6 +144,40 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		631635D92DC8D98B0024EE2D /* AssistantModule */ = {
+			isa = PBXGroup;
+			children = (
+				631635DC2DC8D9C60024EE2D /* AssistantView.swift */,
+			);
+			path = AssistantModule;
+			sourceTree = "<group>";
+		};
+		631635DE2DC8DC9D0024EE2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADE82DC62D8B001BD921 /* CustomNavBarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		631635DF2DC8DCA10024EE2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6316ADE42DC62C47001BD921 /* CustomNavBarView.swift */,
+				6304906B2DC77603002E9AAA /* CustomNavBarContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		631635E02DC8DCAA0024EE2D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6304906C2DC77603002E9AAA /* CustomNavLink.swift */,
+				6304906D2DC77603002E9AAA /* FullSwipeNavigationStack.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		6316ADD42DC564D8001BD921 /* OpeningModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,11 +217,9 @@
 		6316ADE72DC62D6E001BD921 /* CustomNavBar */ = {
 			isa = PBXGroup;
 			children = (
-				6316ADE82DC62D8B001BD921 /* CustomNavBarModel.swift */,
-				6316ADE42DC62C47001BD921 /* CustomNavBarView.swift */,
-				6304906B2DC77603002E9AAA /* CustomNavBarContainerView.swift */,
-				6304906C2DC77603002E9AAA /* CustomNavLink.swift */,
-				6304906D2DC77603002E9AAA /* FullSwipeNavigationStack.swift */,
+				631635DE2DC8DC9D0024EE2D /* Model */,
+				631635DF2DC8DCA10024EE2D /* View */,
+				631635E02DC8DCAA0024EE2D /* Navigation */,
 			);
 			path = CustomNavBar;
 			sourceTree = "<group>";
@@ -285,6 +319,7 @@
 				638878202DC4D9E100028C5C /* MainModule */,
 				6316ADDE2DC62BC1001BD921 /* AboutModule */,
 				630490712DC77864002E9AAA /* AccessibilityModule */,
+				631635D92DC8D98B0024EE2D /* AssistantModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -434,6 +469,7 @@
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
 				630490732DC778A9002E9AAA /* AccessibilityView.swift in Sources */,
 				6316ADDD2DC58165001BD921 /* TicketManagementView.swift in Sources */,
+				631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */,
 				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
 				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				630490752DC778DD002E9AAA /* AccessibilityParamCellView.swift in Sources */,

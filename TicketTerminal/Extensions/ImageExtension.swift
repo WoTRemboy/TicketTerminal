@@ -66,6 +66,11 @@ extension Image {
             static let normal = Image("NavBarBuy")
             static let black = Image("NavBarBuyBlack")
         }
+        
+        enum Assistant {
+            static let normal = Image("NavBarAssistant")
+            static let black = Image("NavBarAssistantBlack")
+        }
     }
     
     enum Accessibility {

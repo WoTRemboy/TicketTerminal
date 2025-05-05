@@ -12,6 +12,8 @@ struct MainView: View {
     @EnvironmentObject private var viewModel: MainViewModel
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
+    @Namespace private var namespace
+    
     internal var body: some View {
         NavigationStack {
             ZStack {
@@ -21,6 +23,9 @@ struct MainView: View {
         }
         .sheet(isPresented: $viewModel.isShowingLanguagePage) {
             Text(Texts.Language.title)
+        }
+        .fullScreenCover(isPresented: $viewModel.isShowingAssistantPage) {
+            AssistantView(namespace: namespace)
         }
     }
     
@@ -35,7 +40,7 @@ struct MainView: View {
         VStack(spacing: 0) {
             MainNavBar()
                 .padding([.top, .horizontal])
-            AssistantWeatherButtons()
+            AssistantWeatherButtons(namespace: namespace)
                 .padding(.top, 36)
             
             TripScroller()

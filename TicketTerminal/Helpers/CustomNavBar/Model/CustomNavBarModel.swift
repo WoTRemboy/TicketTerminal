@@ -11,6 +11,7 @@ enum NavBar {
     case about
     case special
     case buy
+    case assistant
     
     internal var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum NavBar {
             Texts.NavBar.special
         case .buy:
             Texts.NavBar.buy
+        case .assistant:
+            Texts.NavBar.assistant
         }
     }
     
@@ -39,6 +42,11 @@ enum NavBar {
             Image.alterColored(
                 normal: Image.NavBar.Buy.normal,
                 alter: Image.NavBar.Buy.black,
+                scheme: scheme)
+        case .assistant:
+            Image.alterColored(
+                normal: Image.NavBar.Assistant.normal,
+                alter: Image.NavBar.Assistant.black,
                 scheme: scheme)
         }
     }

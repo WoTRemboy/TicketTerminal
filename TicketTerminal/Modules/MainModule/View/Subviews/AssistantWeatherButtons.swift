@@ -9,7 +9,14 @@ import SwiftUI
 
 struct AssistantWeatherButtons: View {
     
+    @EnvironmentObject private var viewModel: MainViewModel
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
+    private let namespace: Namespace.ID
+    
+    init(namespace: Namespace.ID) {
+        self.namespace = namespace
+    }
     
     internal var body: some View {
         HStack(spacing: 16) {
@@ -20,7 +27,7 @@ struct AssistantWeatherButtons: View {
     
     private func button(type: DetailedButton) -> some View {
         Button {
-            // Button Action
+            viewModel.detaildeButtonAction(type: type)
         } label: {
             buttonContent(type: type)
         }
@@ -56,23 +63,44 @@ struct AssistantWeatherButtons: View {
         .frame(width: type.frameSize.width,
                height: type.frameSize.height)
         
-        .background {
-            switch type {
-            case .assistant:
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.blackVariant(
-                        color: .clear,
-                        scheme: accessibilityManager.fontColor),
-                            lineWidth: 4)
+        .matchedTransitionSource(
+            id: Texts.NamespaceID.Assistant.zoomTransition,
+            in: namespace
+        )
+        .background(background(type: type))
+    }
+    
+    private func background(type: DetailedButton) -> some View {
+        let cornerRadius: CGFloat = 20
+        let shape = RoundedRectangle(cornerRadius: cornerRadius)
+
+        switch type {
+        case .assistant:
+            return AnyView(
+                shape
                     .fill(type.color(scheme: accessibilityManager.fontColor))
-            case .weather:
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.blackVariant(
-                        color: .clear,
-                        scheme: accessibilityManager.fontColor),
-                            lineWidth: 4)
+                    .overlay(
+                        shape.stroke(
+                            Color.blackVariant(
+                                color: .clear,
+                                scheme: accessibilityManager.fontColor),
+                            lineWidth: 3
+                        )
+                    )
+            )
+        case .weather:
+            return AnyView(
+                shape
                     .fill(gradient)
-            }
+                    .overlay(
+                        shape.stroke(
+                            Color.blackVariant(
+                                color: .clear,
+                                scheme: accessibilityManager.fontColor),
+                            lineWidth: 3
+                        )
+                    )
+            )
         }
     }
     
@@ -80,8 +108,8 @@ struct AssistantWeatherButtons: View {
         LinearGradient(
             gradient: Gradient(
                 colors: [Color.whiteVariant(
-                            color: .SymbolColors.yellow,
-                            scheme: accessibilityManager.fontColor),
+                    color: .SymbolColors.yellow,
+                    scheme: accessibilityManager.fontColor),
                          Color.whiteVariant(
                             color: .SymbolColors.blue,
                             scheme: accessibilityManager.fontColor)]
@@ -93,6 +121,7 @@ struct AssistantWeatherButtons: View {
 }
 
 #Preview {
-    AssistantWeatherButtons()
+    AssistantWeatherButtons(namespace: Namespace().wrappedValue)
         .environmentObject(AccessibilityManager())
+        .environmentObject(MainViewModel())
 }
