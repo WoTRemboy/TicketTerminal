@@ -14,18 +14,18 @@ enum DetailedButton {
     internal var title: String {
         switch self {
         case .assistant:
-            Texts.MainPage.Assistant.title
+            Texts.MainPage.Assistant.title.localized
         case .weather:
-            Texts.MainPage.Weather.title
+            Texts.MainPage.Weather.title.localized
         }
     }
     
     internal var content: String {
         switch self {
         case .assistant:
-            Texts.MainPage.Assistant.content
+            Texts.MainPage.Assistant.content.localized
         case .weather:
-            Texts.MainPage.Weather.content
+            Texts.MainPage.Weather.content.localized
         }
     }
     

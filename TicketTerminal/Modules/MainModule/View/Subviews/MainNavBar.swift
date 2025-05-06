@@ -11,6 +11,7 @@ struct MainNavBar: View {
     
     @EnvironmentObject private var viewModel: MainViewModel
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    @EnvironmentObject private var localizationManager: LocalizationManager
     
     internal var body: some View {
         HStack(spacing: 45) {
@@ -60,11 +61,14 @@ struct MainNavBar: View {
             .background {
                 ZStack {
                     type.backgroundColor(scheme: accessibilityManager.fontColor)
-                    type.image(scheme: accessibilityManager.fontColor)
+                    type.image(
+                        scheme: accessibilityManager.fontColor,
+                        language: localizationManager.selectedLanguage)
                 }
             }
             .mask(Circle())
             .frame(width: 60)
+            .transition(.blurReplace)
     }
 }
 
@@ -72,4 +76,5 @@ struct MainNavBar: View {
     MainNavBar()
         .environmentObject(MainViewModel())
         .environmentObject(AccessibilityManager())
+        .environmentObject(LocalizationManager())
 }

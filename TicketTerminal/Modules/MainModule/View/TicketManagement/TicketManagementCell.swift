@@ -55,7 +55,7 @@ struct TicketManagementCell: View {
     
     private var horizontalLayout: some View {
         HStack {
-            Text(type.title)
+            Text(type.title.localized)
                 .font(.scalable(
                     size: 40,
                     weight: .medium,
@@ -84,7 +84,7 @@ struct TicketManagementCell: View {
                         height: type.imageFrame.height)
             }
             
-            Text(type.title)
+            Text(type.title.localized)
                 .font(.scalable(
                     size: 40,
                     weight: .medium,
@@ -97,7 +97,7 @@ struct TicketManagementCell: View {
     }
     
     private var hotLayout: some View {
-        Text(type.title)
+        Text(type.title.localized)
             .font(.scalable(
                 size: 40,
                 weight: .medium,

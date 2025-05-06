@@ -16,13 +16,13 @@ enum NavBar {
     internal var title: String {
         switch self {
         case .about:
-            Texts.NavBar.about
+            Texts.NavBar.about.localized
         case .special:
-            Texts.NavBar.special
+            Texts.NavBar.special.localized
         case .buy:
-            Texts.NavBar.buy
+            Texts.NavBar.buy.localized
         case .assistant:
-            Texts.NavBar.assistant
+            Texts.NavBar.assistant.localized
         }
     }
     

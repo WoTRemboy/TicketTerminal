@@ -9,10 +9,19 @@ import SwiftUI
 
 @main
 struct TicketTerminalApp: App {
-    var body: some Scene {
+    
+    @AppStorage(Texts.UserDefaults.Language.selectedLanguage)
+    private var selectedLanguage: String = Locale.current.language.languageCode?.identifier ?? Texts.Language.English.code
+    
+    init() {
+        Bundle.setLanguage(selectedLanguage)
+    }
+    
+    internal var body: some Scene {
         WindowGroup {
             SplashScreenView()
-                .environmentObject(AccessibilityManager())
+                .environmentObject(AccessibilityManager.shared)
+                .environmentObject(LocalizationManager.shared)
         }
     }
 }

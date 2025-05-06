@@ -15,11 +15,11 @@ enum Trip: CaseIterable {
     internal var title: String {
         switch self {
         case .pearl:
-            Texts.MainPage.Trip.pearl
+            Texts.MainPage.Trip.pearl.localized
         case .lotus:
-            Texts.MainPage.Trip.lotus
+            Texts.MainPage.Trip.lotus.localized
         case .express:
-            Texts.MainPage.Trip.express
+            Texts.MainPage.Trip.express.localized
         }
     }
     

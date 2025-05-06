@@ -12,9 +12,9 @@ enum BuyDate: CaseIterable {
     internal var title: String {
         switch self {
         case .departureDate:
-            Texts.Buy.Placeholder.dateOfDeparture
+            Texts.Buy.Placeholder.dateOfDeparture.localized
         case .returnDate:
-            Texts.Buy.Placeholder.dateOfReturn
+            Texts.Buy.Placeholder.dateOfReturn.localized
         }
     }
 }

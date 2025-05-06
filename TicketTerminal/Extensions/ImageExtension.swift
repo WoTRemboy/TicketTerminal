@@ -28,8 +28,20 @@ extension Image {
         }
         
         enum Language {
-            static let normal = Image("MainRussianLogo")
-            static let black = Image("MainRussianLogoBlack")
+            enum Russian {
+                static let normal = Image("MainLocalizationFlagRussian")
+                static let black = Image("MainLocalizationFlagBlackRussian")
+            }
+            
+            enum English {
+                static let normal = Image("MainLocalizationFlagEnglish")
+                static let black = Image("MainLocalizationFlagBlackEnglish")
+            }
+            
+            enum Chinese {
+                static let normal = Image("MainLocalizationFlagChinese")
+                static let black = Image("MainLocalizationFlagBlackChinese")
+            }
         }
     }
     
@@ -71,6 +83,12 @@ extension Image {
             static let normal = Image("NavBarAssistant")
             static let black = Image("NavBarAssistantBlack")
         }
+    }
+    
+    enum Language {
+        static let russian = Image("FlagLanguageRussian")
+        static let english = Image("FlagLanguageEnglish")
+        static let chinese = Image("FlagLanguageChinese")
     }
     
     enum Buy {

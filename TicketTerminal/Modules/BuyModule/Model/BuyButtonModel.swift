@@ -19,11 +19,11 @@ enum BuyButton {
     internal var title: String {
         switch self {
         case .search:
-            Texts.Buy.Buttons.search
+            Texts.Buy.Buttons.search.localized
         case .trips:
-            Texts.Buy.Buttons.trips
+            Texts.Buy.Buttons.trips.localized
         case .hot:
-            Texts.Buy.Buttons.hot
+            Texts.Buy.Buttons.hot.localized
         }
     }
     

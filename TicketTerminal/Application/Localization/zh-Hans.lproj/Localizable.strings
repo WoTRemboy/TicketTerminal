@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  TicketTerminal
+
+  Created by Roman Tverdokhleb on 06/05/2025.
+  
+*/
+
+/* MainPage - Assistant */
+"MainPageAssistantTitle" = "伙伴";
+"MainPageAssistantContent" = "你的语音助手";
+
+/* MainPage - Weather */
+"MainPageWeatherTitle" = "18°C";
+"MainPageWeatherContent" = "莫斯科";
+
+/* MainPage - Trip */
+"MainPageTripPearl" = "高加索明珠";
+"MainPageTripLotus" = "莲花谷之旅";
+"MainPageTripExpress" = "贝加尔快车";
+
+/* MainPage - Management */
+"MainPageManagementBuy" = "购票";
+"MainPageManagementRefund" = "退票";
+"MainPageManagementRecomendation" = "推荐";
+"MainPageManagementHot" = "热门\n路线";
+"MainPageManagementPrint" = "打印\n车票";
+
+/* NavBar */
+"NavBarAbout" = "关于终端";
+"NavBarSpecial" = "辅助功能";
+"NavBarAssistant" = "伙伴";
+"NavBarBuy" = "购票";
+"NavBarRefund" = "退票";
+"NavBarRecomendation" = "推荐";
+"NavBarHot" = "热门路线";
+"NavBarPrint" = "打印车票";
+
+/* Language */
+"LanguageTitle" = "语言";
+
+/* About */
+"AboutHeadquaters" = "总部";
+"AboutVersionTitle" = "版本";
+"AboutNumberTitle" = "技术支持电话";
+"AboutAddressTitle" = "地址";
+"AboutAddressContent" = "107174，俄罗斯莫斯科，巴斯曼区，新巴斯曼街 2/1，1号楼";
+"AboutInfoTitle" = "法律信息";
+"AboutInfoContent" = "链接";
+
+/* Accessibility - FontColor */
+"AccessibilityFontColorTitle" = "配色方案";
+"AccessibilityFontColorFirstVariation" = "品牌色";
+"AccessibilityFontColorSecondVariation" = "黑白";
+
+/* Accessibility - FontSize */
+"AccessibilityFontSizeTitle" = "字体大小";
+
+/* Accessibility - ImparedMode */
+"AccessibilityImparedModeTitle" = "低视力模式";
+
+/* Accessibility - ScreenReader */
+"AccessibilityScreenReaderTitle" = "屏幕朗读";
+"AccessibilityScreenReaderFirstVariation" = "开启";
+"AccessibilityScreenReaderSecondVariation" = "关闭";
+
+/* Buy - Placeholder */
+"BuyPlaceholderFrom" = "出发地...";
+"BuyPlaceholderDestination" = "目的地...";
+"BuyPlaceholderDateOfDeparture" = "去程";
+"BuyPlaceholderDateOfReturn" = "返程";
+
+/* Buy - Buttons */
+"BuyButtonsSearch" = "搜索";
+"BuyButtonsTrips" = "旅游线路";
+"BuyButtonsHot" = "热门路线";

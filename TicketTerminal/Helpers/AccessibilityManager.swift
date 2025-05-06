@@ -13,6 +13,20 @@ final class AccessibilityManager: ObservableObject {
     
     @AppStorage(Texts.UserDefaults.AccessibilityManager.fontColor)
     internal var fontColor: AccessibilityFontColor = .defaultValue
+    
+    static internal let shared = AccessibilityManager()
+    
+    internal func updateLayout() {
+        fontColor = fontColor
+    }
+    
+    internal func setFontColor(to scheme: AccessibilityFontColor) {
+        fontColor = scheme
+    }
+    
+    internal func setFontSize(to size: AccessibilityFontSize) {
+        fontScale = size
+    }
 }
 
 extension Font {

@@ -12,9 +12,9 @@ enum BuyTarget: CaseIterable {
     internal var title: String {
         switch self {
         case .from:
-            Texts.Buy.Placeholder.from
+            Texts.Buy.Placeholder.from.localized
         case .destination:
-            Texts.Buy.Placeholder.destination
+            Texts.Buy.Placeholder.destination.localized
         }
     }
 }

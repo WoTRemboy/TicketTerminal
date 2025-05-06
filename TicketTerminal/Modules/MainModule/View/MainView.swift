@@ -22,7 +22,7 @@ struct MainView: View {
             .background(background)
         }
         .sheet(isPresented: $viewModel.isShowingLanguagePage) {
-            Text(Texts.Language.title)
+            SelectLanguageView()
         }
         .fullScreenCover(isPresented: $viewModel.isShowingAssistantPage) {
             AssistantView(namespace: namespace)

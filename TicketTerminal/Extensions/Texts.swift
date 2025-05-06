@@ -14,80 +14,95 @@ struct Texts {
     
     enum MainPage {
         enum Assistant {
-            static let title = "Попутчик"
-            static let content = "Твой голосовой помощник"
+            static let title = "MainPageAssistantTitle"
+            static let content = "MainPageAssistantContent"
         }
         
         enum Weather {
-            static let title = "18°C"
-            static let content = "Москва"
+            static let title = "MainPageWeatherTitle"
+            static let content = "MainPageWeatherContent"
         }
         
         enum Trip {
-            static let pearl = "Жемчужина Кавказа"
-            static let lotus = "В долину лотосов"
-            static let express = "Байкальский экспресс"
+            static let pearl = "MainPageTripPearl"
+            static let lotus = "MainPageTripLotus"
+            static let express = "MainPageTripExpress"
         }
         
         enum Management {
-            static let buy = "Купить билет"
-            static let refund = "Вернуть билет"
-            static let recomendation = "Рекомендации"
-            static let hot = "Горячие\nпути"
-            static let print = "Распечатать\nбилет"
+            static let buy = "MainPageManagementBuy"
+            static let refund = "MainPageManagementRefund"
+            static let recomendation = "MainPageManagementRecomendation"
+            static let hot = "MainPageManagementHot"
+            static let print = "MainPageManagementPrint"
         }
     }
     
     enum NavBar {
-        static let about = "О терминале"
-        static let special = "Специальные возможности"
-        static let assistant = "Попутчик"
+        static let about = "NavBarAbout"
+        static let special = "NavBarSpecial"
+        static let assistant = "NavBarAssistant"
         
-        static let buy = "Купить билет"
-        static let refund = "Вернуть билет"
-        static let recomendation = "Рекомендации"
-        static let hot = "Горячие пути"
-        static let print = "Распечатать билет"
+        static let buy = "NavBarBuy"
+        static let refund = "NavBarRefund"
+        static let recomendation = "NavBarRecomendation"
+        static let hot = "NavBarHot"
+        static let print = "NavBarPrint"
     }
     
     enum Language {
-        static let title = "Выберите язык"
+        static let title = "LanguageTitle"
+        
+        enum English {
+            static let code = "en"
+            static let name = "English"
+        }
+        
+        enum Russian {
+            static let code = "ru"
+            static let name = "Русский"
+        }
+        
+        enum Chinese {
+            static let code = "zh-Hans"
+            static let name = "中国人"
+        }
     }
     
     enum About {
-        static let headquaters = "Штаб-квартира"
+        static let headquaters = "AboutHeadquaters"
         
         enum Version {
-            static let title = "Версия"
+            static let title = "AboutVersionTitle"
             static let content = "v \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0") (\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"))"
         }
         
         enum Number {
-            static let title = "Номер тех.поддержки"
+            static let title = "AboutNumberTitle"
             static let content = "+7 (800) 775-00-00"
             static let linkTel = "+78007750000"
         }
         
         enum Address {
-            static let title = "Адрес нахождения"
-            static let content = "107174, г. Москва, вн. тер. г. муниципальный округ Басманный, ул. Новая Басманная, д. 2/1, стр. 1"
+            static let title = "AboutAddressTitle"
+            static let content = "AboutAddressContent"
         }
         
         enum Info {
-            static let title = "Юридическая информация"
-            static let content = "Ссылка"
+            static let title = "AboutInfoTitle"
+            static let content = "AboutInfoContent"
         }
     }
     
     enum Accessibility {
         enum FontColor {
-            static let title = "Цветовая схема"
-            static let firstVariation = "Фирменная палитра"
-            static let secondVariation = "Чёрно-белый"
+            static let title = "AccessibilityFontColorTitle"
+            static let firstVariation = "AccessibilityFontColorFirstVariation"
+            static let secondVariation = "AccessibilityFontColorSecondVariation"
         }
         
         enum FontSize {
-            static let title = "Размер шрифта"
+            static let title = "AccessibilityFontSizeTitle"
             static let firstVariation = "1x"
             static let secondVariation = "1.25x"
             static let thirdVariation = "1.5x"
@@ -96,28 +111,28 @@ struct Texts {
         }
         
         enum ImparedMode {
-            static let title = "Режим для слабовидящих"
+            static let title = "AccessibilityImparedModeTitle"
         }
         
         enum ScreenReader {
-            static let title = "Чтение с экрана"
-            static let firstVariation = "Включить"
-            static let secondVariation = "Выключить"
+            static let title = "AccessibilityScreenReaderTitle"
+            static let firstVariation = "AccessibilityScreenReaderFirstVariation"
+            static let secondVariation = "AccessibilityScreenReaderSecondVariation"
         }
     }
     
     enum Buy {
         enum Placeholder {
-            static let from = "Откуда..."
-            static let destination = "Куда..."
-            static let dateOfDeparture = "Туда"
-            static let dateOfReturn = "Обратно"
+            static let from = "BuyPlaceholderFrom"
+            static let destination = "BuyPlaceholderDestination"
+            static let dateOfDeparture = "BuyPlaceholderDateOfDeparture"
+            static let dateOfReturn = "BuyPlaceholderDateOfReturn"
         }
         
         enum Buttons {
-            static let search = "Поиск"
-            static let trips = "Туристические пути"
-            static let hot = "Горячие пути"
+            static let search = "BuyButtonsSearch"
+            static let trips = "BuyButtonsTrips"
+            static let hot = "BuyButtonsHot"
         }
     }
     
@@ -132,6 +147,10 @@ struct Texts {
         enum AccessibilityManager {
             static let fontSize = "FontSizeManager"
             static let fontColor = "FontColorManager"
+        }
+        
+        enum Language {
+            static let selectedLanguage = "LocalizationManagerSelectedLanguage"
         }
     }
     
