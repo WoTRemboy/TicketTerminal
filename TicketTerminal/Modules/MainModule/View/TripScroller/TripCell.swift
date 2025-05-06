@@ -31,18 +31,30 @@ struct TripCell: View {
     }
     
     private var tripContent: some View {
-        ZStack(alignment: trip.alignment(scheme: accessibilityManager.fontColor)) {
+        ZStack(alignment: trip.alignment(
+            scheme: accessibilityManager.fontColor,
+            size: accessibilityManager.fontScale)
+        ) {
             if accessibilityManager.fontColor == .defaultValue {
                 trip.image
                     .resizable()
                     .scaledToFit()
+                    .blur(radius: trip.backgroundBlur(scheme: accessibilityManager.fontScale),
+                          opaque: false)
             } else {
                 Color.SymbolColors.grey
             }
             
             
             Text(trip.title)
-                .font(.system(size: 40, weight: .medium))
+                .font(.scalable(
+                    size: 40,
+                    weight: .medium,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .multilineTextAlignment(trip.textAlignment(
+                    scheme: accessibilityManager.fontColor)
+                )
                 .foregroundStyle(Color.LabelColors.labelWhite)
                 .padding(24)
         }

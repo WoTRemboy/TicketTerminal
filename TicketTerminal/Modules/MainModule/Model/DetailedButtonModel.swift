@@ -14,18 +14,18 @@ enum DetailedButton {
     internal var title: String {
         switch self {
         case .assistant:
-            Texts.MainPage.Assistant.title
+            Texts.MainPage.Assistant.title.localized
         case .weather:
-            Texts.MainPage.Weather.title
+            Texts.MainPage.Weather.title.localized
         }
     }
     
     internal var content: String {
         switch self {
         case .assistant:
-            Texts.MainPage.Assistant.content
+            Texts.MainPage.Assistant.content.localized
         case .weather:
-            Texts.MainPage.Weather.content
+            Texts.MainPage.Weather.content.localized
         }
     }
     
@@ -48,6 +48,24 @@ enum DetailedButton {
             Color.whiteVariant(
                 color: .SymbolColors.yellow,
                 scheme: scheme)
+        }
+    }
+    
+    internal func scaleFactor(scheme: AccessibilityFontSize) -> CGFloat {
+        switch self {
+        case .assistant:
+            return 0.8
+        case .weather:
+            return 0.5
+        }
+    }
+    
+    internal func scaleDescriprion(scheme: AccessibilityFontSize) -> Bool {
+        switch scheme {
+        case .first, .second:
+            true
+        case .third, .fourth, .fifth:
+            false
         }
     }
 }

@@ -10,28 +10,37 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject private var viewModel: MainViewModel
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    
+    @Namespace private var namespace
     
     internal var body: some View {
         NavigationStack {
             ZStack {
                 content
             }
-            .background(
-                background
-            )
+            .background(background)
+        }
+        .sheet(isPresented: $viewModel.isShowingLanguagePage) {
+            SelectLanguageView()
+        }
+        .fullScreenCover(isPresented: $viewModel.isShowingAssistantPage) {
+            AssistantView(namespace: namespace)
         }
     }
     
     private var background: some View {
-        Color.BackColors.backDefault
-            .ignoresSafeArea()
+        Color.whiteVariant(
+            color: .BackColors.backPage,
+            scheme: accessibilityManager.fontColor)
+        .ignoresSafeArea()
     }
     
     private var content: some View {
         VStack(spacing: 0) {
             MainNavBar()
                 .padding([.top, .horizontal])
-            AssistantWeatherButtons()
+            AssistantWeatherButtons(namespace: namespace)
                 .padding(.top, 36)
             
             TripScroller()
@@ -48,4 +57,5 @@ struct MainView: View {
 #Preview {
     MainView()
         .environmentObject(MainViewModel())
+        .environmentObject(AccessibilityManager())
 }

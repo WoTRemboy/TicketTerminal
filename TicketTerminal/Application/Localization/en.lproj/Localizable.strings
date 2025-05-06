@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  TicketTerminal
+
+  Created by Roman Tverdokhleb on 06/05/2025.
+  
+*/
+
+/* MainPage - Assistant */
+"MainPageAssistantTitle" = "Companion";
+"MainPageAssistantContent" = "Your voice assistant";
+
+/* MainPage - Weather */
+"MainPageWeatherTitle" = "18°C";
+"MainPageWeatherContent" = "Moscow";
+
+/* MainPage - Trip */
+"MainPageTripPearl" = "Pearl of the Caucasus";
+"MainPageTripLotus" = "To the Lotus Valley";
+"MainPageTripExpress" = "Baikal Express";
+
+/* MainPage - Management */
+"MainPageManagementBuy" = "Buy Ticket";
+"MainPageManagementRefund" = "Refund Ticket";
+"MainPageManagementRecomendation" = "Recommendations";
+"MainPageManagementHot" = "Hot\nRoutes";
+"MainPageManagementPrint" = "Print\nTicket";
+
+/* NavBar */
+"NavBarAbout" = "About Terminal";
+"NavBarSpecial" = "Accessibility Options";
+"NavBarAssistant" = "Companion";
+"NavBarBuy" = "Buy Ticket";
+"NavBarRefund" = "Refund Ticket";
+"NavBarRecomendation" = "Recommendations";
+"NavBarHot" = "Hot Routes";
+"NavBarPrint" = "Print Ticket";
+
+/* Language */
+"LanguageTitle" = "Language";
+
+/* About */
+"AboutHeadquaters" = "Headquarters";
+"AboutVersionTitle" = "Version";
+"AboutNumberTitle" = "Support Number";
+"AboutAddressTitle" = "Address";
+"AboutAddressContent" = "107174, Moscow, Basmanny District, Novaya Basmannaya St., 2/1, bldg. 1";
+"AboutInfoTitle" = "Legal Information";
+"AboutInfoContent" = "Link";
+
+/* Accessibility - FontColor */
+"AccessibilityFontColorTitle" = "Color Scheme";
+"AccessibilityFontColorFirstVariation" = "Brand Palette";
+"AccessibilityFontColorSecondVariation" = "Black & White";
+
+/* Accessibility - FontSize */
+"AccessibilityFontSizeTitle" = "Font Size";
+
+/* Accessibility - ImparedMode */
+"AccessibilityImparedModeTitle" = "Low Vision Mode";
+
+/* Accessibility - ScreenReader */
+"AccessibilityScreenReaderTitle" = "Screen Reader";
+"AccessibilityScreenReaderFirstVariation" = "Enable";
+"AccessibilityScreenReaderSecondVariation" = "Disable";
+
+/* Buy - Placeholder */
+"BuyPlaceholderFrom" = "From...";
+"BuyPlaceholderDestination" = "To...";
+"BuyPlaceholderDateOfDeparture" = "Depart";
+"BuyPlaceholderDateOfReturn" = "Return";
+
+/* Buy - Buttons */
+"BuyButtonsSearch" = "Search";
+"BuyButtonsTrips" = "Tourist Routes";
+"BuyButtonsHot" = "Hot Routes";

@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  TicketTerminal
+
+  Created by Roman Tverdokhleb on 06/05/2025.
+  
+*/
+
+/* MainPage - Assistant */
+"MainPageAssistantTitle" = "Попутчик";
+"MainPageAssistantContent" = "Твой голосовой помощник";
+
+/* MainPage - Weather */
+"MainPageWeatherTitle" = "18°C";
+"MainPageWeatherContent" = "Москва";
+
+/* MainPage - Trip */
+"MainPageTripPearl" = "Жемчужина Кавказа";
+"MainPageTripLotus" = "В долину лотосов";
+"MainPageTripExpress" = "Байкальский экспресс";
+
+/* MainPage - Management */
+"MainPageManagementBuy" = "Купить билет";
+"MainPageManagementRefund" = "Вернуть билет";
+"MainPageManagementRecomendation" = "Рекомендации";
+"MainPageManagementHot" = "Горячие\nпути";
+"MainPageManagementPrint" = "Распечатать\nбилет";
+
+/* NavBar */
+"NavBarAbout" = "О терминале";
+"NavBarSpecial" = "Специальные возможности";
+"NavBarAssistant" = "Попутчик";
+"NavBarBuy" = "Купить билет";
+"NavBarRefund" = "Вернуть билет";
+"NavBarRecomendation" = "Рекомендации";
+"NavBarHot" = "Горячие пути";
+"NavBarPrint" = "Распечатать билет";
+
+/* Language */
+"LanguageTitle" = "Язык";
+
+/* About */
+"AboutHeadquaters" = "Штаб-квартира";
+"AboutVersionTitle" = "Версия";
+"AboutNumberTitle" = "Номер тех.поддержки";
+"AboutAddressTitle" = "Адрес нахождения";
+"AboutAddressContent" = "107174, г. Москва, вн. тер. г. муниципальный округ Басманный, ул. Новая Басманная, д. 2/1, стр. 1";
+"AboutInfoTitle" = "Юридическая информация";
+"AboutInfoContent" = "Ссылка";
+
+/* Accessibility - FontColor */
+"AccessibilityFontColorTitle" = "Цветовая схема";
+"AccessibilityFontColorFirstVariation" = "Фирменная палитра";
+"AccessibilityFontColorSecondVariation" = "Чёрно-белый";
+
+/* Accessibility - FontSize */
+"AccessibilityFontSizeTitle" = "Размер шрифта";
+
+/* Accessibility - ImparedMode */
+"AccessibilityImparedModeTitle" = "Режим для слабовидящих";
+
+/* Accessibility - ScreenReader */
+"AccessibilityScreenReaderTitle" = "Чтение с экрана";
+"AccessibilityScreenReaderFirstVariation" = "Включить";
+"AccessibilityScreenReaderSecondVariation" = "Выключить";
+
+/* Buy - Placeholder */
+"BuyPlaceholderFrom" = "Откуда...";
+"BuyPlaceholderDestination" = "Куда...";
+"BuyPlaceholderDateOfDeparture" = "Туда";
+"BuyPlaceholderDateOfReturn" = "Обратно";
+
+/* Buy - Buttons */
+"BuyButtonsSearch" = "Поиск";
+"BuyButtonsTrips" = "Туристические пути";
+"BuyButtonsHot" = "Горячие пути";

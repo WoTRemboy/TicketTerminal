@@ -14,6 +14,14 @@ enum TicketManagement {
     case hot
     case print
     
+    static internal var allCasesHorizont: [TicketManagement] {
+        [.buy, .refund, .recomendations]
+    }
+    
+    static internal var allCasesVertical: [TicketManagement] {
+        [.hot, .print]
+    }
+    
     internal var title: String {
         switch self {
         case .buy:
@@ -61,6 +69,26 @@ enum TicketManagement {
             (width: 289, height: 170)
         case .print:
             (width: 289, height: 274)
+        }
+    }
+    
+    internal func showIcon(scheme: AccessibilityFontSize) -> Bool {
+        switch scheme {
+        case .first, .second:
+            true
+        case .third, .fourth, .fifth:
+            false
+        }
+    }
+    
+    @ViewBuilder
+    internal var destination: some View {
+        switch self {
+        case .buy:
+            BuyView()
+                .environmentObject(BuyViewModel())
+        case .refund, .recomendations, .hot, .print:
+            Text(self.title)
         }
     }
 }

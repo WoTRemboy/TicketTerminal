@@ -12,19 +12,37 @@ enum NavBarButton: CaseIterable {
     case special
     case language
     
-    internal func image(scheme: AccessibilityFontColor) -> Image {
+    static internal var allCases: [NavBarButton] {
+        [.info, .special]
+    }
+    
+    internal func image(scheme: AccessibilityFontColor, language: String) -> Image {
         switch self {
         case .info:
-            Image.MainPage.Info.normal
+            return Image.MainPage.Info.normal
         case .special:
-            Image.alterColored(
+            return Image.alterColored(
                 normal: Image.MainPage.Special.normal,
                 alter: Image.MainPage.Special.black,
                 scheme: scheme)
         case .language:
-            Image.alterColored(
-                normal: Image.MainPage.Language.normal,
-                alter: Image.MainPage.Language.black,
+            let imageBundle: (normal: Image, alter: Image)
+            
+            switch language {
+            case Texts.Language.Russian.code:
+                imageBundle = (normal: Image.MainPage.Language.Russian.normal,
+                               alter: Image.MainPage.Language.Russian.black)
+            case Texts.Language.Chinese.code:
+                imageBundle = (normal: Image.MainPage.Language.Chinese.normal,
+                               alter: Image.MainPage.Language.Chinese.black)
+            default:
+                imageBundle = (normal: Image.MainPage.Language.English.normal,
+                               alter: Image.MainPage.Language.English.black)
+            }
+            
+            return Image.alterColored(
+                normal: imageBundle.normal,
+                alter: imageBundle.alter,
                 scheme: scheme)
         }
     }

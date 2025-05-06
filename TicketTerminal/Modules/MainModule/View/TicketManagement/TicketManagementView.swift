@@ -17,20 +17,28 @@ struct TicketManagementView: View {
     
     private var buyRefundRecomend: some View {
         VStack(spacing: 16) {
-            TicketManagementCell(type: .buy)
-            TicketManagementCell(type: .refund)
-            TicketManagementCell(type: .recomendations)
+            ForEach(TicketManagement.allCasesHorizont, id: \.self) { type in
+                CustomNavLink(destination: type.destination) {
+                    TicketManagementCell(type: type)
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
     
     private var hotPrint: some View {
         VStack(spacing: 16) {
-            TicketManagementCell(type: .hot)
-            TicketManagementCell(type: .print)
+            ForEach(TicketManagement.allCasesVertical, id: \.self) { type in
+                CustomNavLink(destination: type.destination) {
+                    TicketManagementCell(type: type)
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
 }
 
 #Preview {
     TicketManagementView()
+        .environmentObject(AccessibilityManager())
 }

@@ -18,15 +18,6 @@ struct TicketManagementCell: View {
     }
     
     internal var body: some View {
-        Button {
-            // Ticket Management Action
-        } label: {
-            content
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var content: some View {
         Group {
             switch type {
             case .buy, .refund, .recomendations:
@@ -43,15 +34,7 @@ struct TicketManagementCell: View {
         }
         .frame(maxWidth: .infinity,
                maxHeight: .infinity)
-        
-        .background {
-            background
-                .shadow(
-                    color: .LabelColors.labelBlack.opacity(0.25),
-                    radius: 4,
-                    x: 0,
-                    y: 1)
-        }
+        .background(background)
         .frame(
             width: type.cellFrame.width,
             height: type.cellFrame.height)
@@ -63,61 +46,64 @@ struct TicketManagementCell: View {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(gradient)
             } else {
-                shadowBackground
+                Background(
+                    radius: 20,
+                    scheme: accessibilityManager.fontColor)
             }
         }
-    }
-    
-    private var shadowBackground: some View {
-        RoundedRectangle(cornerRadius: 20)
-            .stroke(Color.blackVariant(
-                color: .clear,
-                scheme: accessibilityManager.fontColor),
-                    lineWidth: 3)
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(Color.BackColors.backDefault)
-                    .shadow(
-                        color: Color.alterColor(
-                            normal: .LabelColors.labelBlack.opacity(0.25),
-                            alter: .clear,
-                            scheme: accessibilityManager.fontColor),
-                        radius: 4,
-                        x: 0,
-                        y: 1)
-            }
     }
     
     private var horizontalLayout: some View {
         HStack {
-            Text(type.title)
-                .font(.system(size: 40, weight: .medium))
+            Text(type.title.localized)
+                .font(.scalable(
+                    size: 40,
+                    weight: .medium,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .foregroundStyle(Color.LabelColors.labelPrimary)
+                .minimumScaleFactor(0.7)
+                .lineLimit(1)
             
             Spacer()
-            type.image
-                .frame(
-                    width: type.imageFrame.width,
-                    height: type.imageFrame.height)
+            if type.showIcon(scheme: accessibilityManager.fontScale) {
+                type.image
+                    .frame(
+                        width: type.imageFrame.width,
+                        height: type.imageFrame.height)
+            }
         }
     }
     
     private var verticalLayout: some View {
-        VStack {
-            type.image
-                .frame(
-                    width: type.imageFrame.width,
-                    height: type.imageFrame.height)
+        VStack(spacing: 28) {
+            if type.showIcon(scheme: accessibilityManager.fontScale) {
+                type.image
+                    .frame(
+                        width: type.imageFrame.width,
+                        height: type.imageFrame.height)
+            }
             
-            Spacer()
-            Text(type.title)
-                .font(.system(size: 40, weight: .medium))
+            Text(type.title.localized)
+                .font(.scalable(
+                    size: 40,
+                    weight: .medium,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .foregroundStyle(Color.LabelColors.labelPrimary)
+                .minimumScaleFactor(0.7)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
     
     private var hotLayout: some View {
-        Text(type.title)
-            .font(.system(size: 40, weight: .medium))
+        Text(type.title.localized)
+            .font(.scalable(
+                size: 40,
+                weight: .medium,
+                scale: accessibilityManager.fontScale.scale)
+            )
+            .minimumScaleFactor(0.7)
             .foregroundStyle(Color.LabelColors.labelWhite)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
