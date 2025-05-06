@@ -24,6 +24,7 @@ struct CustomNavBarView: View {
                 backButton
                     .padding(.leading)
             }
+//            .animation(.easeInOut(duration: 0.2), value: accessibilityManager.fontScale)
     }
     
     private var content: some View {

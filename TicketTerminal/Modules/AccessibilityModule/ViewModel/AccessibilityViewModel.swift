@@ -36,7 +36,9 @@ final class AccessibilityViewModel: ObservableObject {
         withAnimation(.easeInOut(duration: 0.2)) {
             self.fontColor = color
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.fontColorValue = color
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    self.fontColorValue = color
+                }
             }
         }
     }
@@ -50,7 +52,9 @@ final class AccessibilityViewModel: ObservableObject {
         withAnimation(.easeInOut(duration: 0.2)) {
             self.fontSize = size
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.fontSizeValue = size
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    self.fontSizeValue = size
+                }
             }
         }
     }

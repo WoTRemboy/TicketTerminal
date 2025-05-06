@@ -23,6 +23,7 @@ struct AccessibilityParamCellView: View {
             .background(Background(
                 radius: 50,
                 scheme: accessibilityManager.fontColor))
+            .transition(.blurReplace)
     }
     
     private var content: some View {
