@@ -35,6 +35,8 @@
 "NavBarRecomendation" = "Recommendations";
 "NavBarHot" = "Hot Routes";
 "NavBarPrint" = "Print Ticket";
+"NavBarFrom" = "Departure";
+"NavBarDestination" = "Arrival";
 
 /* Language */
 "LanguageTitle" = "Language";
@@ -69,6 +71,10 @@
 "BuyPlaceholderDestination" = "To...";
 "BuyPlaceholderDateOfDeparture" = "Depart";
 "BuyPlaceholderDateOfReturn" = "Return";
+"BuyPlaceholderStation" = "Enter station...";
+"BuyPlaceholderStationFirst" = "Saint Petersburg";
+"BuyPlaceholderStationSecond" = "Moscow";
+"BuyPlaceholderStationThird" = "Volgograd";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Search";

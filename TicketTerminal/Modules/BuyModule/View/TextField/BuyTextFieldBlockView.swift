@@ -18,7 +18,7 @@ struct BuyTextFieldsView: View {
         VStack(spacing: 22) {
             ForEach(BuyTarget.allCases, id: \.self) {
                 type in
-                BuyTextField(type: type)
+                BuyTargetButton(type: type)
             }
         }
         .overlay(alignment: .trailing) {

@@ -48,6 +48,9 @@ struct Texts {
         static let recomendation = "NavBarRecomendation"
         static let hot = "NavBarHot"
         static let print = "NavBarPrint"
+        
+        static let from = "NavBarFrom"
+        static let destination = "NavBarDestination"
     }
     
     enum Language {
@@ -127,6 +130,13 @@ struct Texts {
             static let destination = "BuyPlaceholderDestination"
             static let dateOfDeparture = "BuyPlaceholderDateOfDeparture"
             static let dateOfReturn = "BuyPlaceholderDateOfReturn"
+            static let station = "BuyPlaceholderStation"
+            
+            enum Station {
+                static let first = "BuyPlaceholderStationFirst"
+                static let second = "BuyPlaceholderStationSecond"
+                static let third = "BuyPlaceholderStationThird"
+            }
         }
         
         enum Buttons {

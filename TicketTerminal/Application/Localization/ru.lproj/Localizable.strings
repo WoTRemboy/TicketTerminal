@@ -35,6 +35,8 @@
 "NavBarRecomendation" = "Рекомендации";
 "NavBarHot" = "Горячие пути";
 "NavBarPrint" = "Распечатать билет";
+"NavBarFrom" = "Отправление";
+"NavBarDestination" = "Прибытие";
 
 /* Language */
 "LanguageTitle" = "Язык";
@@ -69,6 +71,10 @@
 "BuyPlaceholderDestination" = "Куда...";
 "BuyPlaceholderDateOfDeparture" = "Туда";
 "BuyPlaceholderDateOfReturn" = "Обратно";
+"BuyPlaceholderStation" = "Введите станцию...";
+"BuyPlaceholderStationFirst" = "Санкт-Петербург";
+"BuyPlaceholderStationSecond" = "Москва";
+"BuyPlaceholderStationThird" = "Волгоград";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Поиск";

@@ -35,6 +35,8 @@
 "NavBarRecomendation" = "推荐";
 "NavBarHot" = "热门路线";
 "NavBarPrint" = "打印车票";
+"NavBarFrom" = "出发";
+"NavBarDestination" = "到达";
 
 /* Language */
 "LanguageTitle" = "语言";
@@ -69,6 +71,10 @@
 "BuyPlaceholderDestination" = "目的地...";
 "BuyPlaceholderDateOfDeparture" = "去程";
 "BuyPlaceholderDateOfReturn" = "返程";
+"BuyPlaceholderStation" = "请输入车站...";
+"BuyPlaceholderStationFirst" = "Saint Petersburg";
+"BuyPlaceholderStationSecond" = "Moscow";
+"BuyPlaceholderStationThird" = "Volgograd";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "搜索";

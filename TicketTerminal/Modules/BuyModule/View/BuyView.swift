@@ -13,17 +13,19 @@ struct BuyView: View {
     
     internal var body: some View {
         ScrollView {
-            CustomNavBarView(type: .buy)
-                .padding(.top)
-            
-            BuyTextFieldsView()
-                .padding(.top, 40 / accessibilityManager.fontScale.scale)
-            
-            BuyDateBlockView()
-                .padding(.top, 34)
-            
-            BuyButtonView(type: .search)
-                .padding(.top, 34)
+            VStack(spacing: 0) {
+                CustomNavBarView(type: .buy)
+                    .padding(.top)
+                
+                BuyTextFieldsView()
+                    .padding(.top, 40)
+                
+                BuyDateBlockView()
+                    .padding(.top, 34)
+                
+                BuyButtonView(type: .search)
+                    .padding(.top, 34)
+            }
         }
         .safeAreaInset(edge: .bottom) {
             if BuyButton.showButtons(scheme: accessibilityManager.fontScale) {
