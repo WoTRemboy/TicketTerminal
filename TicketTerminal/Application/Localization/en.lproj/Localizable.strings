@@ -72,9 +72,9 @@
 "BuyPlaceholderDateOfDeparture" = "Depart";
 "BuyPlaceholderDateOfReturn" = "Return";
 "BuyPlaceholderStation" = "Enter station...";
-"BuyPlaceholderStationFirst" = "Saint Petersburg";
-"BuyPlaceholderStationSecond" = "Moscow";
-"BuyPlaceholderStationThird" = "Volgograd";
+"BuyPlaceholderStationFirst" = "SAINT PETERSBURG";
+"BuyPlaceholderStationSecond" = "MOSCOW";
+"BuyPlaceholderStationThird" = "VOLGOGRAD";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Search";

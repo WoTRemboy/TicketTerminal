@@ -72,9 +72,9 @@
 "BuyPlaceholderDateOfDeparture" = "Туда";
 "BuyPlaceholderDateOfReturn" = "Обратно";
 "BuyPlaceholderStation" = "Введите станцию...";
-"BuyPlaceholderStationFirst" = "Санкт-Петербург";
-"BuyPlaceholderStationSecond" = "Москва";
-"BuyPlaceholderStationThird" = "Волгоград";
+"BuyPlaceholderStationFirst" = "САНКТ-ПЕТЕРБУРГ";
+"BuyPlaceholderStationSecond" = "МОСКВА";
+"BuyPlaceholderStationThird" = "ВОЛГОГРАД";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Поиск";

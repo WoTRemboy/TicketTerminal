@@ -27,20 +27,26 @@ struct BuyTargetButton: View {
     }
     
     private var content: some View {
-        CustomNavLink(destination: StationSearchView(type: type)) {
-            Text(type.title)
+        let (name, color) = viewModel.getStationName(for: type)
+        return CustomNavLink(
+            destination: StationSearchView(
+                type: type,
+                viewModel: viewModel)
+        ) {
+            Text(name)
                 .font(.scalable(
                     size: 32,
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale))
-                .foregroundStyle(Color.LabelColors.labelPrimary)
+                .foregroundStyle(color)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .animation(.easeInOut(duration: 0.15), value: name)
     }
 }
 
 #Preview {
-    BuyTargetButton(type: .from)
+    BuyTargetButton(type: .departure)
         .environmentObject(AccessibilityManager())
         .environmentObject(BuyViewModel())
 }

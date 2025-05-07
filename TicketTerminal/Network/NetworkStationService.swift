@@ -10,7 +10,7 @@ import Foundation
 actor NetworkStationService {
     static let shared = NetworkStationService()
 
-    struct Station: Identifiable, Decodable {
+    struct Station: Identifiable, Decodable, Equatable {
         let name: String
         let code: Int
         let S: Int
@@ -23,6 +23,10 @@ actor NetworkStationService {
             case code = "c"
             case S
             case L
+        }
+        
+        static internal func ==(lhs: Self, rhs: Self) -> Bool {
+            lhs.name == rhs.name && lhs.code == rhs.code
         }
         
         static func mock() -> [Station] {

@@ -32,8 +32,8 @@ struct BuyTextFieldsView: View {
         Button {
             withAnimation(.spring(duration: 0.5)) {
                 rotationAngle += .degrees(180)
-                viewModel.switchSearchTexts()
             }
+            viewModel.switchDestinations()
         } label: {
             switchButtonContent
         }

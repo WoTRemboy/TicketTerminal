@@ -6,18 +6,39 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class BuyViewModel: ObservableObject {
-    
-    @Published internal var fromSearchText: String = String()
-    @Published internal var destinationSearchText: String = String()
+
+    @Published internal var selectedDepartureStation: NetworkStationService.Station?
+    @Published internal var selectedArrivalStation: NetworkStationService.Station?
     
     @Published internal var departureDate: Date = .now
     @Published internal var returnDate: Date = .now
     
-    internal func switchSearchTexts() {
-        let temp = destinationSearchText
-        destinationSearchText = fromSearchText
-        fromSearchText = temp
+    internal func setStation(_ station: NetworkStationService.Station, for type: BuyTarget) {
+        switch type {
+        case .departure:
+            selectedDepartureStation = station
+        case .arrival:
+            selectedArrivalStation = station
+        }
+    }
+    
+    internal func getStationName(for type: BuyTarget) -> (name: String, color: Color) {
+        switch type {
+        case .departure:
+            guard let selectedDepartureStation else { return (type.title, Color.LabelColors.labelDetails) }
+            return (selectedDepartureStation.name, Color.LabelColors.labelPrimary)
+        case .arrival:
+            guard let selectedArrivalStation else { return (type.title, Color.LabelColors.labelDetails) }
+            return (selectedArrivalStation.name, Color.LabelColors.labelPrimary)
+        }
+    }
+    
+    internal func switchDestinations() {
+        let temp = selectedDepartureStation
+        selectedDepartureStation = selectedArrivalStation
+        selectedArrivalStation = temp
     }
 }

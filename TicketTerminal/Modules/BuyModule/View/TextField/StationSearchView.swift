@@ -7,24 +7,26 @@
 
 import SwiftUI
 
-// MARK: Пример использования в SwiftUI
-
 struct StationSearchView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    @StateObject private var viewModel: BuyViewModel
+    
+    @Environment(\.dismiss) private var dismiss
     
     @State private var searchText: String = String()
     @State private var results = NetworkStationService.Station.mock()
     
     private let type: BuyTarget
     
-    init(type: BuyTarget) {
+    init(type: BuyTarget, viewModel: BuyViewModel) {
         self.type = type
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(type: type == .from ? .from : .destination)
+            CustomNavBarView(type: type == .departure ? .from : .destination)
                 .padding(.top)
             
             textField
@@ -65,7 +67,8 @@ struct StationSearchView: View {
     private var resultList: some View {
         List(results) { station in
             Button {
-                // Result List Buttom Action
+                viewModel.setStation(station, for: type)
+                dismiss()
             } label: {
                 Text(station.name)
                     .font(.scalable(
@@ -83,11 +86,11 @@ struct StationSearchView: View {
         }
         .padding(.top, 20)
         .padding(.horizontal)
+        .animation(.easeInOut(duration: 0.2), value: results)
     }
 }
 
 #Preview {
-    StationSearchView(type: .from)
-        .environmentObject(BuyViewModel())
+    StationSearchView(type: .departure, viewModel: BuyViewModel())
         .environmentObject(AccessibilityManager())
 }
