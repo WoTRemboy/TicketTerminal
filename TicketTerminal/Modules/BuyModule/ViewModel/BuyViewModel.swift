@@ -28,6 +28,15 @@ final class BuyViewModel: ObservableObject {
         }
     }
     
+    internal func getDate(for type: BuyDate) -> Date? {
+        switch type {
+        case .departureDate:
+            return selectedDepartureDate
+        case .returnDate:
+            return selectedReturnDate
+        }
+    }
+    
     internal func getDateSeconds(for type: BuyDate) -> Double {
         switch type {
         case .departureDate:
@@ -47,6 +56,17 @@ final class BuyViewModel: ObservableObject {
         case .returnDate:
             guard let selectedReturnDate else { return (type.title, Color.LabelColors.labelDetails) }
             return (selectedReturnDate.formatted(date: .numeric, time: .omitted), Color.LabelColors.labelPrimary)
+        }
+    }
+    
+    internal func removeDate(for type: BuyDate) {
+        switch type {
+        case .departureDate:
+            selectedDepartureDate = nil
+            departureDate = .now
+        case .returnDate:
+            selectedReturnDate = nil
+            returnDate = .now
         }
     }
     

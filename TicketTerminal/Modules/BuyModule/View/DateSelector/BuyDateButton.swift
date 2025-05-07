@@ -23,9 +23,16 @@ struct BuyDateButton: View {
     internal var body: some View {
         content
             .background(background)
+            .overlay(alignment: .bottomTrailing) {
+                if viewModel.getDate(for: type) != nil {
+                    removeButton
+                        .transition(.scale)
+                }
+            }
             .sheet(isPresented: $isDatePickerShown) {
                 BuyDateSelectorView(type: type)
             }
+            
     }
     
     private var background: some View {
@@ -77,6 +84,23 @@ struct BuyDateButton: View {
             String(),
             selection: $viewModel.returnDate,
             displayedComponents: .date)
+    }
+    
+    private var removeButton: some View {
+        Button {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                viewModel.removeDate(for: type)
+            }
+        } label: {
+            Image.Buy.removeDate
+                .padding()
+                .background(
+                    Background(radius: 16,
+                               scheme: accessibilityManager.fontColor)
+                )
+        }
+        .buttonStyle(.plain)
+        .padding(22)
     }
 }
 

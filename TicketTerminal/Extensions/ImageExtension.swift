@@ -103,6 +103,7 @@ extension Image {
     
     enum Buy {
         static let switchIcon = Image("SwitchButtonIcon")
+        static let removeDate = Image("RemoveDateIcon")
     }
     
     enum Accessibility {
