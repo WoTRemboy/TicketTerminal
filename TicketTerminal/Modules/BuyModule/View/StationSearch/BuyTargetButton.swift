@@ -39,6 +39,7 @@ struct BuyTargetButton: View {
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale))
                 .foregroundStyle(color)
+                .contentTransition(.numericText())
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .animation(.easeInOut(duration: 0.15), value: name)

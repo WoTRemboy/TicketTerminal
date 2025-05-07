@@ -1,5 +1,5 @@
 //
-//  BuyTextFieldsView.swift
+//  BuyStationButtonsView.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 05/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BuyTextFieldsView: View {
+struct BuyStationButtonsView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @EnvironmentObject private var viewModel: BuyViewModel
@@ -64,7 +64,7 @@ struct BuyTextFieldsView: View {
 }
 
 #Preview {
-    BuyTextFieldsView()
+    BuyStationButtonsView()
         .environmentObject(BuyViewModel())
         .environmentObject(AccessibilityManager())
 }

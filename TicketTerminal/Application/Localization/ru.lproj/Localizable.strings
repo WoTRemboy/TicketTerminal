@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "Принять";
+"ActionsCancel" = "Отменить";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "Попутчик";
 "MainPageAssistantContent" = "Твой голосовой помощник";

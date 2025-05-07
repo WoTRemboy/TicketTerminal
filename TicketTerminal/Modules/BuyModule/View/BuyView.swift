@@ -17,7 +17,7 @@ struct BuyView: View {
                 CustomNavBarView(type: .buy)
                     .padding(.top)
                 
-                BuyTextFieldsView()
+                BuyStationButtonsView()
                     .padding(.top, 40)
                 
                 BuyDateBlockView()

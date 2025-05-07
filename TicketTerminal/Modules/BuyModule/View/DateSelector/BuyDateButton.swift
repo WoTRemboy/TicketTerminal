@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct BuyDateSelector: View {
+struct BuyDateButton: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @EnvironmentObject private var viewModel: BuyViewModel
     
+    @State private var isDatePickerShown: Bool = false
+        
     private let type: BuyDate
     
     init(type: BuyDate) {
@@ -19,26 +21,34 @@ struct BuyDateSelector: View {
     }
     
     internal var body: some View {
-        Background(
-            radius: 40,
-            scheme: accessibilityManager.fontColor
-        )
-        .frame(height: 200)
-        .overlay(alignment: .topLeading) {
-            overlay
-        }
+        content
+            .background(background)
+            .sheet(isPresented: $isDatePickerShown) {
+                BuyDateSelectorView(type: type)
+            }
     }
     
-    private var overlay: some View {
-        ZStack {
-            Text(type.title)
+    private var background: some View {
+        Background(
+            radius: 40,
+            scheme: accessibilityManager.fontColor)
+    }
+    
+    private var content: some View {
+        Button {
+            isDatePickerShown.toggle()
+        } label: {
+            let (name, color) = viewModel.getDateName(for: type)
+            Text(name)
                 .font(.scalable(
                     size: 32,
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale))
-                .foregroundStyle(Color.LabelColors.labelPlaceholder)
+                .foregroundStyle(color)
+                .contentTransition(.numericText(value: viewModel.getDateSeconds(for: type)))
+            
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(24)
-            datePicker
         }
     }
     
@@ -71,7 +81,7 @@ struct BuyDateSelector: View {
 }
 
 #Preview {
-    BuyDateSelector(type: .departureDate)
+    BuyDateButton(type: .departureDate)
         .environmentObject(AccessibilityManager())
         .environmentObject(BuyViewModel())
 }

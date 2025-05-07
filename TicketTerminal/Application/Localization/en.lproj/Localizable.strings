@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "Accept";
+"ActionsCancel" = "Cancel";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "Companion";
 "MainPageAssistantContent" = "Your voice assistant";

@@ -12,6 +12,11 @@ struct Texts {
         static let title = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Ticket Terminal"
     }
     
+    enum Actions {
+        static let accept = "ActionsAccept"
+        static let cancel = "ActionsCancel"
+    }
+    
     enum MainPage {
         enum Assistant {
             static let title = "MainPageAssistantTitle"

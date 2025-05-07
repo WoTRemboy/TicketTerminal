@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "接受";
+"ActionsCancel" = "取消";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "伙伴";
 "MainPageAssistantContent" = "你的语音助手";

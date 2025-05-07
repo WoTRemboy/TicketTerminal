@@ -11,9 +11,10 @@ struct BuyDateBlockView: View {
     internal var body: some View {
         HStack(spacing: 22) {
             ForEach(BuyDate.allCases, id: \.self) { type in
-                BuyDateSelector(type: type)
+                BuyDateButton(type: type)
             }
         }
+        .frame(height: 200)
         .padding(.horizontal)
     }
 }
