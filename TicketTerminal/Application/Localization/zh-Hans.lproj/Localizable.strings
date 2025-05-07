@@ -76,8 +76,8 @@
 "BuyPlaceholderDateOfDeparture" = "去程";
 "BuyPlaceholderDateOfReturn" = "返程";
 "BuyPlaceholderStation" = "请输入车站...";
-"BuyPlaceholderStationFirst" = "SAINT PETERSBURG";
-"BuyPlaceholderStationSecond" = "MOSCOW";
+"BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
+"BuyPlaceholderStationSecond" = "MOSKVA";
 "BuyPlaceholderStationThird" = "VOLGOGRAD";
 
 /* Buy - Buttons */

@@ -36,12 +36,12 @@ actor NetworkStationService {
         }
     }
 
-    internal func searchStations(partial: String) async -> [Station] {
+    internal func searchStations(partial: String, language: String) async -> [Station] {
         guard !partial.isEmpty else { return [] }
         var components = URLComponents(string: "https://pass.rzd.ru/suggester")
         components?.queryItems = [
             URLQueryItem(name: "stationNamePart", value: partial),
-            URLQueryItem(name: "lang", value: "ru"),
+            URLQueryItem(name: "lang", value: language),
             URLQueryItem(name: "compactMode", value: "y")
         ]
         guard let url = components?.url else { return [] }

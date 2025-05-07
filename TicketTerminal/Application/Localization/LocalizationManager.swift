@@ -23,6 +23,15 @@ final class LocalizationManager: ObservableObject {
     internal func changeLanguage(to code: String) {
         selectedLanguage = code
     }
+    
+    internal var networkServiceLanguage: String {
+        switch selectedLanguage {
+        case "ru":
+            return "ru"
+        default:
+            return "en"
+        }
+    }
 }
 
 private var bundleKey: UInt8 = 0

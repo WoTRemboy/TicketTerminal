@@ -39,6 +39,7 @@ struct BuyTargetButton: View {
                     weight: .medium,
                     scale: accessibilityManager.fontScale.scale))
                 .foregroundStyle(color)
+                .lineLimit(1)
                 .contentTransition(.numericText())
                 .frame(maxWidth: .infinity, alignment: .leading)
         }

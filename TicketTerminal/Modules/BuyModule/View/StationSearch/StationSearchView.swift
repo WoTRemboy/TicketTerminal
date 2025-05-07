@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StationSearchView: View {
     
+    @EnvironmentObject private var localizationManager: LocalizationManager
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @StateObject private var viewModel: BuyViewModel
     
@@ -54,7 +55,7 @@ struct StationSearchView: View {
             .onChange(of: searchText) { newValue, _ in
                 Task {
                     let upper = newValue.uppercased()
-                    results = await NetworkStationService.shared.searchStations(partial: upper)
+                    results = await NetworkStationService.shared.searchStations(partial: upper, language: localizationManager.networkServiceLanguage)
                 }
             }
             .autocorrectionDisabled()
@@ -93,4 +94,5 @@ struct StationSearchView: View {
 #Preview {
     StationSearchView(type: .departure, viewModel: BuyViewModel())
         .environmentObject(AccessibilityManager())
+        .environmentObject(LocalizationManager())
 }
