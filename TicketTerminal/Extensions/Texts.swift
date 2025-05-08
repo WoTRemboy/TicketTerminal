@@ -148,6 +148,13 @@ struct Texts {
             }
         }
         
+        enum TripCell {
+            static let days = "BuyPlaceholderTripCellDays"
+            static let hours = "BuyPlaceholderTripCellHours"
+            static let minutes = "BuyPlaceholderTripCellMinutes"
+            static let from = "BuyPlaceholderTripCellFrom"
+        }
+        
         enum Buttons {
             static let search = "BuyButtonsSearch"
             static let trips = "BuyButtonsTrips"

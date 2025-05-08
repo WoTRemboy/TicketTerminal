@@ -88,3 +88,9 @@
 "BuyButtonsSearch" = "Search";
 "BuyButtonsTrips" = "Tourist Routes";
 "BuyButtonsHot" = "Hot Routes";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "d";
+"BuyPlaceholderTripCellHours" = "h";
+"BuyPlaceholderTripCellMinutes" = "min";
+"BuyPlaceholderTripCellFrom" = "from";

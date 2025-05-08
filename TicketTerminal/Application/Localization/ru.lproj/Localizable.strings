@@ -88,3 +88,9 @@
 "BuyButtonsSearch" = "Поиск";
 "BuyButtonsTrips" = "Туристические пути";
 "BuyButtonsHot" = "Горячие пути";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "д";
+"BuyPlaceholderTripCellHours" = "ч";
+"BuyPlaceholderTripCellMinutes" = "мин";
+"BuyPlaceholderTripCellFrom" = "от";

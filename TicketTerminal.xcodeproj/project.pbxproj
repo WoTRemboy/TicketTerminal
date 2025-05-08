@@ -70,6 +70,13 @@
 		63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */; };
 		63B03B782DCBA8E000379AD9 /* BuyDateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */; };
 		63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */; };
+		63B03B7F2DCCD93600379AD9 /* TripSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */; };
+		63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B802DCCD96500379AD9 /* TripCellView.swift */; };
+		63B03B842DCCDF6F00379AD9 /* TripCellStationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */; };
+		63B03B862DCCE15D00379AD9 /* TripCellTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B852DCCE15D00379AD9 /* TripCellTime.swift */; };
+		63B03B882DCCE2D900379AD9 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B872DCCE2D600379AD9 /* DateExtension.swift */; };
+		63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B892DCCEB0400379AD9 /* TripCellCar.swift */; };
+		63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +145,13 @@
 		63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
 		63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelectorView.swift; sourceTree = "<group>"; };
 		63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTimetableService.swift; sourceTree = "<group>"; };
+		63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSelectView.swift; sourceTree = "<group>"; };
+		63B03B802DCCD96500379AD9 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
+		63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellStationName.swift; sourceTree = "<group>"; };
+		63B03B852DCCE15D00379AD9 /* TripCellTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellTime.swift; sourceTree = "<group>"; };
+		63B03B872DCCE2D600379AD9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		63B03B892DCCEB0400379AD9 /* TripCellCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCar.swift; sourceTree = "<group>"; };
+		63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCarList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,10 +261,8 @@
 		631635ED2DC9140A0024EE2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				631635E42DC90C300024EE2D /* BuyView.swift */,
-				631635EE2DC914160024EE2D /* StationSearch */,
-				631635F22DC91F4E0024EE2D /* DateSelector */,
-				631635F92DC92AE00024EE2D /* Buttons */,
+				63B03B7C2DCCD8DE00379AD9 /* TripSearch */,
+				63B03B7D2DCCD8FE00379AD9 /* TripSelect */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -514,6 +526,7 @@
 				6388782B2DC4DE1900028C5C /* ImageExtension.swift */,
 				636EF4CE2DC7E43B004B259B /* FontExtension.swift */,
 				6388782D2DC52E9900028C5C /* Texts.swift */,
+				63B03B872DCCE2D600379AD9 /* DateExtension.swift */,
 				6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */,
 			);
 			path = Extensions;
@@ -555,6 +568,54 @@
 				63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		63B03B7C2DCCD8DE00379AD9 /* TripSearch */ = {
+			isa = PBXGroup;
+			children = (
+				631635E42DC90C300024EE2D /* BuyView.swift */,
+				631635EE2DC914160024EE2D /* StationSearch */,
+				631635F22DC91F4E0024EE2D /* DateSelector */,
+				631635F92DC92AE00024EE2D /* Buttons */,
+			);
+			path = TripSearch;
+			sourceTree = "<group>";
+		};
+		63B03B7D2DCCD8FE00379AD9 /* TripSelect */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */,
+				63B03B822DCCDF3C00379AD9 /* TripCell */,
+			);
+			path = TripSelect;
+			sourceTree = "<group>";
+		};
+		63B03B822DCCDF3C00379AD9 /* TripCell */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B802DCCD96500379AD9 /* TripCellView.swift */,
+				63B03B8B2DCCEB0900379AD9 /* Train */,
+				63B03B8C2DCCEB1400379AD9 /* Cars */,
+			);
+			path = TripCell;
+			sourceTree = "<group>";
+		};
+		63B03B8B2DCCEB0900379AD9 /* Train */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */,
+				63B03B852DCCE15D00379AD9 /* TripCellTime.swift */,
+			);
+			path = Train;
+			sourceTree = "<group>";
+		};
+		63B03B8C2DCCEB1400379AD9 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */,
+				63B03B892DCCEB0400379AD9 /* TripCellCar.swift */,
+			);
+			path = Cars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,10 +708,13 @@
 				631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */,
 				635801842DCA37FD00404250 /* LocalizationManager.swift in Sources */,
 				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
+				63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */,
 				631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */,
 				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				630490752DC778DD002E9AAA /* AccessibilityParamCellView.swift in Sources */,
+				63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */,
 				636EF4CF2DC7E43F004B259B /* FontExtension.swift in Sources */,
+				63B03B842DCCDF6F00379AD9 /* TripCellStationName.swift in Sources */,
 				631635E92DC910800024EE2D /* BuyTargetButton.swift in Sources */,
 				6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
@@ -660,10 +724,13 @@
 				630490792DC778F7002E9AAA /* AccessibilityModel.swift in Sources */,
 				6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */,
 				636EF4C32DC79846004B259B /* AccessibilityFontSizeModel.swift in Sources */,
+				63B03B7F2DCCD93600379AD9 /* TripSelectView.swift in Sources */,
 				638878392DC54AC000028C5C /* TripCell.swift in Sources */,
+				63B03B862DCCE15D00379AD9 /* TripCellTime.swift in Sources */,
 				6316ADF72DC64FDF001BD921 /* AboutAppViewModel.swift in Sources */,
 				6316ADE92DC62D90001BD921 /* CustomNavBarModel.swift in Sources */,
 				636EF4CA2DC79A6E004B259B /* AccessibilityScreenReaderModel.swift in Sources */,
+				63B03B882DCCE2D900379AD9 /* DateExtension.swift in Sources */,
 				6316ADEB2DC63614001BD921 /* AboutAppCellModel.swift in Sources */,
 				635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
@@ -680,6 +747,7 @@
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6316ADE52DC62C47001BD921 /* CustomNavBarView.swift in Sources */,
 				63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */,
+				63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */,
 				6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */,
 				636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */,
 				631635FF2DC92C2E0024EE2D /* Background.swift in Sources */,

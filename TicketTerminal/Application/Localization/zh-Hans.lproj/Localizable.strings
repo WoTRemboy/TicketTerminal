@@ -88,3 +88,9 @@
 "BuyButtonsSearch" = "搜索";
 "BuyButtonsTrips" = "旅游线路";
 "BuyButtonsHot" = "热门路线";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "天";
+"BuyPlaceholderTripCellHours" = "小时";
+"BuyPlaceholderTripCellMinutes" = "分钟";
+"BuyPlaceholderTripCellFrom" = "从";
