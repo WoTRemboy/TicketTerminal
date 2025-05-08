@@ -69,6 +69,7 @@
 		63B03B702DCB8B4400379AD9 /* NetworkStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */; };
 		63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */; };
 		63B03B782DCBA8E000379AD9 /* BuyDateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */; };
+		63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStationService.swift; sourceTree = "<group>"; };
 		63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
 		63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelectorView.swift; sourceTree = "<group>"; };
+		63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTimetableService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */,
+				63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 			files = (
 				631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */,
 				631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */,
+				63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */,
 				631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */,
 				631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */,
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
