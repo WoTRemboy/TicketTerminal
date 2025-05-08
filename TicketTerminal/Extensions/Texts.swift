@@ -141,6 +141,10 @@ struct Texts {
                 static let first = "BuyPlaceholderStationFirst"
                 static let second = "BuyPlaceholderStationSecond"
                 static let third = "BuyPlaceholderStationThird"
+                static let fourth = "BuyPlaceholderStationFourth"
+                static let fifth = "BuyPlaceholderStationFifth"
+                static let sixth = "BuyPlaceholderStationSixth"
+                static let seventh = "BuyPlaceholderStationSeventh"
             }
         }
         

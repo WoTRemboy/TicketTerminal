@@ -78,7 +78,11 @@
 "BuyPlaceholderStation" = "Enter station...";
 "BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
 "BuyPlaceholderStationSecond" = "MOSKVA";
-"BuyPlaceholderStationThird" = "VOLGOGRAD";
+"BuyPlaceholderStationThird" = "KAZAN";
+"BuyPlaceholderStationFourth" = "VOLGOGRAD";
+"BuyPlaceholderStationFifth" = "KRASNODAR";
+"BuyPlaceholderStationSixth" = "ASTRAHAN";
+"BuyPlaceholderStationSeventh" = "SOCHI";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Search";

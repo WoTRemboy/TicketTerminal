@@ -78,7 +78,11 @@
 "BuyPlaceholderStation" = "Введите станцию...";
 "BuyPlaceholderStationFirst" = "САНКТ-ПЕТЕРБУРГ";
 "BuyPlaceholderStationSecond" = "МОСКВА";
-"BuyPlaceholderStationThird" = "ВОЛГОГРАД";
+"BuyPlaceholderStationThird" = "КАЗАНЬ";
+"BuyPlaceholderStationFourth" = "ВОЛГОГРАД";
+"BuyPlaceholderStationFifth" = "КРАСНОДАР";
+"BuyPlaceholderStationSixth" = "АСТРАХАНЬ";
+"BuyPlaceholderStationSeventh" = "СОЧИ";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Поиск";

@@ -78,7 +78,11 @@
 "BuyPlaceholderStation" = "请输入车站...";
 "BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
 "BuyPlaceholderStationSecond" = "MOSKVA";
-"BuyPlaceholderStationThird" = "VOLGOGRAD";
+"BuyPlaceholderStationThird" = "KAZAN";
+"BuyPlaceholderStationFourth" = "VOLGOGRAD";
+"BuyPlaceholderStationFifth" = "KRASNODAR";
+"BuyPlaceholderStationSixth" = "ASTRAHAN";
+"BuyPlaceholderStationSeventh" = "SOCHI";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "搜索";

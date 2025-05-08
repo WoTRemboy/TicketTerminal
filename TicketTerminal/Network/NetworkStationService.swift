@@ -30,9 +30,13 @@ actor NetworkStationService {
         }
         
         static func mock() -> [Station] {
-            [Station(name: Texts.Buy.Placeholder.Station.first.localized, code: 2004000, S: 7, L: 6),
-             Station(name: Texts.Buy.Placeholder.Station.second.localized, code: 2000000, S: 7, L: 6),
-             Station(name: Texts.Buy.Placeholder.Station.third.localized, code: 2020500, S: 5, L: 5)]
+            [Station(name: Texts.Buy.Placeholder.Station.first.localized, code: 2004000, S: 7, L: 6),   // SPB
+             Station(name: Texts.Buy.Placeholder.Station.second.localized, code: 2000000, S: 7, L: 6),  // MSC
+             Station(name: Texts.Buy.Placeholder.Station.third.localized, code: 2060615, S: 6, L: 6),   // KZN
+             Station(name: Texts.Buy.Placeholder.Station.fourth.localized, code: 2020500, S: 5, L: 5),  // VLG
+             Station(name: Texts.Buy.Placeholder.Station.fifth.localized, code: 2064788, S: 5, L: 5),   // KSD
+             Station(name: Texts.Buy.Placeholder.Station.sixth.localized, code: 2020600, S: 4, L: 5),   // AST
+             Station(name: Texts.Buy.Placeholder.Station.seventh.localized, code: 2064130, S: 5, L: 5)] // SOC
         }
     }
 
