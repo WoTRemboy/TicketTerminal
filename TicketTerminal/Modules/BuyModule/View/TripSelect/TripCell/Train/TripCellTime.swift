@@ -41,6 +41,8 @@ struct TripCellTime: View {
                             weight: .medium,
                             scale: accessibilityManager.fontScale.scale))
             .foregroundStyle(Color.LabelColors.labelPrimary)
+            .lineLimit(1)
+            .minimumScaleFactor(0.6)
     }
     
     private func dateString(_ date: String) -> some View {
@@ -51,6 +53,7 @@ struct TripCellTime: View {
                                     weight: .medium,
                                     scale: accessibilityManager.fontScale.scale))
                     .foregroundStyle(Color.LabelColors.labelSecondary)
+                    .minimumScaleFactor(0.7)
             }
         }
     }

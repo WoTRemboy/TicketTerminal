@@ -17,7 +17,7 @@ struct TripCellCarList: View {
     }
     
     internal var body: some View {
-        ScrollView {
+        ScrollView(.vertical) {
             VStack(spacing: 10) {
                 ForEach(cars, id: \.id) { car in
                     TripCellCar(car: car)

@@ -94,3 +94,5 @@
 "BuyPlaceholderTripCellHours" = "小时";
 "BuyPlaceholderTripCellMinutes" = "分钟";
 "BuyPlaceholderTripCellFrom" = "从";
+"BuyPlaceholderTripCellTrip" = "行程";
+"BuyPlaceholderTripCellDate" = "日期";

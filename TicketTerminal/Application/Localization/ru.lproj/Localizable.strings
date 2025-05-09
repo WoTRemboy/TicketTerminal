@@ -94,3 +94,5 @@
 "BuyPlaceholderTripCellHours" = "ч";
 "BuyPlaceholderTripCellMinutes" = "мин";
 "BuyPlaceholderTripCellFrom" = "от";
+"BuyPlaceholderTripCellTrip" = "Путь";
+"BuyPlaceholderTripCellDate" = "Дата";

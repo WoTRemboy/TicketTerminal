@@ -153,6 +153,8 @@ struct Texts {
             static let hours = "BuyPlaceholderTripCellHours"
             static let minutes = "BuyPlaceholderTripCellMinutes"
             static let from = "BuyPlaceholderTripCellFrom"
+            static let trip = "BuyPlaceholderTripCellTrip"
+            static let date = "BuyPlaceholderTripCellDate"
         }
         
         enum Buttons {

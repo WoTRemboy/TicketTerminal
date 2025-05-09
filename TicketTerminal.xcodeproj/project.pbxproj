@@ -77,6 +77,8 @@
 		63B03B882DCCE2D900379AD9 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B872DCCE2D600379AD9 /* DateExtension.swift */; };
 		63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B892DCCEB0400379AD9 /* TripCellCar.swift */; };
 		63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */; };
+		63B03B912DCCF80900379AD9 /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B902DCCF80900379AD9 /* TripDetailsView.swift */; };
+		63B03B932DCD059C00379AD9 /* TripDetailsDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +154,8 @@
 		63B03B872DCCE2D600379AD9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		63B03B892DCCEB0400379AD9 /* TripCellCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCar.swift; sourceTree = "<group>"; };
 		63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCarList.swift; sourceTree = "<group>"; };
+		63B03B902DCCF80900379AD9 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
+		63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +590,7 @@
 			children = (
 				63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */,
 				63B03B822DCCDF3C00379AD9 /* TripCell */,
+				63B03B8F2DCCF7EE00379AD9 /* TripDetails */,
 			);
 			path = TripSelect;
 			sourceTree = "<group>";
@@ -616,6 +621,15 @@
 				63B03B892DCCEB0400379AD9 /* TripCellCar.swift */,
 			);
 			path = Cars;
+			sourceTree = "<group>";
+		};
+		63B03B8F2DCCF7EE00379AD9 /* TripDetails */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B902DCCF80900379AD9 /* TripDetailsView.swift */,
+				63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */,
+			);
+			path = TripDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -708,7 +722,9 @@
 				631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */,
 				635801842DCA37FD00404250 /* LocalizationManager.swift in Sources */,
 				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
+				63B03B932DCD059C00379AD9 /* TripDetailsDateView.swift in Sources */,
 				63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */,
+				63B03B912DCCF80900379AD9 /* TripDetailsView.swift in Sources */,
 				631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */,
 				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				630490752DC778DD002E9AAA /* AccessibilityParamCellView.swift in Sources */,

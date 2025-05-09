@@ -94,3 +94,5 @@
 "BuyPlaceholderTripCellHours" = "h";
 "BuyPlaceholderTripCellMinutes" = "min";
 "BuyPlaceholderTripCellFrom" = "from";
+"BuyPlaceholderTripCellTrip" = "Trip";
+"BuyPlaceholderTripCellDate" = "Date";
