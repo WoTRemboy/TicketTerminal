@@ -43,6 +43,26 @@ struct Texts {
         }
     }
     
+    enum TripsPage {
+        enum Pearl {
+            static let title = "TripsPagePearlTitle"
+            static let route = "TripsPagePearlRoute"
+            static let description = "TripsPagePearlDescription"
+        }
+        
+        enum Lotus {
+            static let title = "TripsPageLotusTitle"
+            static let route = "TripsPageLotusRoute"
+            static let description = "TripsPageLotusDescription"
+        }
+        
+        enum Express {
+            static let title = "TripsPageExpressTitle"
+            static let route = "TripsPageExpressRoute"
+            static let description = "TripsPageExpressDescription"
+        }
+    }
+    
     enum NavBar {
         static let about = "NavBarAbout"
         static let special = "NavBarSpecial"
@@ -56,6 +76,7 @@ struct Texts {
         
         static let from = "NavBarFrom"
         static let destination = "NavBarDestination"
+        static let trips = "NavBarTrips"
     }
     
     enum Language {

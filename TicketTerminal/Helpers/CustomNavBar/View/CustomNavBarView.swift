@@ -57,6 +57,6 @@ struct CustomNavBarView: View {
 }
 
 #Preview {
-    CustomNavBarView(type: .about)
+    CustomNavBarView(type: .trips)
         .environmentObject(AccessibilityManager())
 }

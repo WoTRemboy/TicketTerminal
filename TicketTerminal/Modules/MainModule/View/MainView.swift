@@ -16,10 +16,8 @@ struct MainView: View {
     
     internal var body: some View {
         NavigationStack {
-            ZStack {
-                content
-            }
-            .background(background)
+            content
+                .background(background)
         }
         .sheet(isPresented: $viewModel.isShowingLanguagePage) {
             SelectLanguageView()
@@ -40,6 +38,7 @@ struct MainView: View {
         VStack(spacing: 0) {
             MainNavBar()
                 .padding([.top, .horizontal])
+            
             AssistantWeatherButtons(namespace: namespace)
                 .padding(.top, 36)
             
@@ -58,5 +57,6 @@ struct MainView: View {
 #Preview {
     MainView()
         .environmentObject(MainViewModel())
+        .environmentObject(LocalizationManager())
         .environmentObject(AccessibilityManager())
 }
