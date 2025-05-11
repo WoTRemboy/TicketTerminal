@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "Accept";
+"ActionsCancel" = "Cancel";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "Companion";
 "MainPageAssistantContent" = "Your voice assistant";
@@ -22,7 +26,7 @@
 /* MainPage - Management */
 "MainPageManagementBuy" = "Buy Ticket";
 "MainPageManagementRefund" = "Refund Ticket";
-"MainPageManagementRecomendation" = "Recommendations";
+"MainPageManagementRecomendation" = "Recommends";
 "MainPageManagementHot" = "Hot\nRoutes";
 "MainPageManagementPrint" = "Print\nTicket";
 
@@ -35,6 +39,8 @@
 "NavBarRecomendation" = "Recommendations";
 "NavBarHot" = "Hot Routes";
 "NavBarPrint" = "Print Ticket";
+"NavBarFrom" = "Departure";
+"NavBarDestination" = "Arrival";
 
 /* Language */
 "LanguageTitle" = "Language";
@@ -69,8 +75,24 @@
 "BuyPlaceholderDestination" = "To...";
 "BuyPlaceholderDateOfDeparture" = "Depart";
 "BuyPlaceholderDateOfReturn" = "Return";
+"BuyPlaceholderStation" = "Enter station...";
+"BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
+"BuyPlaceholderStationSecond" = "MOSKVA";
+"BuyPlaceholderStationThird" = "KAZAN";
+"BuyPlaceholderStationFourth" = "VOLGOGRAD";
+"BuyPlaceholderStationFifth" = "KRASNODAR";
+"BuyPlaceholderStationSixth" = "ASTRAHAN";
+"BuyPlaceholderStationSeventh" = "SOCHI";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Search";
 "BuyButtonsTrips" = "Tourist Routes";
 "BuyButtonsHot" = "Hot Routes";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "d";
+"BuyPlaceholderTripCellHours" = "h";
+"BuyPlaceholderTripCellMinutes" = "min";
+"BuyPlaceholderTripCellFrom" = "from";
+"BuyPlaceholderTripCellTrip" = "Trip";
+"BuyPlaceholderTripCellDate" = "Date";

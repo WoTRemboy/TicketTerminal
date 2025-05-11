@@ -51,6 +51,7 @@ struct MainView: View {
             
             Spacer()
         }
+        .contentTransition(.numericText())
     }
 }
 

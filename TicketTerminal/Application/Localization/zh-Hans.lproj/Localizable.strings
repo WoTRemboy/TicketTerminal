@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "接受";
+"ActionsCancel" = "取消";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "伙伴";
 "MainPageAssistantContent" = "你的语音助手";
@@ -35,6 +39,8 @@
 "NavBarRecomendation" = "推荐";
 "NavBarHot" = "热门路线";
 "NavBarPrint" = "打印车票";
+"NavBarFrom" = "出发";
+"NavBarDestination" = "到达";
 
 /* Language */
 "LanguageTitle" = "语言";
@@ -69,8 +75,24 @@
 "BuyPlaceholderDestination" = "目的地...";
 "BuyPlaceholderDateOfDeparture" = "去程";
 "BuyPlaceholderDateOfReturn" = "返程";
+"BuyPlaceholderStation" = "请输入车站...";
+"BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
+"BuyPlaceholderStationSecond" = "MOSKVA";
+"BuyPlaceholderStationThird" = "KAZAN";
+"BuyPlaceholderStationFourth" = "VOLGOGRAD";
+"BuyPlaceholderStationFifth" = "KRASNODAR";
+"BuyPlaceholderStationSixth" = "ASTRAHAN";
+"BuyPlaceholderStationSeventh" = "SOCHI";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "搜索";
 "BuyButtonsTrips" = "旅游线路";
 "BuyButtonsHot" = "热门路线";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "天";
+"BuyPlaceholderTripCellHours" = "小时";
+"BuyPlaceholderTripCellMinutes" = "分钟";
+"BuyPlaceholderTripCellFrom" = "从";
+"BuyPlaceholderTripCellTrip" = "行程";
+"BuyPlaceholderTripCellDate" = "日期";

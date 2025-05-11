@@ -1,5 +1,5 @@
 //
-//  BuyTextFieldsView.swift
+//  BuyStationButtonsView.swift
 //  TicketTerminal
 //
 //  Created by Roman Tverdokhleb on 05/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BuyTextFieldsView: View {
+struct BuyStationButtonsView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @EnvironmentObject private var viewModel: BuyViewModel
@@ -18,7 +18,7 @@ struct BuyTextFieldsView: View {
         VStack(spacing: 22) {
             ForEach(BuyTarget.allCases, id: \.self) {
                 type in
-                BuyTextField(type: type)
+                BuyTargetButton(type: type)
             }
         }
         .overlay(alignment: .trailing) {
@@ -32,8 +32,8 @@ struct BuyTextFieldsView: View {
         Button {
             withAnimation(.spring(duration: 0.5)) {
                 rotationAngle += .degrees(180)
-                viewModel.switchSearchTexts()
             }
+            viewModel.switchDestinations()
         } label: {
             switchButtonContent
         }
@@ -64,7 +64,7 @@ struct BuyTextFieldsView: View {
 }
 
 #Preview {
-    BuyTextFieldsView()
+    BuyStationButtonsView()
         .environmentObject(BuyViewModel())
         .environmentObject(AccessibilityManager())
 }

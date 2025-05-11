@@ -12,6 +12,11 @@ struct Texts {
         static let title = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Ticket Terminal"
     }
     
+    enum Actions {
+        static let accept = "ActionsAccept"
+        static let cancel = "ActionsCancel"
+    }
+    
     enum MainPage {
         enum Assistant {
             static let title = "MainPageAssistantTitle"
@@ -48,6 +53,9 @@ struct Texts {
         static let recomendation = "NavBarRecomendation"
         static let hot = "NavBarHot"
         static let print = "NavBarPrint"
+        
+        static let from = "NavBarFrom"
+        static let destination = "NavBarDestination"
     }
     
     enum Language {
@@ -127,6 +135,26 @@ struct Texts {
             static let destination = "BuyPlaceholderDestination"
             static let dateOfDeparture = "BuyPlaceholderDateOfDeparture"
             static let dateOfReturn = "BuyPlaceholderDateOfReturn"
+            static let station = "BuyPlaceholderStation"
+            
+            enum Station {
+                static let first = "BuyPlaceholderStationFirst"
+                static let second = "BuyPlaceholderStationSecond"
+                static let third = "BuyPlaceholderStationThird"
+                static let fourth = "BuyPlaceholderStationFourth"
+                static let fifth = "BuyPlaceholderStationFifth"
+                static let sixth = "BuyPlaceholderStationSixth"
+                static let seventh = "BuyPlaceholderStationSeventh"
+            }
+        }
+        
+        enum TripCell {
+            static let days = "BuyPlaceholderTripCellDays"
+            static let hours = "BuyPlaceholderTripCellHours"
+            static let minutes = "BuyPlaceholderTripCellMinutes"
+            static let from = "BuyPlaceholderTripCellFrom"
+            static let trip = "BuyPlaceholderTripCellTrip"
+            static let date = "BuyPlaceholderTripCellDate"
         }
         
         enum Buttons {

@@ -6,14 +6,14 @@
 //
 
 enum BuyTarget: CaseIterable {
-    case from
-    case destination
+    case departure
+    case arrival
     
     internal var title: String {
         switch self {
-        case .from:
+        case .departure:
             Texts.Buy.Placeholder.from.localized
-        case .destination:
+        case .arrival:
             Texts.Buy.Placeholder.destination.localized
         }
     }

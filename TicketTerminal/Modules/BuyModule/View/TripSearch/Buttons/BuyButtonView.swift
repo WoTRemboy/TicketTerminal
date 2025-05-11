@@ -10,6 +10,7 @@ import SwiftUI
 struct BuyButtonView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    @EnvironmentObject private var viewModel: BuyViewModel
     
     private let type: BuyButton
     
@@ -18,13 +19,12 @@ struct BuyButtonView: View {
     }
     
     internal var body: some View {
-        Button {
-            // Buy Button Action
-        } label: {
+        CustomNavLink(destination: TripSelectView(viewModel: viewModel)) {
             buttonContent
         }
         .padding(.horizontal)
         .buttonStyle(.plain)
+        .disabled(type == .search ? !viewModel.isSearchButtonAvailable() : false)
     }
     
     private var buttonContent: some View {
@@ -80,4 +80,5 @@ struct BuyButtonView: View {
 #Preview {
     BuyButtonView(type: .search)
         .environmentObject(AccessibilityManager())
+        .environmentObject(BuyViewModel())
 }

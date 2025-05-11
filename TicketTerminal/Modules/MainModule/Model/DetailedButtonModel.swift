@@ -54,7 +54,7 @@ enum DetailedButton {
     internal func scaleFactor(scheme: AccessibilityFontSize) -> CGFloat {
         switch self {
         case .assistant:
-            return 0.8
+            return 0.7
         case .weather:
             return 0.5
         }

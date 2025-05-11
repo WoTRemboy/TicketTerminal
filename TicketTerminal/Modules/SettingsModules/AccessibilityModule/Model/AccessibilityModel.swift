@@ -35,11 +35,11 @@ enum AccessibilityParam: CaseIterable {
         case .fontColor:
             return 9
         case .fontSize:
-            return 26
+            return 20
         case .imparedMode:
             return 26
         case .screenReader:
-            return 26
+            return 9
         }
     }
 }

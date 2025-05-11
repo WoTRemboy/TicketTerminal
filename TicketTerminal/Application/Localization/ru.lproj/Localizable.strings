@@ -6,6 +6,10 @@
   
 */
 
+/* Actions */
+"ActionsAccept" = "Принять";
+"ActionsCancel" = "Отменить";
+
 /* MainPage - Assistant */
 "MainPageAssistantTitle" = "Попутчик";
 "MainPageAssistantContent" = "Твой голосовой помощник";
@@ -35,6 +39,8 @@
 "NavBarRecomendation" = "Рекомендации";
 "NavBarHot" = "Горячие пути";
 "NavBarPrint" = "Распечатать билет";
+"NavBarFrom" = "Отправление";
+"NavBarDestination" = "Прибытие";
 
 /* Language */
 "LanguageTitle" = "Язык";
@@ -69,8 +75,24 @@
 "BuyPlaceholderDestination" = "Куда...";
 "BuyPlaceholderDateOfDeparture" = "Туда";
 "BuyPlaceholderDateOfReturn" = "Обратно";
+"BuyPlaceholderStation" = "Введите станцию...";
+"BuyPlaceholderStationFirst" = "САНКТ-ПЕТЕРБУРГ";
+"BuyPlaceholderStationSecond" = "МОСКВА";
+"BuyPlaceholderStationThird" = "КАЗАНЬ";
+"BuyPlaceholderStationFourth" = "ВОЛГОГРАД";
+"BuyPlaceholderStationFifth" = "КРАСНОДАР";
+"BuyPlaceholderStationSixth" = "АСТРАХАНЬ";
+"BuyPlaceholderStationSeventh" = "СОЧИ";
 
 /* Buy - Buttons */
 "BuyButtonsSearch" = "Поиск";
 "BuyButtonsTrips" = "Туристические пути";
 "BuyButtonsHot" = "Горячие пути";
+
+/* Buy - TripCell */
+"BuyPlaceholderTripCellDays" = "д";
+"BuyPlaceholderTripCellHours" = "ч";
+"BuyPlaceholderTripCellMinutes" = "мин";
+"BuyPlaceholderTripCellFrom" = "от";
+"BuyPlaceholderTripCellTrip" = "Путь";
+"BuyPlaceholderTripCellDate" = "Дата";

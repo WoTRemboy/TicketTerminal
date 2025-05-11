@@ -17,11 +17,11 @@
 		6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */; };
 		631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635DC2DC8D9C60024EE2D /* AssistantView.swift */; };
 		631635E52DC90C300024EE2D /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E42DC90C300024EE2D /* BuyView.swift */; };
-		631635E72DC9106B0024EE2D /* BuyTextFieldBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */; };
-		631635E92DC910800024EE2D /* BuyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E82DC910800024EE2D /* BuyTextField.swift */; };
+		631635E72DC9106B0024EE2D /* BuyStationButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E62DC9106B0024EE2D /* BuyStationButtonsView.swift */; };
+		631635E92DC910800024EE2D /* BuyTargetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635E82DC910800024EE2D /* BuyTargetButton.swift */; };
 		631635EB2DC913670024EE2D /* BuyTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635EA2DC9131B0024EE2D /* BuyTargetModel.swift */; };
 		631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F02DC9142E0024EE2D /* BuyViewModel.swift */; };
-		631635F42DC91F6D0024EE2D /* BuyDateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */; };
+		631635F42DC91F6D0024EE2D /* BuyDateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F32DC91F6D0024EE2D /* BuyDateButton.swift */; };
 		631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F52DC920A50024EE2D /* BuyDateSelectorModel.swift */; };
 		631635F82DC927870024EE2D /* BuyDateBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635F72DC927870024EE2D /* BuyDateBlockView.swift */; };
 		631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FA2DC92B0A0024EE2D /* BuyButtonView.swift */; };
@@ -46,6 +46,7 @@
 		635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801872DCA3BC000404250 /* SelectLanguageView.swift */; };
 		6358018A2DCA3CAD00404250 /* SelectLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801892DCA3CA700404250 /* SelectLanguageModel.swift */; };
 		6358018C2DCA425200404250 /* SelectLanguageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6358018B2DCA425200404250 /* SelectLanguageCellView.swift */; };
+		635C25E52DD0C25800AB365A /* LoadingIndicatiorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */; };
 		636EF4C12DC796AC004B259B /* AccessibilityFontColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C02DC7967C004B259B /* AccessibilityFontColorModel.swift */; };
 		636EF4C32DC79846004B259B /* AccessibilityFontSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C22DC7983B004B259B /* AccessibilityFontSizeModel.swift */; };
 		636EF4C52DC79986004B259B /* AccessibilityImparedModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C42DC7996C004B259B /* AccessibilityImparedModeModel.swift */; };
@@ -66,6 +67,19 @@
 		638878392DC54AC000028C5C /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638878382DC54AC000028C5C /* TripCell.swift */; };
 		6388783B2DC54B8000028C5C /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388783A2DC54B7D00028C5C /* TripModel.swift */; };
 		6388783D2DC553DC00028C5C /* TripScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388783C2DC553D800028C5C /* TripScroller.swift */; };
+		63B03B702DCB8B4400379AD9 /* NetworkStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */; };
+		63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */; };
+		63B03B782DCBA8E000379AD9 /* BuyDateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */; };
+		63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */; };
+		63B03B7F2DCCD93600379AD9 /* TripSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */; };
+		63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B802DCCD96500379AD9 /* TripCellView.swift */; };
+		63B03B842DCCDF6F00379AD9 /* TripCellStationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */; };
+		63B03B862DCCE15D00379AD9 /* TripCellTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B852DCCE15D00379AD9 /* TripCellTime.swift */; };
+		63B03B882DCCE2D900379AD9 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B872DCCE2D600379AD9 /* DateExtension.swift */; };
+		63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B892DCCEB0400379AD9 /* TripCellCar.swift */; };
+		63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */; };
+		63B03B912DCCF80900379AD9 /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B902DCCF80900379AD9 /* TripDetailsView.swift */; };
+		63B03B932DCD059C00379AD9 /* TripDetailsDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,11 +93,11 @@
 		6304907D2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityParamSelectorCell.swift; sourceTree = "<group>"; };
 		631635DC2DC8D9C60024EE2D /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		631635E42DC90C300024EE2D /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
-		631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTextFieldBlockView.swift; sourceTree = "<group>"; };
-		631635E82DC910800024EE2D /* BuyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTextField.swift; sourceTree = "<group>"; };
+		631635E62DC9106B0024EE2D /* BuyStationButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyStationButtonsView.swift; sourceTree = "<group>"; };
+		631635E82DC910800024EE2D /* BuyTargetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTargetButton.swift; sourceTree = "<group>"; };
 		631635EA2DC9131B0024EE2D /* BuyTargetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTargetModel.swift; sourceTree = "<group>"; };
 		631635F02DC9142E0024EE2D /* BuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewModel.swift; sourceTree = "<group>"; };
-		631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelector.swift; sourceTree = "<group>"; };
+		631635F32DC91F6D0024EE2D /* BuyDateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateButton.swift; sourceTree = "<group>"; };
 		631635F52DC920A50024EE2D /* BuyDateSelectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelectorModel.swift; sourceTree = "<group>"; };
 		631635F72DC927870024EE2D /* BuyDateBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateBlockView.swift; sourceTree = "<group>"; };
 		631635FA2DC92B0A0024EE2D /* BuyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonView.swift; sourceTree = "<group>"; };
@@ -109,6 +123,7 @@
 		635801892DCA3CA700404250 /* SelectLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageModel.swift; sourceTree = "<group>"; };
 		6358018B2DCA425200404250 /* SelectLanguageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageCellView.swift; sourceTree = "<group>"; };
 		6358018D2DCA4CA700404250 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatiorView.swift; sourceTree = "<group>"; };
 		636EF4C02DC7967C004B259B /* AccessibilityFontColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFontColorModel.swift; sourceTree = "<group>"; };
 		636EF4C22DC7983B004B259B /* AccessibilityFontSizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFontSizeModel.swift; sourceTree = "<group>"; };
 		636EF4C42DC7996C004B259B /* AccessibilityImparedModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityImparedModeModel.swift; sourceTree = "<group>"; };
@@ -130,6 +145,19 @@
 		638878382DC54AC000028C5C /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
 		6388783A2DC54B7D00028C5C /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		6388783C2DC553D800028C5C /* TripScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripScroller.swift; sourceTree = "<group>"; };
+		63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStationService.swift; sourceTree = "<group>"; };
+		63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
+		63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDateSelectorView.swift; sourceTree = "<group>"; };
+		63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTimetableService.swift; sourceTree = "<group>"; };
+		63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSelectView.swift; sourceTree = "<group>"; };
+		63B03B802DCCD96500379AD9 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
+		63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellStationName.swift; sourceTree = "<group>"; };
+		63B03B852DCCE15D00379AD9 /* TripCellTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellTime.swift; sourceTree = "<group>"; };
+		63B03B872DCCE2D600379AD9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		63B03B892DCCEB0400379AD9 /* TripCellCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCar.swift; sourceTree = "<group>"; };
+		63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCarList.swift; sourceTree = "<group>"; };
+		63B03B902DCCF80900379AD9 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
+		63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,21 +267,20 @@
 		631635ED2DC9140A0024EE2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				631635E42DC90C300024EE2D /* BuyView.swift */,
-				631635EE2DC914160024EE2D /* TextField */,
-				631635F22DC91F4E0024EE2D /* DateSelector */,
-				631635F92DC92AE00024EE2D /* Buttons */,
+				63B03B7C2DCCD8DE00379AD9 /* TripSearch */,
+				63B03B7D2DCCD8FE00379AD9 /* TripSelect */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		631635EE2DC914160024EE2D /* TextField */ = {
+		631635EE2DC914160024EE2D /* StationSearch */ = {
 			isa = PBXGroup;
 			children = (
-				631635E82DC910800024EE2D /* BuyTextField.swift */,
-				631635E62DC9106B0024EE2D /* BuyTextFieldBlockView.swift */,
+				631635E62DC9106B0024EE2D /* BuyStationButtonsView.swift */,
+				631635E82DC910800024EE2D /* BuyTargetButton.swift */,
+				63B03B732DCB8D1E00379AD9 /* StationSearchView.swift */,
 			);
-			path = TextField;
+			path = StationSearch;
 			sourceTree = "<group>";
 		};
 		631635EF2DC914220024EE2D /* ViewModel */ = {
@@ -267,8 +294,9 @@
 		631635F22DC91F4E0024EE2D /* DateSelector */ = {
 			isa = PBXGroup;
 			children = (
-				631635F32DC91F6D0024EE2D /* BuyDateSelector.swift */,
 				631635F72DC927870024EE2D /* BuyDateBlockView.swift */,
+				631635F32DC91F6D0024EE2D /* BuyDateButton.swift */,
+				63B03B772DCBA8E000379AD9 /* BuyDateSelectorView.swift */,
 			);
 			path = DateSelector;
 			sourceTree = "<group>";
@@ -438,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				6388781E2DC4D8CD00028C5C /* Application */,
+				63B03B6E2DCB8B2F00379AD9 /* Network */,
 				6388781F2DC4D9D400028C5C /* Modules */,
 				6316ADE62DC62C4D001BD921 /* Helpers */,
 				638878232DC4DA3300028C5C /* Extensions */,
@@ -503,6 +532,7 @@
 				6388782B2DC4DE1900028C5C /* ImageExtension.swift */,
 				636EF4CE2DC7E43B004B259B /* FontExtension.swift */,
 				6388782D2DC52E9900028C5C /* Texts.swift */,
+				63B03B872DCCE2D600379AD9 /* DateExtension.swift */,
 				6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */,
 			);
 			path = Extensions;
@@ -535,6 +565,74 @@
 				6388783C2DC553D800028C5C /* TripScroller.swift */,
 			);
 			path = TripScroller;
+			sourceTree = "<group>";
+		};
+		63B03B6E2DCB8B2F00379AD9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */,
+				63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		63B03B7C2DCCD8DE00379AD9 /* TripSearch */ = {
+			isa = PBXGroup;
+			children = (
+				631635E42DC90C300024EE2D /* BuyView.swift */,
+				631635EE2DC914160024EE2D /* StationSearch */,
+				631635F22DC91F4E0024EE2D /* DateSelector */,
+				631635F92DC92AE00024EE2D /* Buttons */,
+			);
+			path = TripSearch;
+			sourceTree = "<group>";
+		};
+		63B03B7D2DCCD8FE00379AD9 /* TripSelect */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B7E2DCCD93600379AD9 /* TripSelectView.swift */,
+				63B03B822DCCDF3C00379AD9 /* TripCell */,
+				63B03B8F2DCCF7EE00379AD9 /* TripDetails */,
+			);
+			path = TripSelect;
+			sourceTree = "<group>";
+		};
+		63B03B822DCCDF3C00379AD9 /* TripCell */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B802DCCD96500379AD9 /* TripCellView.swift */,
+				63B03B8B2DCCEB0900379AD9 /* Train */,
+				63B03B8C2DCCEB1400379AD9 /* Cars */,
+			);
+			path = TripCell;
+			sourceTree = "<group>";
+		};
+		63B03B8B2DCCEB0900379AD9 /* Train */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B832DCCDF6F00379AD9 /* TripCellStationName.swift */,
+				63B03B852DCCE15D00379AD9 /* TripCellTime.swift */,
+			);
+			path = Train;
+			sourceTree = "<group>";
+		};
+		63B03B8C2DCCEB1400379AD9 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */,
+				63B03B892DCCEB0400379AD9 /* TripCellCar.swift */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		63B03B8F2DCCF7EE00379AD9 /* TripDetails */ = {
+			isa = PBXGroup;
+			children = (
+				63B03B902DCCF80900379AD9 /* TripDetailsView.swift */,
+				63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */,
+				635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */,
+			);
+			path = TripDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,7 +715,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */,
+				635C25E52DD0C25800AB365A /* LoadingIndicatiorView.swift in Sources */,
 				631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */,
+				63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */,
 				631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */,
 				631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */,
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
@@ -626,11 +726,16 @@
 				631635DD2DC8D9C60024EE2D /* AssistantView.swift in Sources */,
 				635801842DCA37FD00404250 /* LocalizationManager.swift in Sources */,
 				638878342DC53EAA00028C5C /* AssistantWeatherButtons.swift in Sources */,
+				63B03B932DCD059C00379AD9 /* TripDetailsDateView.swift in Sources */,
+				63B03B8A2DCCEB0400379AD9 /* TripCellCar.swift in Sources */,
+				63B03B912DCCF80900379AD9 /* TripDetailsView.swift in Sources */,
 				631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */,
 				638878312DC5379800028C5C /* NavBarButtonModel.swift in Sources */,
 				630490752DC778DD002E9AAA /* AccessibilityParamCellView.swift in Sources */,
+				63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */,
 				636EF4CF2DC7E43F004B259B /* FontExtension.swift in Sources */,
-				631635E92DC910800024EE2D /* BuyTextField.swift in Sources */,
+				63B03B842DCCDF6F00379AD9 /* TripCellStationName.swift in Sources */,
+				631635E92DC910800024EE2D /* BuyTargetButton.swift in Sources */,
 				6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */,
 				638878262DC4DB7F00028C5C /* ColorExtension.swift in Sources */,
 				636EF4C52DC79986004B259B /* AccessibilityImparedModeModel.swift in Sources */,
@@ -639,10 +744,13 @@
 				630490792DC778F7002E9AAA /* AccessibilityModel.swift in Sources */,
 				6304907E2DC77DD6002E9AAA /* AccessibilityParamSelectorCell.swift in Sources */,
 				636EF4C32DC79846004B259B /* AccessibilityFontSizeModel.swift in Sources */,
+				63B03B7F2DCCD93600379AD9 /* TripSelectView.swift in Sources */,
 				638878392DC54AC000028C5C /* TripCell.swift in Sources */,
+				63B03B862DCCE15D00379AD9 /* TripCellTime.swift in Sources */,
 				6316ADF72DC64FDF001BD921 /* AboutAppViewModel.swift in Sources */,
 				6316ADE92DC62D90001BD921 /* CustomNavBarModel.swift in Sources */,
 				636EF4CA2DC79A6E004B259B /* AccessibilityScreenReaderModel.swift in Sources */,
+				63B03B882DCCE2D900379AD9 /* DateExtension.swift in Sources */,
 				6316ADEB2DC63614001BD921 /* AboutAppCellModel.swift in Sources */,
 				635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
@@ -650,13 +758,16 @@
 				638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */,
 				636EF4C12DC796AC004B259B /* AccessibilityFontColorModel.swift in Sources */,
 				6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */,
-				631635F42DC91F6D0024EE2D /* BuyDateSelector.swift in Sources */,
+				631635F42DC91F6D0024EE2D /* BuyDateButton.swift in Sources */,
+				63B03B782DCBA8E000379AD9 /* BuyDateSelectorView.swift in Sources */,
 				6304907B2DC77D6D002E9AAA /* AccessibilityParamSelector.swift in Sources */,
 				6316ADE02DC62BDA001BD921 /* AboutAppView.swift in Sources */,
 				6358018A2DCA3CAD00404250 /* SelectLanguageModel.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6316ADE52DC62C47001BD921 /* CustomNavBarView.swift in Sources */,
+				63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */,
+				63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */,
 				6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */,
 				636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */,
 				631635FF2DC92C2E0024EE2D /* Background.swift in Sources */,
@@ -666,8 +777,9 @@
 				636EF4D32DC7E8CC004B259B /* AccessibilityManager.swift in Sources */,
 				6388783D2DC553DC00028C5C /* TripScroller.swift in Sources */,
 				6388781D2DC4D6E100028C5C /* TicketTerminalApp.swift in Sources */,
+				63B03B702DCB8B4400379AD9 /* NetworkStationService.swift in Sources */,
 				6388783B2DC54B8000028C5C /* TripModel.swift in Sources */,
-				631635E72DC9106B0024EE2D /* BuyTextFieldBlockView.swift in Sources */,
+				631635E72DC9106B0024EE2D /* BuyStationButtonsView.swift in Sources */,
 				6304906E2DC77603002E9AAA /* CustomNavBarContainerView.swift in Sources */,
 				6304906F2DC77603002E9AAA /* FullSwipeNavigationStack.swift in Sources */,
 				630490702DC77603002E9AAA /* CustomNavLink.swift in Sources */,
