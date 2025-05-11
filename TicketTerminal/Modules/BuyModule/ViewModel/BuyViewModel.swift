@@ -97,4 +97,8 @@ final class BuyViewModel: ObservableObject {
         selectedDepartureStation = selectedArrivalStation
         selectedArrivalStation = temp
     }
+    
+    internal func isSearchButtonAvailable() -> Bool {
+        selectedDepartureDate != nil && selectedArrivalStation != nil && selectedDepartureStation != nil
+    }
 }

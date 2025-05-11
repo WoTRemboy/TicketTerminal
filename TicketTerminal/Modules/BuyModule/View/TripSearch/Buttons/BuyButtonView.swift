@@ -24,6 +24,7 @@ struct BuyButtonView: View {
         }
         .padding(.horizontal)
         .buttonStyle(.plain)
+        .disabled(type == .search ? !viewModel.isSearchButtonAvailable() : false)
     }
     
     private var buttonContent: some View {
