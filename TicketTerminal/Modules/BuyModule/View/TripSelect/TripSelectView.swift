@@ -29,9 +29,13 @@ struct TripSelectView: View {
             
             resultsList
                 .padding(.top, 40)
+                .overlay(alignment: .center) {
+                    loadingIndicatior
+                }
         }
         .onAppear {
             Task {
+                viewModel.isLoading.toggle()
                 guard let departureStation = viewModel.selectedDepartureStation,
                       let arrivalStation = viewModel.selectedArrivalStation,
                       let departureDate = viewModel.selectedDepartureDate else { return }
@@ -48,10 +52,19 @@ struct TripSelectView: View {
                         DispatchQueue.main.async {
                             results = list
                         }
+                        viewModel.isLoading.toggle()
                     case .failure(let error):
                         print("Time table parsing Error: \(error)")
                     }
                 }
+            }
+        }
+    }
+    
+    private var loadingIndicatior: some View {
+        Group {
+            if viewModel.isLoading {
+                LoadingIndicatorView()
             }
         }
     }

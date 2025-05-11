@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 final class BuyViewModel: ObservableObject {
+    
+    @Published internal var isLoading: Bool = false
 
     @Published internal var selectedDepartureStation: NetworkStationService.Station?
     @Published internal var selectedArrivalStation: NetworkStationService.Station?

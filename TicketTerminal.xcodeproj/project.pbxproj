@@ -46,6 +46,7 @@
 		635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801872DCA3BC000404250 /* SelectLanguageView.swift */; };
 		6358018A2DCA3CAD00404250 /* SelectLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801892DCA3CA700404250 /* SelectLanguageModel.swift */; };
 		6358018C2DCA425200404250 /* SelectLanguageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6358018B2DCA425200404250 /* SelectLanguageCellView.swift */; };
+		635C25E52DD0C25800AB365A /* LoadingIndicatiorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */; };
 		636EF4C12DC796AC004B259B /* AccessibilityFontColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C02DC7967C004B259B /* AccessibilityFontColorModel.swift */; };
 		636EF4C32DC79846004B259B /* AccessibilityFontSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C22DC7983B004B259B /* AccessibilityFontSizeModel.swift */; };
 		636EF4C52DC79986004B259B /* AccessibilityImparedModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EF4C42DC7996C004B259B /* AccessibilityImparedModeModel.swift */; };
@@ -122,6 +123,7 @@
 		635801892DCA3CA700404250 /* SelectLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageModel.swift; sourceTree = "<group>"; };
 		6358018B2DCA425200404250 /* SelectLanguageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageCellView.swift; sourceTree = "<group>"; };
 		6358018D2DCA4CA700404250 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatiorView.swift; sourceTree = "<group>"; };
 		636EF4C02DC7967C004B259B /* AccessibilityFontColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFontColorModel.swift; sourceTree = "<group>"; };
 		636EF4C22DC7983B004B259B /* AccessibilityFontSizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFontSizeModel.swift; sourceTree = "<group>"; };
 		636EF4C42DC7996C004B259B /* AccessibilityImparedModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityImparedModeModel.swift; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 			children = (
 				63B03B902DCCF80900379AD9 /* TripDetailsView.swift */,
 				63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */,
+				635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */,
 			);
 			path = TripDetails;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */,
+				635C25E52DD0C25800AB365A /* LoadingIndicatiorView.swift in Sources */,
 				631635F12DC914330024EE2D /* BuyViewModel.swift in Sources */,
 				63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */,
 				631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */,
