@@ -75,7 +75,7 @@ actor NetworkTimetableService {
         let servCls: String
     }
     
-    func fetchTimetable(fromCode: Int, toCode: Int, date: String) async throws -> TimetableResponse {
+    private func fetchTimetable(fromCode: Int, toCode: Int, date: String) async throws -> TimetableResponse {
         guard let url = URLComponents(string: "https://pass.rzd.ru/timetable/public/ru") else {
             throw URLError(.badURL)
         }
@@ -121,6 +121,21 @@ actor NetworkTimetableService {
         }
         let timetable = try JSONDecoder().decode(TimetableResponse.self, from: data2)
         return timetable
+    }
+    
+    internal func fetchTimetableRequest(fromCode: Int, toCode: Int, date: String, completion: @escaping (Result<TimetableResponse, Error>) -> Void) {
+        Task {
+            do {
+                let response = try await fetchTimetable(fromCode: fromCode, toCode: toCode, date: date)
+                DispatchQueue.main.async {
+                    completion(.success(response))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
     }
 }
 

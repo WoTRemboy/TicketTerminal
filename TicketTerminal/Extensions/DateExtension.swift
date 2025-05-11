@@ -25,6 +25,10 @@ extension Date {
         inFormatter.date(from: raw)
     }
     
+    internal var dayMonthYearNumeric: String {
+        Date.inFormatter.string(from: self)
+    }
+    
     internal var dayMonthYear: String {
         Date.outFormatter.string(from: self)
     }

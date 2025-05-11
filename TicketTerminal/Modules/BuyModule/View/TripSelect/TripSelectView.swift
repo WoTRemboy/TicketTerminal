@@ -13,7 +13,7 @@ struct TripSelectView: View {
     @StateObject private var viewModel: BuyViewModel
     @Environment(\.dismiss) private var dismiss
 
-    private var results: [NetworkTimetableService.List] = [.mock, .mock, .mock]
+    @State private var results: [NetworkTimetableService.List] = []
     
     init(viewModel: BuyViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -29,6 +29,30 @@ struct TripSelectView: View {
             
             resultsList
                 .padding(.top, 40)
+        }
+        .onAppear {
+            Task {
+                guard let departureStation = viewModel.selectedDepartureStation,
+                      let arrivalStation = viewModel.selectedArrivalStation,
+                      let departureDate = viewModel.selectedDepartureDate else { return }
+                let dateString = departureDate.dayMonthYearNumeric
+                
+                await NetworkTimetableService.shared.fetchTimetableRequest(
+                    fromCode: departureStation.code,
+                    toCode: arrivalStation.code,
+                    date: dateString
+                ) { result in
+                    switch result {
+                    case .success(let response):
+                        let list = response.tp.first?.list ?? []
+                        DispatchQueue.main.async {
+                            results = list
+                        }
+                    case .failure(let error):
+                        print("Time table parsing Error: \(error)")
+                    }
+                }
+            }
         }
     }
     
@@ -57,9 +81,11 @@ struct TripSelectView: View {
                 ForEach(results, id: \.id) { train in
                     TripCellView(train: train)
                 }
+                .transition(.blurReplace)
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
+            .animation(.easeInOut(duration: 0.2), value: results.count)
         }
     }
 }
