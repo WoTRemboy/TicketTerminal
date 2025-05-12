@@ -35,7 +35,7 @@ struct TripSelectView: View {
         }
         .onAppear {
             Task {
-                viewModel.isLoading.toggle()
+                viewModel.setLoadingIndicator(to: true)
                 guard let departureStation = viewModel.selectedDepartureStation,
                       let arrivalStation = viewModel.selectedArrivalStation,
                       let departureDate = viewModel.selectedDepartureDate else { return }
@@ -52,7 +52,7 @@ struct TripSelectView: View {
                         DispatchQueue.main.async {
                             results = list
                         }
-                        viewModel.isLoading.toggle()
+                        viewModel.setLoadingIndicator(to: false)
                     case .failure(let error):
                         print("Time table parsing Error: \(error)")
                     }

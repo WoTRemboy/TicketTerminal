@@ -19,7 +19,7 @@ struct BuyButtonView: View {
     }
     
     internal var body: some View {
-        CustomNavLink(destination: TripSelectView(viewModel: viewModel)) {
+        CustomNavLink(destination: destination(for: type)) {
             buttonContent
         }
         .padding(.horizontal)
@@ -74,6 +74,18 @@ struct BuyButtonView: View {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
+    }
+    
+    @ViewBuilder
+    private func destination(for type: BuyButton) -> some View {
+        switch type {
+        case .search:
+            TripSelectView(viewModel: viewModel)
+        case .trips:
+            TripsView()
+        case .hot:
+            Text(type.title)
+        }
     }
 }
 

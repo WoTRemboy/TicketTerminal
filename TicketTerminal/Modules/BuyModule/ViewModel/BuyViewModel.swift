@@ -21,6 +21,10 @@ final class BuyViewModel: ObservableObject {
     @Published internal var departureDate: Date = .now
     @Published internal var returnDate: Date = .now
     
+    internal func setLoadingIndicator(to state: Bool) {
+        isLoading = state
+    }
+    
     internal func setDate(for type: BuyDate) {
         switch type {
         case .departureDate:
