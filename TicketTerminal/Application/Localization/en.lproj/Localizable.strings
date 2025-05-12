@@ -41,6 +41,7 @@
 "NavBarPrint" = "Print Ticket";
 "NavBarFrom" = "Departure";
 "NavBarDestination" = "Arrival";
+"NavBarTrips" = "Tourist Routes";
 
 /* Language */
 "LanguageTitle" = "Language";
@@ -96,3 +97,18 @@
 "BuyPlaceholderTripCellFrom" = "from";
 "BuyPlaceholderTripCellTrip" = "Trip";
 "BuyPlaceholderTripCellDate" = "Date";
+
+/* TripsPage - Pearl */
+"TripsPagePearlTitle" = "Cruise: 4 days | 4 nights";
+"TripsPagePearlRoute" = "Rostov-on-Don – Maykop – Vladikavkaz – Grozny – Derbent – Nalchik – Rostov-on-Don";
+"TripsPagePearlDescription" = "What is the Caucasus? It’s the amazing people and their indescribable hospitality.";
+
+/* TripsPage - Lotus */
+"TripsPageLotusTitle" = "Cruise: 4 days | 4 nights";
+"TripsPageLotusRoute" = "Moscow – Verkhny Baskunchak – Astrakhan – Moscow";
+"TripsPageLotusDescription" = "You will be engulfed by the splendour of the endless lotus fields, majestically unfolding their buds under the gentle rays of the sun, creating a sight that captivates the imagination with its beauty.";
+
+/* TripsPage - Express */
+"TripsPageExpressTitle" = "Cruise: 1 day | 2 nights";
+"TripsPageExpressRoute" = "Irkutsk – Slyudyanka – Baikal – Irkutsk";
+"TripsPageExpressDescription" = "This journey promises unforgettable impressions of the legendary Lake Baikal, its breath, the spirit of its landscapes, and architectural marvels.";

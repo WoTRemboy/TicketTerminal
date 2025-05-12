@@ -28,7 +28,6 @@
 		631635FD2DC92B1A0024EE2D /* BuyButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FC2DC92B170024EE2D /* BuyButtonModel.swift */; };
 		631635FF2DC92C2E0024EE2D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631635FE2DC92C2E0024EE2D /* Background.swift */; };
 		631636012DC92F1F0024EE2D /* BuyButtonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631636002DC92F1F0024EE2D /* BuyButtonBlockView.swift */; };
-		631636042DC9528E0024EE2D /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 631636032DC9528E0024EE2D /* SwiftSoup */; };
 		6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD52DC564F1001BD921 /* SplashScreen.swift */; };
 		6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADD82DC57AF3001BD921 /* TicketManagementCell.swift */; };
 		6316ADDB2DC57B46001BD921 /* TicketManagementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADDA2DC57B40001BD921 /* TicketManagementModel.swift */; };
@@ -41,6 +40,11 @@
 		6316ADEF2DC64B8A001BD921 /* LocationCoordinateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */; };
 		6316ADF72DC64FDF001BD921 /* AboutAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADF62DC64FDA001BD921 /* AboutAppViewModel.swift */; };
 		6316ADFA2DC655D8001BD921 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316ADF92DC655D5001BD921 /* MainViewModel.swift */; };
+		634700142DD10DCB00716A25 /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634700132DD10DCB00716A25 /* TripsView.swift */; };
+		634700172DD10F8600716A25 /* TripsSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634700162DD10F8600716A25 /* TripsSelectorView.swift */; };
+		634700192DD10F9900716A25 /* TripsSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634700182DD10F9900716A25 /* TripsSelectorCell.swift */; };
+		6347001D2DD1132B00716A25 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347001C2DD1132B00716A25 /* TripsViewModel.swift */; };
+		6347001F2DD11AC400716A25 /* TripsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347001E2DD11AC400716A25 /* TripsDetailsView.swift */; };
 		635801802DCA373F00404250 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6358017E2DCA373F00404250 /* Localizable.strings */; };
 		635801842DCA37FD00404250 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801832DCA37F800404250 /* LocalizationManager.swift */; };
 		635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801872DCA3BC000404250 /* SelectLanguageView.swift */; };
@@ -116,6 +120,11 @@
 		6316ADEE2DC64B7D001BD921 /* LocationCoordinateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinateExtension.swift; sourceTree = "<group>"; };
 		6316ADF62DC64FDA001BD921 /* AboutAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewModel.swift; sourceTree = "<group>"; };
 		6316ADF92DC655D5001BD921 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		634700132DD10DCB00716A25 /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		634700162DD10F8600716A25 /* TripsSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsSelectorView.swift; sourceTree = "<group>"; };
+		634700182DD10F9900716A25 /* TripsSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsSelectorCell.swift; sourceTree = "<group>"; };
+		6347001C2DD1132B00716A25 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
+		6347001E2DD11AC400716A25 /* TripsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsDetailsView.swift; sourceTree = "<group>"; };
 		6358017F2DCA373F00404250 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635801812DCA374800404250 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635801832DCA37F800404250 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
@@ -165,7 +174,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631636042DC9528E0024EE2D /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +398,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		634700122DD10D8E00716A25 /* TripsModule */ = {
+			isa = PBXGroup;
+			children = (
+				6347001A2DD1131200716A25 /* View */,
+				6347001B2DD1131900716A25 /* ViewModel */,
+			);
+			path = TripsModule;
+			sourceTree = "<group>";
+		};
+		634700152DD10F7100716A25 /* TripsSelector */ = {
+			isa = PBXGroup;
+			children = (
+				634700162DD10F8600716A25 /* TripsSelectorView.swift */,
+				634700182DD10F9900716A25 /* TripsSelectorCell.swift */,
+			);
+			path = TripsSelector;
+			sourceTree = "<group>";
+		};
+		6347001A2DD1131200716A25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				634700132DD10DCB00716A25 /* TripsView.swift */,
+				6347001E2DD11AC400716A25 /* TripsDetailsView.swift */,
+				634700152DD10F7100716A25 /* TripsSelector */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6347001B2DD1131900716A25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6347001C2DD1132B00716A25 /* TripsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		635801822DCA37E800404250 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +535,7 @@
 				638878202DC4D9E100028C5C /* MainModule */,
 				631635D92DC8D98B0024EE2D /* AssistantModule */,
 				631635E12DC90BDE0024EE2D /* BuyModule */,
+				634700122DD10D8E00716A25 /* TripsModule */,
 				635801862DCA3B7700404250 /* SettingsModules */,
 			);
 			path = Modules;
@@ -652,7 +697,6 @@
 			);
 			name = TicketTerminal;
 			packageProductDependencies = (
-				631636032DC9528E0024EE2D /* SwiftSoup */,
 			);
 			productName = TicketTerminal;
 			productReference = 638878092DC4D6D200028C5C /* TicketTerminal.app */;
@@ -685,7 +729,6 @@
 			mainGroup = 638878002DC4D6D200028C5C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				631636022DC9528E0024EE2D /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6388780A2DC4D6D200028C5C /* Products */;
@@ -720,6 +763,7 @@
 				63B03B7A2DCCBF6700379AD9 /* NetworkTimetableService.swift in Sources */,
 				631635FB2DC92B0A0024EE2D /* BuyButtonView.swift in Sources */,
 				631635F62DC920AC0024EE2D /* BuyDateSelectorModel.swift in Sources */,
+				6347001F2DD11AC400716A25 /* TripsDetailsView.swift in Sources */,
 				6388782E2DC52E9E00028C5C /* Texts.swift in Sources */,
 				630490732DC778A9002E9AAA /* AccessibilityView.swift in Sources */,
 				6316ADDD2DC58165001BD921 /* TicketManagementView.swift in Sources */,
@@ -754,7 +798,9 @@
 				6316ADEB2DC63614001BD921 /* AboutAppCellModel.swift in Sources */,
 				635801882DCA3BC000404250 /* SelectLanguageView.swift in Sources */,
 				6388781C2DC4D6E100028C5C /* MainView.swift in Sources */,
+				634700192DD10F9900716A25 /* TripsSelectorCell.swift in Sources */,
 				6358018C2DCA425200404250 /* SelectLanguageCellView.swift in Sources */,
+				634700142DD10DCB00716A25 /* TripsView.swift in Sources */,
 				638878362DC5445B00028C5C /* DetailedButtonModel.swift in Sources */,
 				636EF4C12DC796AC004B259B /* AccessibilityFontColorModel.swift in Sources */,
 				6316ADD62DC564F1001BD921 /* SplashScreen.swift in Sources */,
@@ -763,12 +809,14 @@
 				6304907B2DC77D6D002E9AAA /* AccessibilityParamSelector.swift in Sources */,
 				6316ADE02DC62BDA001BD921 /* AboutAppView.swift in Sources */,
 				6358018A2DCA3CAD00404250 /* SelectLanguageModel.swift in Sources */,
+				6347001D2DD1132B00716A25 /* TripsViewModel.swift in Sources */,
 				6388782A2DC4DDE500028C5C /* MainNavBar.swift in Sources */,
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6316ADE52DC62C47001BD921 /* CustomNavBarView.swift in Sources */,
 				63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */,
 				63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */,
 				6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */,
+				634700172DD10F8600716A25 /* TripsSelectorView.swift in Sources */,
 				636EF4CD2DC79C20004B259B /* AccessibilityViewModel.swift in Sources */,
 				631635FF2DC92C2E0024EE2D /* Background.swift in Sources */,
 				6316ADED2DC638C0001BD921 /* AboutAppCellView.swift in Sources */,
@@ -945,7 +993,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.avoqode.TicketTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -979,7 +1027,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.avoqode.TicketTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1014,25 +1062,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		631636022DC9528E0024EE2D /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.8.7;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		631636032DC9528E0024EE2D /* SwiftSoup */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 631636022DC9528E0024EE2D /* XCRemoteSwiftPackageReference "SwiftSoup" */;
-			productName = SwiftSoup;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 638878012DC4D6D200028C5C /* Project object */;
 }

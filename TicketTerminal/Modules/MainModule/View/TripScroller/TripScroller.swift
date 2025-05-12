@@ -15,8 +15,12 @@ struct TripScroller: View {
     internal var body: some View {
         TabView(selection: $currentIndex) {
             ForEach(Array(Trip.allCases.enumerated()), id: \.offset) { index, trip in
-                TripCell(trip: trip)
+                CustomNavLink(
+                    destination: TripsView(selectedTrip: trip)) {
+                        TripCell(trip: trip)
+                    }
                     .tag(index)
+                    .buttonStyle(.plain)
             }
         }
         .frame(height: 279)
@@ -88,4 +92,5 @@ struct TripScroller: View {
 }
 #Preview {
     TripScroller()
+        .environmentObject(AccessibilityManager())
 }

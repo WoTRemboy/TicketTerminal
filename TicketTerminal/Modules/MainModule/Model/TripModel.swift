@@ -12,6 +12,10 @@ enum Trip: CaseIterable {
     case lotus
     case express
     
+    static internal var horizontalCases: [Trip] {
+        [.express, .lotus]
+    }
+    
     internal var title: String {
         switch self {
         case .pearl:
@@ -23,14 +27,58 @@ enum Trip: CaseIterable {
         }
     }
     
-    internal var image: Image {
+    internal var route: String {
         switch self {
         case .pearl:
-            Image.Trip.pearl
+            Texts.TripsPage.Pearl.route.localized
         case .lotus:
-            Image.Trip.lotus
+            Texts.TripsPage.Lotus.route.localized
         case .express:
-            Image.Trip.express
+            Texts.TripsPage.Express.route.localized
+        }
+    }
+    
+    internal var detailsTitle: String {
+        switch self {
+        case .pearl:
+            Texts.TripsPage.Pearl.title.localized
+        case .lotus:
+            Texts.TripsPage.Lotus.title.localized
+        case .express:
+            Texts.TripsPage.Express.title.localized
+        }
+    }
+    
+    internal var description: String {
+        switch self {
+        case .pearl:
+            Texts.TripsPage.Pearl.description.localized
+        case .lotus:
+            Texts.TripsPage.Lotus.description.localized
+        case .express:
+            Texts.TripsPage.Express.description.localized
+        }
+    }
+    
+    internal var preview: Image {
+        switch self {
+        case .pearl:
+            Image.Trip.Pearl.preview
+        case .lotus:
+            Image.Trip.Lotus.preview
+        case .express:
+            Image.Trip.Express.preview
+        }
+    }
+    
+    internal var detailsImage: Image {
+        switch self {
+        case .pearl:
+            Image.Trip.Pearl.details
+        case .lotus:
+            Image.Trip.Lotus.details
+        case .express:
+            Image.Trip.Express.details
         }
     }
     

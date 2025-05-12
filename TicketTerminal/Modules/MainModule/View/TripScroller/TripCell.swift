@@ -22,21 +22,12 @@ struct TripCell: View {
     }
     
     private var content: some View {
-        Button {
-            // Trip Cell Action
-        } label: {
-            tripContent
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var tripContent: some View {
         ZStack(alignment: trip.alignment(
             scheme: accessibilityManager.fontColor,
             size: accessibilityManager.fontScale)
         ) {
             if accessibilityManager.fontColor == .defaultValue {
-                trip.image
+                trip.preview
                     .resizable()
                     .scaledToFit()
                     .blur(radius: trip.backgroundBlur(scheme: accessibilityManager.fontScale),

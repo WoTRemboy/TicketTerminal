@@ -46,9 +46,20 @@ extension Image {
     }
     
     enum Trip {
-        static let pearl = Image("TripPearl")
-        static let lotus = Image("TripLotus")
-        static let express = Image("TripExpress")
+        enum Pearl {
+            static let preview = Image("TripPearl")
+            static let details = Image("TripDetailsPearl")
+        }
+        
+        enum Lotus {
+            static let preview = Image("TripLotus")
+            static let details = Image("TripDetailsLotus")
+        }
+        
+        enum Express {
+            static let preview = Image("TripExpress")
+            static let details = Image("TripDetailsExpress")
+        }
     }
     
     enum Management {
@@ -92,6 +103,11 @@ extension Image {
         enum From {
             static let normal = Image("NavBarFrom")
             static let black = Image("NavBarFromBlack")
+        }
+        
+        enum Trips {
+            static let normal = Image("NavBarTrips")
+            static let black = Image("NavBarTripsBlack")
         }
     }
     
