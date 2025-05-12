@@ -41,6 +41,7 @@
 "NavBarPrint" = "Распечатать билет";
 "NavBarFrom" = "Отправление";
 "NavBarDestination" = "Прибытие";
+"NavBarTrips" = "Туристические маршруты";
 
 /* Language */
 "LanguageTitle" = "Язык";
@@ -96,3 +97,18 @@
 "BuyPlaceholderTripCellFrom" = "от";
 "BuyPlaceholderTripCellTrip" = "Путь";
 "BuyPlaceholderTripCellDate" = "Дата";
+
+/* TripsPage - Pearl */
+"TripsPagePearlTitle" = "Круиз: 4 дня | 4 ночи";
+"TripsPagePearlRoute" = "Ростов-на-Дону – Майкоп – Владикавказ – Грозный – Дербент – Нальчик – Ростов-на-Дону ";
+"TripsPagePearlDescription" = "Что такое Кавказ? Это удивительные люди и их непередаваемая гостеприимность.";
+
+/* TripsPage - Lotus */
+"TripsPageLotusTitle" = "Круиз: 4 дня | 4 ночи";
+"TripsPageLotusRoute" = "Москва – Верхний Баскунчак – Астрахань – Москва";
+"TripsPageLotusDescription" = "Вас поглотит великолепие бескрайних полей лотосов, величественно распускающих свои бутоны под мягкими лучами солнца, создавая зрелище, поражающее воображение своей красотой.";
+
+/* TripsPage - Express */
+"TripsPageExpressTitle" = "Круиз: 1 день | 2 ночи";
+"TripsPageExpressRoute" = "Иркутск – Слюдянка – Байкал – Иркутск";
+"TripsPageExpressDescription" = "Это путешествие обещает незабываемые впечатления от легендарного озера Байкал, его дыхания, духа пейзажей и архитектурных шедевров.";

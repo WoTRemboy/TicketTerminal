@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TripsView: View {
     
+    @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @StateObject private var viewModel: TripsViewModel
     
     init(selectedTrip: Trip? = nil) {
@@ -27,10 +28,19 @@ struct TripsView: View {
             TripsSelectorView(viewModel: viewModel)
                 .padding(.top, 40)
             
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 TripsDetailsView(type: viewModel.selectedTrip)
+                    .padding(.horizontal, 20)
+                    .contentTransition(.numericText())
             }
+            .background(background)
+            .padding(.top, 20)
         }
+    }
+    
+    private var background: some View {
+        Background(radius: 20, scheme: accessibilityManager.fontColor)
+            .ignoresSafeArea(.all)
     }
 }
 

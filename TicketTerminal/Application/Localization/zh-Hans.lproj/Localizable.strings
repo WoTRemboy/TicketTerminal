@@ -41,6 +41,7 @@
 "NavBarPrint" = "打印车票";
 "NavBarFrom" = "出发";
 "NavBarDestination" = "到达";
+"NavBarTrips" = "旅游路线";
 
 /* Language */
 "LanguageTitle" = "语言";
@@ -96,3 +97,18 @@
 "BuyPlaceholderTripCellFrom" = "从";
 "BuyPlaceholderTripCellTrip" = "行程";
 "BuyPlaceholderTripCellDate" = "日期";
+
+/* TripsPage - Pearl */
+"TripsPagePearlTitle" = "游轮：4天 | 4晚";
+"TripsPagePearlRoute" = "顿河畔罗斯托夫 – 迈科普 – 弗拉季高加索 – 格罗兹尼 – 代尔本特 – 纳尔奇克 – 顿河畔罗斯托夫";
+"TripsPagePearlDescription" = "高加索是什么？这是那里的人民及其难以言喻的热情好客。";
+
+/* TripsPage - Lotus */
+"TripsPageLotusTitle" = "游轮：4天 | 4晚";
+"TripsPageLotusRoute" = "莫斯科 – 上巴斯昆恰克 – 阿斯特拉罕 – 莫斯科";
+"TripsPageLotusDescription" = "您将沉浸在无垠的莲花田的壮丽景象中，莲花在柔和的阳光下庄严绽放，呈现出一种令人惊叹的美丽画面。";
+
+/* TripsPage - Express */
+"TripsPageExpressTitle" = "游轮：1天 | 2晚";
+"TripsPageExpressRoute" = "伊尔库茨克 – 斯柳德扬卡 – 贝加尔湖 – 伊尔库茨克";
+"TripsPageExpressDescription" = "此行程将带来对传奇贝加尔湖的难忘印象，感受它的气息、风景的灵魂和建筑杰作。";
