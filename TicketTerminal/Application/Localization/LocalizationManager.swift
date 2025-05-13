@@ -32,6 +32,17 @@ final class LocalizationManager: ObservableObject {
             return "en"
         }
     }
+    
+    internal var localeLanguage: String {
+        switch selectedLanguage {
+        case "ru":
+            return "ru_RU"
+        case "en":
+            return "en-US"
+        default:
+            return "zh-CN"
+        }
+    }
 }
 
 private var bundleKey: UInt8 = 0
