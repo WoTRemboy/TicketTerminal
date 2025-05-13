@@ -84,6 +84,7 @@
 		63B03B8E2DCCED4E00379AD9 /* TripCellCarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */; };
 		63B03B912DCCF80900379AD9 /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B902DCCF80900379AD9 /* TripDetailsView.swift */; };
 		63B03B932DCD059C00379AD9 /* TripDetailsDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */; };
+		63DE829A2DD3AA6E00E4ED5E /* RecomendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE82992DD3AA6E00E4ED5E /* RecomendsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +168,7 @@
 		63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCarList.swift; sourceTree = "<group>"; };
 		63B03B902DCCF80900379AD9 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
 		63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsDateView.swift; sourceTree = "<group>"; };
+		63DE82992DD3AA6E00E4ED5E /* RecomendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +538,7 @@
 				631635D92DC8D98B0024EE2D /* AssistantModule */,
 				631635E12DC90BDE0024EE2D /* BuyModule */,
 				634700122DD10D8E00716A25 /* TripsModule */,
+				63DE82982DD3AA5300E4ED5E /* RecommendsModule */,
 				635801862DCA3B7700404250 /* SettingsModules */,
 			);
 			path = Modules;
@@ -680,6 +683,14 @@
 			path = TripDetails;
 			sourceTree = "<group>";
 		};
+		63DE82982DD3AA5300E4ED5E /* RecommendsModule */ = {
+			isa = PBXGroup;
+			children = (
+				63DE82992DD3AA6E00E4ED5E /* RecomendsView.swift */,
+			);
+			path = RecommendsModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -814,6 +825,7 @@
 				6388782C2DC4DE1D00028C5C /* ImageExtension.swift in Sources */,
 				6316ADE52DC62C47001BD921 /* CustomNavBarView.swift in Sources */,
 				63B03B742DCB8D1E00379AD9 /* StationSearchView.swift in Sources */,
+				63DE829A2DD3AA6E00E4ED5E /* RecomendsView.swift in Sources */,
 				63B03B812DCCD96500379AD9 /* TripCellView.swift in Sources */,
 				6316ADD92DC57AF3001BD921 /* TicketManagementCell.swift in Sources */,
 				634700172DD10F8600716A25 /* TripsSelectorView.swift in Sources */,
