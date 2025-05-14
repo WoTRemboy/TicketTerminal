@@ -109,6 +109,11 @@ extension Image {
             static let normal = Image("NavBarTrips")
             static let black = Image("NavBarTripsBlack")
         }
+        
+        enum Recommends {
+            static let normal = Image("NavBarRecommends")
+            static let black = Image("NavBarRecommendsBlack")
+        }
     }
     
     enum Language {

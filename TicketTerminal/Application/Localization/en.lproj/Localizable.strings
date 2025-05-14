@@ -42,6 +42,7 @@
 "NavBarFrom" = "Departure";
 "NavBarDestination" = "Arrival";
 "NavBarTrips" = "Tourist Routes";
+"NavBarRecommends" = "Recommendations";
 
 /* Language */
 "LanguageTitle" = "Language";
@@ -77,8 +78,8 @@
 "BuyPlaceholderDateOfDeparture" = "Depart";
 "BuyPlaceholderDateOfReturn" = "Return";
 "BuyPlaceholderStation" = "Enter station...";
-"BuyPlaceholderStationFirst" = "SANKT-PETERBURG";
-"BuyPlaceholderStationSecond" = "MOSKVA";
+"BuyPlaceholderStationFirst" = "SAINT PETERSBURG";
+"BuyPlaceholderStationSecond" = "MOSCOW";
 "BuyPlaceholderStationThird" = "KAZAN";
 "BuyPlaceholderStationFourth" = "VOLGOGRAD";
 "BuyPlaceholderStationFifth" = "KRASNODAR";
@@ -112,3 +113,31 @@
 "TripsPageExpressTitle" = "Cruise: 1 day | 2 nights";
 "TripsPageExpressRoute" = "Irkutsk – Slyudyanka – Baikal – Irkutsk";
 "TripsPageExpressDescription" = "This journey promises unforgettable impressions of the legendary Lake Baikal, its breath, the spirit of its landscapes, and architectural marvels.";
+
+/* Recommends - North */
+"RecommendsNorthTitle" = "Northern Cities";
+"RecommendsNorthFirstTitle" = "Astrakhan";
+"RecommendsNorthFirstDescription" = "An ancient city in southern Russia, located in the Volga Delta, 1,400 kilometers southeast of Moscow.";
+
+"RecommendsNorthSecondTitle" = "Saratov";
+"RecommendsNorthSecondDescription" = "Located opposite the mouth of the Saratovka River and the city of Engels, 858 kilometers southeast of Moscow.";
+
+"RecommendsNorthThirdTitle" = "Krasnodar";
+"RecommendsNorthThirdDescription" = "Situated on the right bank of the Kuban River, 1,196 kilometers south of Moscow.";
+
+/* Recommends - South */
+"RecommendsSouthTitle" = "Southern Cities";
+"RecommendsSouthFirstTitle" = "Yaroslavl";
+"RecommendsSouthFirstDescription" = "Located on both banks of the Volga River at the confluence of the Kotorosl River, 282 kilometers northeast of Moscow.";
+
+"RecommendsSouthSecondTitle" = "Veliky Novgorod";
+"RecommendsSouthSecondDescription" = "One of the oldest cities in Russia, located on the Volkhov River, 491 kilometers northwest of Moscow.";
+
+"RecommendsSouthThirdTitle" = "Saint Petersburg";
+"RecommendsSouthThirdDescription" = "Situated in the northwest of the country on the coast of the Gulf of Finland and at the mouth of the Neva River, 634 kilometers from Moscow.";
+
+/* Recommends - East */
+"RecommendsEastTitle" = "Eastern Cities";
+
+/* Recommends - West */
+"RecommendsWestTitle" = "Western Cities";

@@ -77,6 +77,7 @@ struct Texts {
         static let from = "NavBarFrom"
         static let destination = "NavBarDestination"
         static let trips = "NavBarTrips"
+        static let recommends = "NavBarRecommends"
     }
     
     enum Language {
@@ -182,6 +183,51 @@ struct Texts {
             static let search = "BuyButtonsSearch"
             static let trips = "BuyButtonsTrips"
             static let hot = "BuyButtonsHot"
+        }
+    }
+    
+    enum Recommends {
+        enum North {
+            static let title = "RecommendsNorthTitle"
+            
+            enum First {
+                static let title = "RecommendsNorthFirstTitle"
+                static let description = "RecommendsNorthFirstDescription"
+                static let price = "RecommendsNorthFirstPrice"
+            }
+            enum Second {
+                static let title = "RecommendsNorthSecondTitle"
+                static let description = "RecommendsNorthSecondDescription"
+                static let price = "RecommendsNorthSecondPrice"
+            }
+            enum Third {
+                static let title = "RecommendsNorthThirdTitle"
+                static let description = "RecommendsNorthThirdDescription"
+                static let price = "RecommendsNorthThirdPrice"
+            }
+        }
+        
+        enum South {
+            static let title = "RecommendsSouthTitle"
+            
+            enum First {
+                static let title = "RecommendsSouthFirstTitle"
+                static let description = "RecommendsSouthFirstDescription"
+            }
+            enum Second {
+                static let title = "RecommendsSouthSecondTitle"
+                static let description = "RecommendsSouthSecondDescription"
+            }
+            enum Third {
+                static let title = "RecommendsSouthThirdTitle"
+                static let description = "RecommendsSouthThirdDescription"
+            }
+        }
+        enum East {
+            static let title = "RecommendsEastTitle"
+        }
+        enum West {
+            static let title = "RecommendsWestTitle"
         }
     }
     

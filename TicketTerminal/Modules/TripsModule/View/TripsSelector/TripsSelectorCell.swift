@@ -11,12 +11,12 @@ struct TripsSelectorCell: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
-    private let type: Trip
+    private let title: String
     private let selected: Bool
     private let action: () -> Void
     
-    init(type: Trip, selected: Bool, action: @escaping () -> Void) {
-        self.type = type
+    init(title: String, selected: Bool, action: @escaping () -> Void) {
+        self.title = title
         self.selected = selected
         self.action = action
     }
@@ -45,7 +45,7 @@ struct TripsSelectorCell: View {
     }
     
     private var content: some View {
-        Text(type.title)
+        Text(title)
             .font(.scalable(
                 size: 32,
                 weight: .medium,
@@ -65,6 +65,6 @@ struct TripsSelectorCell: View {
 }
 
 #Preview {
-    TripsSelectorCell(type: .express, selected: false) {}
+    TripsSelectorCell(title: "Express", selected: false) {}
         .environmentObject(AccessibilityManager())
 }

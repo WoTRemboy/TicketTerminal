@@ -27,7 +27,7 @@ struct TripsSelectorView: View {
         HStack(spacing: 12) {
             ForEach(Trip.horizontalCases, id: \.self) { trip in
                 TripsSelectorCell(
-                    type: trip,
+                    title: trip.title,
                     selected: viewModel.isSelectedTrip(trip)) {
                         viewModel.changeTrip(to: trip)
                     }
@@ -36,7 +36,7 @@ struct TripsSelectorView: View {
     }
     
     private var centerButton: some View {
-        TripsSelectorCell(type: .pearl,
+        TripsSelectorCell(title: Trip.pearl.title,
                           selected: viewModel.isSelectedTrip(.pearl)) {
             viewModel.changeTrip(to: .pearl)
         }
