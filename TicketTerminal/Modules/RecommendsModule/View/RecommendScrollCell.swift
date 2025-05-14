@@ -78,6 +78,7 @@ struct RecommendScrollCell: View {
     RecommendScrollCell(type: .init(
         title: "Saint Petersburg",
         description: "Situated in the northwest of the country on the coast of the Gulf of Finland and at the mouth of the Neva River, 634 kilometers from Moscow.",
+        code: 20000040,
         price: 1609))
     .environmentObject(AccessibilityManager())
 }

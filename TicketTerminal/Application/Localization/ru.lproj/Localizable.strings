@@ -116,25 +116,25 @@
 
 /* Recommends - North */
 "RecommendsNorthTitle" = "Северные города";
-"RecommendsNorthFirstTitle" = "Астрахань";
-"RecommendsNorthFirstDescription" = "Древний город на юге России, расположенный в дельте Волги, в 1400 километрах к юго-востоку от Москвы.";
+"RecommendsNorthFirstTitle" = "Ярославль";
+"RecommendsNorthFirstDescription" = "Расположен на обоих берегах Волги при впадении реки Которосли, в 282 км к северо-востоку от Москвы.";
 
-"RecommendsNorthSecondTitle" = "Саратов";
-"RecommendsNorthSecondDescription" = "Находится напротив устья реки Саратовки и города Энгельса, в 858 км к юго-востоку от Москвы.";
+"RecommendsNorthSecondTitle" = "Великий Новгород";
+"RecommendsNorthSecondDescription" = "Один из древнейших городов России, расположенный на реке Волхов, в 491 км к северо-западу от Москвы.";
 
-"RecommendsNorthThirdTitle" = "Краснодар";
-"RecommendsNorthThirdDescription" = "Расположен на правом берегу реки Кубань, в 1196 км к югу от Москвы.";
+"RecommendsNorthThirdTitle" = "Санкт-Петербург";
+"RecommendsNorthThirdDescription" = "Расположен на северо-западе страны на побережье Финского залива и в устье реки Невы, в 634 км от Москвы.";
 
 /* Recommends - South */
 "RecommendsSouthTitle" = "Южные города";
-"RecommendsSouthFirstTitle" = "Ярославль";
-"RecommendsSouthFirstDescription" = "Расположен на обоих берегах Волги при впадении реки Которосли, в 282 км к северо-востоку от Москвы.";
+"RecommendsSouthFirstTitle" = "Астрахань";
+"RecommendsSouthFirstDescription" = "Древний город на юге России, расположенный в дельте Волги, в 1400 километрах к юго-востоку от Москвы.";
 
-"RecommendsSouthSecondTitle" = "Великий Новгород";
-"RecommendsSouthSecondDescription" = "Один из древнейших городов России, расположенный на реке Волхов, в 491 км к северо-западу от Москвы.";
+"RecommendsSouthSecondTitle" = "Саратов";
+"RecommendsSouthSecondDescription" = "Находится напротив устья реки Саратовки и города Энгельса, в 858 км к юго-востоку от Москвы.";
 
-"RecommendsSouthThirdTitle" = "Санкт-Петербург";
-"RecommendsSouthThirdDescription" = "Расположен на северо-западе страны на побережье Финского залива и в устье реки Невы, в 634 км от Москвы.";
+"RecommendsSouthThirdTitle" = "Краснодар";
+"RecommendsSouthThirdDescription" = "Расположен на правом берегу реки Кубань, в 1196 км к югу от Москвы.";
 
 /* Recommends - East */
 "RecommendsEastTitle" = "Восточные города";

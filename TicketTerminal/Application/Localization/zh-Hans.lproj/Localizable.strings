@@ -116,25 +116,25 @@
 
 /* Recommends - North */
 "RecommendsNorthTitle" = "北部城市";
-"RecommendsNorthFirstTitle" = "阿斯特拉罕";
-"RecommendsNorthFirstDescription" = "俄罗斯南部一座古老的城市，位于伏尔加河三角洲，距莫斯科东南1400公里。";
+"RecommendsNorthFirstTitle" = "雅罗斯拉夫尔";
+"RecommendsNorthFirstDescription" = "位于伏尔加河两岸的科托罗斯尔河汇合处，距莫斯科东北282公里。";
 
-"RecommendsNorthSecondTitle" = "萨拉托夫";
-"RecommendsNorthSecondDescription" = "位于萨拉托夫卡河河口及恩格尔斯市对岸，距莫斯科东南858公里。";
+"RecommendsNorthSecondTitle" = "诺夫哥罗德";
+"RecommendsNorthSecondDescription" = "俄罗斯最古老的城市之一，位于沃尔霍夫河畔，距莫斯科西北491公里。";
 
-"RecommendsNorthThirdTitle" = "克拉斯诺达尔";
-"RecommendsNorthThirdDescription" = "位于库班河右岸，距莫斯科以南1196公里。";
+"RecommendsNorthThirdTitle" = "圣彼得堡";
+"RecommendsNorthThirdDescription" = "位于该国西北部，芬兰湾海岸和涅瓦河口，距莫斯科634公里。";
 
 /* Recommends - South */
 "RecommendsSouthTitle" = "南部城市";
-"RecommendsSouthFirstTitle" = "雅罗斯拉夫尔";
-"RecommendsSouthFirstDescription" = "位于伏尔加河两岸的科托罗斯尔河汇合处，距莫斯科东北282公里。";
+"RecommendsSouthFirstTitle" = "阿斯特拉罕";
+"RecommendsSouthFirstDescription" = "俄罗斯南部一座古老的城市，位于伏尔加河三角洲，距莫斯科东南1400公里。";
 
-"RecommendsSouthSecondTitle" = "诺夫哥罗德";
-"RecommendsSouthSecondDescription" = "俄罗斯最古老的城市之一，位于沃尔霍夫河畔，距莫斯科西北491公里。";
+"RecommendsSouthSecondTitle" = "萨拉托夫";
+"RecommendsSouthSecondDescription" = "位于萨拉托夫卡河河口及恩格尔斯市对岸，距莫斯科东南858公里。";
 
-"RecommendsSouthThirdTitle" = "圣彼得堡";
-"RecommendsSouthThirdDescription" = "位于该国西北部，芬兰湾海岸和涅瓦河口，距莫斯科634公里。";
+"RecommendsSouthThirdTitle" = "克拉斯诺达尔";
+"RecommendsSouthThirdDescription" = "位于库班河右岸，距莫斯科以南1196公里。";
 
 /* Recommends - East */
 "RecommendsEastTitle" = "东部城市";

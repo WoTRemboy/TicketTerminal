@@ -24,4 +24,17 @@ final class RecommendsViewModel: ObservableObject {
         selectedSet == set
     }
     
+    internal func viewModelSetup(type: RecommendsTrip) -> BuyViewModel {
+        let destViewModel = BuyViewModel()
+        destViewModel.selectedDepartureDate = selectedDate
+        destViewModel.selectedDepartureStation = NetworkStationService.Station(
+            name: Texts.Buy.Placeholder.Station.second.localized,
+            code: 2000000,
+            S: 7, L: 6)
+        destViewModel.selectedArrivalStation = NetworkStationService.Station(
+            name: type.title.uppercased(),
+            code: type.code,
+            S: 5, L: 5)
+        return destViewModel
+    }
 }

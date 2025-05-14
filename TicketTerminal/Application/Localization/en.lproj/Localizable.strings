@@ -116,25 +116,25 @@
 
 /* Recommends - North */
 "RecommendsNorthTitle" = "Northern Cities";
-"RecommendsNorthFirstTitle" = "Astrakhan";
-"RecommendsNorthFirstDescription" = "An ancient city in southern Russia, located in the Volga Delta, 1,400 kilometers southeast of Moscow.";
+"RecommendsNorthFirstTitle" = "Yaroslavl";
+"RecommendsNorthFirstDescription" = "Located on both banks of the Volga River at the confluence of the Kotorosl River, 282 kilometers northeast of Moscow.";
 
-"RecommendsNorthSecondTitle" = "Saratov";
-"RecommendsNorthSecondDescription" = "Located opposite the mouth of the Saratovka River and the city of Engels, 858 kilometers southeast of Moscow.";
+"RecommendsNorthSecondTitle" = "Veliky Novgorod";
+"RecommendsNorthSecondDescription" = "One of the oldest cities in Russia, located on the Volkhov River, 491 kilometers northwest of Moscow.";
 
-"RecommendsNorthThirdTitle" = "Krasnodar";
-"RecommendsNorthThirdDescription" = "Situated on the right bank of the Kuban River, 1,196 kilometers south of Moscow.";
+"RecommendsNorthThirdTitle" = "Saint Petersburg";
+"RecommendsNorthThirdDescription" = "Situated in the northwest of the country on the coast of the Gulf of Finland and at the mouth of the Neva River, 634 kilometers from Moscow.";
 
 /* Recommends - South */
 "RecommendsSouthTitle" = "Southern Cities";
-"RecommendsSouthFirstTitle" = "Yaroslavl";
-"RecommendsSouthFirstDescription" = "Located on both banks of the Volga River at the confluence of the Kotorosl River, 282 kilometers northeast of Moscow.";
+"RecommendsSouthFirstTitle" = "Astrakhan";
+"RecommendsSouthFirstDescription" = "An ancient city in southern Russia, located in the Volga Delta, 1,400 kilometers southeast of Moscow.";
 
-"RecommendsSouthSecondTitle" = "Veliky Novgorod";
-"RecommendsSouthSecondDescription" = "One of the oldest cities in Russia, located on the Volkhov River, 491 kilometers northwest of Moscow.";
+"RecommendsSouthSecondTitle" = "Saratov";
+"RecommendsSouthSecondDescription" = "Located opposite the mouth of the Saratovka River and the city of Engels, 858 kilometers southeast of Moscow.";
 
-"RecommendsSouthThirdTitle" = "Saint Petersburg";
-"RecommendsSouthThirdDescription" = "Situated in the northwest of the country on the coast of the Gulf of Finland and at the mouth of the Neva River, 634 kilometers from Moscow.";
+"RecommendsSouthThirdTitle" = "Krasnodar";
+"RecommendsSouthThirdDescription" = "Situated on the right bank of the Kuban River, 1,196 kilometers south of Moscow.";
 
 /* Recommends - East */
 "RecommendsEastTitle" = "Eastern Cities";

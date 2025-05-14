@@ -47,9 +47,12 @@ struct RecommendsView: View {
     private var recommendsScrollView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             ForEach(viewModel.selectedSet.trips, id: \.id) { trip in
-                RecommendScrollCell(type: trip)
-                    .transition(.blurReplace)
-                    .padding(.bottom, 20)
+                CustomNavLink(destination: TripSelectView(viewModel: viewModel.viewModelSetup(type: trip))) {
+                    RecommendScrollCell(type: trip)
+                        .transition(.blurReplace)
+                        .padding(.bottom, 20)
+                }
+                .buttonStyle(.plain)
             }
             .padding([.horizontal, .top])
         }
@@ -62,7 +65,6 @@ struct RecommendsView: View {
             title: Texts.Buy.TripCell.date.localized,
             dateRange: Date()...) {}
     }
-    
 }
 
 #Preview {
