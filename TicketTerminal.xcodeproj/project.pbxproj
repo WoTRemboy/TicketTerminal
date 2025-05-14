@@ -371,6 +371,7 @@
 			children = (
 				6316ADE72DC62D6E001BD921 /* CustomNavBar */,
 				636EF4D22DC7E8C6004B259B /* AccessibilityManager.swift */,
+				635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */,
 				631635FE2DC92C2E0024EE2D /* Background.swift */,
 			);
 			path = Helpers;
@@ -640,6 +641,7 @@
 			children = (
 				63B03B6F2DCB8B3A00379AD9 /* NetworkStationService.swift */,
 				63B03B792DCCBF5E00379AD9 /* NetworkTimetableService.swift */,
+				63DE829E2DD3AACD00E4ED5E /* OpenAIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -698,7 +700,6 @@
 			children = (
 				63B03B902DCCF80900379AD9 /* TripDetailsView.swift */,
 				63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */,
-				635C25E42DD0C25800AB365A /* LoadingIndicatiorView.swift */,
 			);
 			path = TripDetails;
 			sourceTree = "<group>";
@@ -743,7 +744,6 @@
 			isa = PBXGroup;
 			children = (
 				63DE829C2DD3AABC00E4ED5E /* SpeechRecognizer.swift */,
-				63DE829E2DD3AACD00E4ED5E /* OpenAIService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
