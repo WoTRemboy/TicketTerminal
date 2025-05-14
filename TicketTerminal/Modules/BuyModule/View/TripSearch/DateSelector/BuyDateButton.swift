@@ -30,7 +30,12 @@ struct BuyDateButton: View {
                 }
             }
             .sheet(isPresented: $isDatePickerShown) {
-                BuyDateSelectorView(type: type)
+                BuyDateSelectorView(
+                    selectedDate: type == .departureDate ? $viewModel.departureDate : $viewModel.returnDate,
+                    title: type.title,
+                    dateRange: type == .departureDate ? Date()... : viewModel.departureDate...) {
+                        viewModel.setDate(for: type)
+                    }
             }
             
     }

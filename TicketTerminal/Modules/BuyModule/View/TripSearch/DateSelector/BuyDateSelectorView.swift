@@ -9,27 +9,25 @@ import SwiftUI
 
 struct BuyDateSelectorView: View {
     
-    @EnvironmentObject private var viewModel: BuyViewModel
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
+    @Binding var selectedDate: Date
     @Environment(\.dismiss) private var dismiss
     
-    private let type: BuyDate
-    
-    init(type: BuyDate) {
-        self.type = type
-    }
+    let title: String
+    let dateRange: PartialRangeFrom<Date>
+    let action: () -> Void
     
     internal var body: some View {
         VStack(spacing: 40) {
-            title
+            titleLabel
             datePicker
             buttons
         }
     }
     
-    private var title: some View {
-        Text(type.title)
+    private var titleLabel: some View {
+        Text(title)
             .font(.scalable(
                 size: 40,
                 weight: .medium,
@@ -37,46 +35,29 @@ struct BuyDateSelectorView: View {
     }
     
     private var datePicker: some View {
-        Group {
-            if type == .departureDate {
-                departureDatePicker
-            } else {
-                returnDatePicker
-            }
-        }
+        DatePicker(
+            String(),
+            selection: $selectedDate,
+            in: dateRange,
+            displayedComponents: .date)
+        
         .datePickerStyle(.graphical)
         .frame(width: 400, height: 380)
         .background(Background(radius: 20, scheme: accessibilityManager.fontColor))
     }
     
-    private var departureDatePicker: some View {
-        DatePicker(
-            String(),
-            selection: $viewModel.departureDate,
-            in: Date()...,
-            displayedComponents: .date)
-    }
-    
-    private var returnDatePicker: some View {
-        DatePicker(
-            String(),
-            selection: $viewModel.returnDate,
-            in: viewModel.departureDate...,
-            displayedComponents: .date)
-    }
-    
     private var buttons: some View {
         HStack(spacing: 20) {
             cancelButton
-            actionButton(type: type)
+            actionButton
         }
         .padding([.horizontal, .bottom], 20)
     }
     
-    private func actionButton(type: BuyDate) -> some View {
+    private var actionButton: some View {
         Button {
             withAnimation(.easeInOut(duration: 0.2)) {
-                viewModel.setDate(for: type)
+                action()
             }
             dismiss()
         } label: {
@@ -109,7 +90,10 @@ struct BuyDateSelectorView: View {
 }
 
 #Preview {
-    BuyDateSelectorView(type: .departureDate)
-        .environmentObject(BuyViewModel())
+    BuyDateSelectorView(
+        selectedDate: .constant(Date()),
+        title: "Departure",
+        dateRange: Date()...,
+        action: {})
         .environmentObject(AccessibilityManager())
 }
