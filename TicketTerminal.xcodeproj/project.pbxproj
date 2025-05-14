@@ -172,6 +172,7 @@
 		63B03B8D2DCCED4E00379AD9 /* TripCellCarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellCarList.swift; sourceTree = "<group>"; };
 		63B03B902DCCF80900379AD9 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
 		63B03B922DCD059C00379AD9 /* TripDetailsDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsDateView.swift; sourceTree = "<group>"; };
+		63B24FEC2DD4B40F00A75E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		63DE82992DD3AA6E00E4ED5E /* RecomendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendsView.swift; sourceTree = "<group>"; };
 		63DE829C2DD3AABC00E4ED5E /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		63DE829E2DD3AACD00E4ED5E /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
@@ -527,6 +528,7 @@
 				6316ADE62DC62C4D001BD921 /* Helpers */,
 				638878232DC4DA3300028C5C /* Extensions */,
 				638878222DC4DA1B00028C5C /* SupportFiles */,
+				63B24FEC2DD4B40F00A75E06 /* Info.plist */,
 			);
 			path = TicketTerminal;
 			sourceTree = "<group>";
@@ -1034,8 +1036,11 @@
 				DEVELOPMENT_TEAM = NAJAJ652LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketTerminal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Ticket Terminal";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1068,8 +1073,11 @@
 				DEVELOPMENT_TEAM = NAJAJ652LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketTerminal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Ticket Terminal";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
