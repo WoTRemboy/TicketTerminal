@@ -100,7 +100,7 @@
 "BuyPlaceholderTripCellDate" = "Date";
 
 /* Assistant */
-"AssistantPreparation" = "Preparing";
+"AssistantPreparation" = "Waiting";
 "AssistantListening"  = "I'm listening";
 
 /* TripsPage - Pearl */

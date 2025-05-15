@@ -49,9 +49,10 @@ struct RecommendsView: View {
             ForEach(viewModel.selectedSet.trips, id: \.id) { trip in
                 CustomNavLink(destination: TripSelectView(viewModel: viewModel.viewModelSetup(type: trip))) {
                     RecommendScrollCell(type: trip)
-                        .transition(.blurReplace)
+                        
                         .padding(.bottom, 20)
                 }
+                .transition(.blurReplace)
                 .buttonStyle(.plain)
             }
             .padding([.horizontal, .top])
