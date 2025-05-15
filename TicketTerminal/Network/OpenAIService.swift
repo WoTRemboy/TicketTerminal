@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import Combine
+import SwiftUI
 
 enum Constants {
     static let apiKey = Bundle.main.object(forInfoDictionaryKey: "OpenAIAPIKey") as? String ?? String()
@@ -75,16 +76,19 @@ struct Arguments: Decodable {
 
 let getCurrentWeatherFunction =  Function(name: "get_current_weather",
                                           description: "Get the current weather in a given location",
-                                          parameters: Parameters(type: "object",
-                                                                 properties: ["location":
-                                                                                Property(type: "integer",
-                                                                                         description: "The city and state, e.g. San Francisco, CA"),
-                                                                              "unit":
-                                                                                Property(type: "string",
-                                                                                         description: "The unit of measurement, e.g. fahrenheit or celsius")
-                                                                             ],
-                                                                 required: ["location"]
-                                                                )
+                                          parameters: Parameters(
+                                            type: "object",
+                                            properties: ["location":
+                                                            Property(
+                                                                type: "integer",
+                                                                description: "The city and state, e.g. San Francisco, CA"),
+                                                        "unit":
+                                                            Property(
+                                                                type: "string",
+                                                                description: "The unit of measurement, e.g. fahrenheit or celsius")
+                                                        ],
+                                            required: ["location"]
+                                        )
 )
 
 class OpenAIService {
@@ -93,7 +97,11 @@ class OpenAIService {
     var isLoading: Bool = false
     var messages: [OpenAIMessage] = []
 
-    func makeRequest(message: OpenAIMessage) -> AnyPublisher<OpenAIResponse, Error> {
+    func makeRequest(message: OpenAIMessage, systemPrompt: String? = nil) -> AnyPublisher<OpenAIResponse, Error> {
+        if let prompt = systemPrompt {
+            let systemMessage = OpenAIMessage(role: "system", content: prompt)
+            messages = [systemMessage] + messages.filter { $0.role != "system" }
+        }
         messages.append(message)
         let functions: [Function] = [getCurrentWeatherFunction]
         let parameters = OpenAIParameters(
@@ -167,4 +175,35 @@ func getCurrentWeather(location: String, unit: String?) -> String {
     ]
     let jsonData = try? JSONSerialization.data(withJSONObject: weatherInfo, options: .prettyPrinted)
     return String(data: jsonData!, encoding: .utf8)!
+}
+
+
+enum RequestStatus {
+    case none
+    case listening
+    case processing
+    case answering
+    case completed
+    
+    internal var title: String {
+        switch self {
+        case .none:
+            Texts.Assistant.preparation.localized
+        case .listening:
+            Texts.Assistant.listening.localized
+        case .processing, .answering, .completed:
+            String()
+        }
+    }
+    
+    internal var image: Image {
+        switch self {
+        case .none:
+            Image.Assistant.None.normal
+        case .listening, .processing:
+            Image.Assistant.Listening.normal
+        case .answering, .completed:
+            Image.Assistant.Answering.normal
+        }
+    }
 }

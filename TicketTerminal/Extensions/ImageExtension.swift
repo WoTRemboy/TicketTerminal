@@ -127,6 +127,26 @@ extension Image {
         static let removeDate = Image("RemoveDateIcon")
     }
     
+    enum Assistant {
+        enum Microphone {
+            static let normal = Image("AssistantMicrophone")
+            static let black = Image("AssistantMicrophoneBlack")
+        }
+        
+        enum Answering {
+            static let normal = Image("AssistantStatusAnswering")
+            static let black = Image("AssistantStatusAnsweringBlack")
+        }
+        
+        enum Listening {
+            static let normal = Image("AssistantStatusListening")
+        }
+        
+        enum None {
+            static let normal = Image("AssistantStatusNone")
+        }
+    }
+    
     enum Accessibility {
         enum FontColor {
             static let first = Image("FontColorRed")

@@ -13,7 +13,7 @@ struct AssistantView: View {
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     
     @StateObject var speechRecognizer = SpeechRecognizer()
-    @State private var isRecording = false
+    @State private var isPulsing = false
     
     private let namespace: Namespace.ID
     
@@ -26,25 +26,11 @@ struct AssistantView: View {
             CustomNavBarView(type: .assistant)
                 .padding(.top)
             
-            Button {
-                endRecording()
-            } label: {
-                if isRecording {
-                    RoundAnimation()
-                }
-                
-                Image(systemName: "mic.circle")
-                    .frame(height: 100)
-                    .foregroundColor(.blue)
-                    .font(.system(size: 70))
-                    .padding()
-            }
-            .simultaneousGesture(
-                LongPressGesture(minimumDuration: 0.1).onEnded { _ in
-                    startRecording()
-                })
-            
+            requestStatus
+                .padding(.top, 100)
+           
             Spacer()
+            speakBlock
         }
         .navigationTransition(.zoom(
             sourceID: Texts.NamespaceID.Assistant.zoomTransition,
@@ -59,35 +45,108 @@ struct AssistantView: View {
         .ignoresSafeArea()
     }
     
+    private var requestStatus: some View {
+        VStack(spacing: 40) {
+            Text(viewModel.isResponding()
+                 ? viewModel.responseText
+                 : viewModel.requestStatus.title)
+                .font(.scalable(
+                    size: 48,
+                    weight: .semibold,
+                    scale: accessibilityManager.fontScale.scale)
+                )
+                .foregroundStyle(Color.blackVariant(
+                    color: viewModel.isResponding()
+                    ? .SymbolColors.red
+                    : .LabelColors.labelPrimary,
+                    scheme: accessibilityManager.fontColor)
+                )
+                .id(viewModel.requestStatus)
+                .transition(.blurReplace)
+            
+            viewModel.requestStatus.image
+                .id(viewModel.requestStatus)
+                .transition(.scale)
+                .scaleEffect(isPulsing ? 1.1 : 1.0)
+                .opacity(isPulsing ? 0.8 : 1.0)
+                .onChange(of: viewModel.requestStatus) {
+                    isPulsing = false
+                    DispatchQueue.main.async {
+                        isPulsing = true
+                    }
+                }
+                .animation(
+                    Animation.easeInOut(duration: 1)
+                        .repeatForever(autoreverses: true),
+                    value: isPulsing
+                )
+        }
+        .animation(.easeInOut(duration: 0.3), value: viewModel.requestStatus)
+    }
+    
+    private var speakBlock: some View {
+        HStack(spacing: 22) {
+            speakButton
+            Text(speechRecognizer.transcript)
+                .font(.scalable(
+                    size: 40,
+                    weight: .semibold,
+                    scale: accessibilityManager.fontScale.scale))
+                .foregroundStyle(Color.LabelColors.labelWhite)
+                .contentTransition(.numericText())
+        }
+        .frame(maxWidth: .infinity, maxHeight: 200, alignment: .leading)
+        .padding(.horizontal, 20)
+        .background {
+            RoundedRectangle(cornerRadius: 40)
+                .fill(Color.greyVariant(
+                    color: .SymbolColors.red,
+                    scheme: accessibilityManager.fontColor)
+                )
+        }
+        .padding(.horizontal)
+        .background(alignment: .bottom) {
+            bottomRectangle
+                .offset(y: 30)
+        }
+    }
+    
+    private var bottomRectangle: some View {
+        Rectangle()
+            .fill(Color.whiteVariant(
+                color: .SymbolColors.lightGrey,
+                scheme: accessibilityManager.fontColor))
+            .frame(maxWidth: .infinity, maxHeight: 160)
+    }
+    
+    private var speakButton: some View {
+        Button {
+            endRecording()
+        } label: {
+            Image.alterColored(
+                normal: Image.Assistant.Microphone.normal,
+                alter: Image.Assistant.Microphone.black,
+                scheme: accessibilityManager.fontColor)
+            
+        }
+        .buttonStyle(.plain)
+        .simultaneousGesture(
+            LongPressGesture(minimumDuration: 0.1).onEnded { _ in
+                startRecording()
+            })
+    }
+    
     private func startRecording() {
         print("Debug: Start transcription")
         speechRecognizer.resetTranscript()
         speechRecognizer.startTranscribing()
-        isRecording = true
+        viewModel.setStatus(.listening)
     }
     
     private func endRecording() {
         speechRecognizer.stopTranscribing()
-        isRecording = false
         print("Stopped:", speechRecognizer.transcript)
         viewModel.sendMessage(message: speechRecognizer.transcript)
-        
-    }
-}
-
-struct RoundAnimation: View {
-    @State private var isAnimating = false
-
-    var body: some View {
-        Circle()
-            .trim(from: 0, to: 0.7)
-            .stroke(AngularGradient(gradient: Gradient(colors: [.blue, .purple]), center: .center), style: StrokeStyle(lineWidth: 8, lineCap: .round))
-            .frame(width: 100, height: 100)
-            .rotationEffect(Angle(degrees: isAnimating ? 360 : 0))
-            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false), value: isAnimating)
-            .onAppear {
-                isAnimating = true
-            }
     }
 }
 

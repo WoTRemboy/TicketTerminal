@@ -99,6 +99,10 @@
 "BuyPlaceholderTripCellTrip" = "Trip";
 "BuyPlaceholderTripCellDate" = "Date";
 
+/* Assistant */
+"AssistantPreparation" = "Preparing";
+"AssistantListening"  = "I'm listening";
+
 /* TripsPage - Pearl */
 "TripsPagePearlTitle" = "Cruise: 4 days | 4 nights";
 "TripsPagePearlRoute" = "Rostov-on-Don – Maykop – Vladikavkaz – Grozny – Derbent – Nalchik – Rostov-on-Don";

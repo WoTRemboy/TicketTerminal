@@ -9,8 +9,13 @@ import Foundation
 import Combine
 import AVFAudio
 import AVFoundation
+import SwiftUI
 
 final class AssistantViewModel: ObservableObject {
+    
+    @Published internal var requestStatus: RequestStatus = .none
+    @Published internal var responseText: String = String()
+    
     private var cancellables = Set<AnyCancellable>()
     let openAIService: OpenAIService
     
@@ -20,10 +25,12 @@ final class AssistantViewModel: ObservableObject {
         self.openAIService = openAIService
     }
 
-    func sendMessage (message: String) {
-        guard message != "" else {return}
+    internal func sendMessage (message: String) {
+        guard message != "" else { return }
 
-        openAIService.makeRequest(message: OpenAIMessage(role: "user", content: message))
+        openAIService.makeRequest(message: OpenAIMessage(role: "user", content: message),
+                                  systemPrompt: Texts.Assistant.prompt
+        )
             .sink { completion in
                 switch completion {
                 case .failure(let error):
@@ -37,18 +44,19 @@ final class AssistantViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    func handleResponse(response: OpenAIResponse) {
+    private func handleResponse(response: OpenAIResponse) {
         guard let message = response.choices.first?.message else { return }
 
         if let functionCall = message.function_call {
             handleFunctionCall(functionCall: functionCall)
         } else if let textResponse = message.content?.trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\""))) {
             print("Response", textResponse)
+            responseText = textResponse
             self.speak(textResponse)
         }
     }
 
-    func handleFunctionCall(functionCall: FunctionCall) {
+    private func handleFunctionCall(functionCall: FunctionCall) {
         self.openAIService.handleFunctionCall(functionCall: functionCall) { result in
             switch result {
             case .success(let functionResponse):
@@ -86,5 +94,16 @@ final class AssistantViewModel: ObservableObject {
         utterance.voice = AVSpeechSynthesisVoice(language: LocalizationManager.shared.localeLanguage)
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate
         speechSynthesizer.speak(utterance)
+        setStatus(.answering)
+    }
+    
+    internal func setStatus(_ status: RequestStatus) {
+        withAnimation(.snappy) {
+            requestStatus = status
+        }
+    }
+    
+    internal func isResponding() -> Bool {
+        return requestStatus == .answering
     }
 }

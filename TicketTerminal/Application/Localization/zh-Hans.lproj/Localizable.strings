@@ -99,6 +99,10 @@
 "BuyPlaceholderTripCellTrip" = "行程";
 "BuyPlaceholderTripCellDate" = "日期";
 
+/* Assistant */
+"AssistantPreparation" = "准备中";
+"AssistantListening"  = "我在听";
+
 /* TripsPage - Pearl */
 "TripsPagePearlTitle" = "游轮：4天 | 4晚";
 "TripsPagePearlRoute" = "顿河畔罗斯托夫 – 迈科普 – 弗拉季高加索 – 格罗兹尼 – 代尔本特 – 纳尔奇克 – 顿河畔罗斯托夫";

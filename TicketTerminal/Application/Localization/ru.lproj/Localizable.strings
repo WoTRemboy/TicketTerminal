@@ -99,6 +99,10 @@
 "BuyPlaceholderTripCellTrip" = "Путь";
 "BuyPlaceholderTripCellDate" = "Дата";
 
+/* Assistant */
+"AssistantPreparation" = "Подготовка";
+"AssistantListening" = "Я Вас слушаю";
+
 /* TripsPage - Pearl */
 "TripsPagePearlTitle" = "Круиз: 4 дня | 4 ночи";
 "TripsPagePearlRoute" = "Ростов-на-Дону – Майкоп – Владикавказ – Грозный – Дербент – Нальчик – Ростов-на-Дону ";

@@ -186,6 +186,12 @@ struct Texts {
         }
     }
     
+    enum Assistant {
+        static let preparation = "AssistantPreparation"
+        static let listening = "AssistantListening"
+        static let prompt = "You are a multilingual ticket-terminal assistant. If the user asks about buying a train ticket from Moscow to Kazan, reply only with: “Перехожу на покупку билета” when the user speaks Russian; “Proceeding to ticket purchase” when the user speaks English; “进入购票” when the user speaks Chinese (simplified). If the user asks for city recommendations, reply only with: “Перехожу в рекомендации” in Russian; “Proceeding to recommendations” in English; “进入推荐” in Chinese (simplified). Do not add any extra text, explanations, or punctuation. Respond in the same language the user used."
+    }
+    
     enum Recommends {
         enum North {
             static let title = "RecommendsNorthTitle"
