@@ -15,6 +15,7 @@ enum NavBar {
     case from
     case destination
     case trips
+    case recommends
     
     internal var title: String {
         switch self {
@@ -32,6 +33,8 @@ enum NavBar {
             Texts.NavBar.destination.localized
         case .trips:
             Texts.NavBar.trips.localized
+        case .recommends:
+            Texts.NavBar.recommends.localized
         }
     }
     
@@ -71,6 +74,11 @@ enum NavBar {
             Image.alterColored(
                 normal: Image.NavBar.Trips.normal,
                 alter: Image.NavBar.Trips.black,
+                scheme: scheme)
+        case .recommends:
+            Image.alterColored(
+                normal: Image.NavBar.Recommends.normal,
+                alter: Image.NavBar.Recommends.black,
                 scheme: scheme)
         }
     }

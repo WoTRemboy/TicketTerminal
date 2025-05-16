@@ -77,6 +77,7 @@ struct Texts {
         static let from = "NavBarFrom"
         static let destination = "NavBarDestination"
         static let trips = "NavBarTrips"
+        static let recommends = "NavBarRecommends"
     }
     
     enum Language {
@@ -182,6 +183,57 @@ struct Texts {
             static let search = "BuyButtonsSearch"
             static let trips = "BuyButtonsTrips"
             static let hot = "BuyButtonsHot"
+        }
+    }
+    
+    enum Assistant {
+        static let preparation = "AssistantPreparation"
+        static let listening = "AssistantListening"
+        static let prompt = "You are a multilingual ticket-terminal assistant. If the user asks about buying a train ticket from Moscow to Kazan, reply only with: “Перехожу на покупку билета” when the user speaks Russian; “Proceeding to ticket purchase” when the user speaks English; “进入购票” when the user speaks Chinese (simplified). If the user asks for city recommendations, reply only with: “Перехожу в рекомендации” in Russian; “Proceeding to recommendations” in English; “进入推荐” in Chinese (simplified). Do not add any extra text, explanations, or punctuation. Respond in the same language the user used."
+    }
+    
+    enum Recommends {
+        enum North {
+            static let title = "RecommendsNorthTitle"
+            
+            enum First {
+                static let title = "RecommendsNorthFirstTitle"
+                static let description = "RecommendsNorthFirstDescription"
+                static let price = "RecommendsNorthFirstPrice"
+            }
+            enum Second {
+                static let title = "RecommendsNorthSecondTitle"
+                static let description = "RecommendsNorthSecondDescription"
+                static let price = "RecommendsNorthSecondPrice"
+            }
+            enum Third {
+                static let title = "RecommendsNorthThirdTitle"
+                static let description = "RecommendsNorthThirdDescription"
+                static let price = "RecommendsNorthThirdPrice"
+            }
+        }
+        
+        enum South {
+            static let title = "RecommendsSouthTitle"
+            
+            enum First {
+                static let title = "RecommendsSouthFirstTitle"
+                static let description = "RecommendsSouthFirstDescription"
+            }
+            enum Second {
+                static let title = "RecommendsSouthSecondTitle"
+                static let description = "RecommendsSouthSecondDescription"
+            }
+            enum Third {
+                static let title = "RecommendsSouthThirdTitle"
+                static let description = "RecommendsSouthThirdDescription"
+            }
+        }
+        enum East {
+            static let title = "RecommendsEastTitle"
+        }
+        enum West {
+            static let title = "RecommendsWestTitle"
         }
     }
     

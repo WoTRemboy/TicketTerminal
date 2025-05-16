@@ -87,7 +87,9 @@ enum TicketManagement {
         case .buy:
             BuyView()
                 .environmentObject(BuyViewModel())
-        case .refund, .recomendations, .hot, .print:
+        case .recomendations:
+            RecommendsView()
+        case .refund, .hot, .print:
             Text(self.title)
         }
     }

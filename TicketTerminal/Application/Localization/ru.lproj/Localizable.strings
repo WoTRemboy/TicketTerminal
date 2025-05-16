@@ -42,6 +42,7 @@
 "NavBarFrom" = "Отправление";
 "NavBarDestination" = "Прибытие";
 "NavBarTrips" = "Туристические маршруты";
+"NavBarRecommends" = "Рекомендации";
 
 /* Language */
 "LanguageTitle" = "Язык";
@@ -98,6 +99,10 @@
 "BuyPlaceholderTripCellTrip" = "Путь";
 "BuyPlaceholderTripCellDate" = "Дата";
 
+/* Assistant */
+"AssistantPreparation" = "Ожидание";
+"AssistantListening" = "Я Вас слушаю";
+
 /* TripsPage - Pearl */
 "TripsPagePearlTitle" = "Круиз: 4 дня | 4 ночи";
 "TripsPagePearlRoute" = "Ростов-на-Дону – Майкоп – Владикавказ – Грозный – Дербент – Нальчик – Ростов-на-Дону ";
@@ -112,3 +117,31 @@
 "TripsPageExpressTitle" = "Круиз: 1 день | 2 ночи";
 "TripsPageExpressRoute" = "Иркутск – Слюдянка – Байкал – Иркутск";
 "TripsPageExpressDescription" = "Это путешествие обещает незабываемые впечатления от легендарного озера Байкал, его дыхания, духа пейзажей и архитектурных шедевров.";
+
+/* Recommends - North */
+"RecommendsNorthTitle" = "Северные города";
+"RecommendsNorthFirstTitle" = "Ярославль";
+"RecommendsNorthFirstDescription" = "Расположен на обоих берегах Волги при впадении реки Которосли, в 282 км к северо-востоку от Москвы.";
+
+"RecommendsNorthSecondTitle" = "Великий Новгород";
+"RecommendsNorthSecondDescription" = "Один из древнейших городов России, расположенный на реке Волхов, в 491 км к северо-западу от Москвы.";
+
+"RecommendsNorthThirdTitle" = "Санкт-Петербург";
+"RecommendsNorthThirdDescription" = "Расположен на северо-западе страны на побережье Финского залива и в устье реки Невы, в 634 км от Москвы.";
+
+/* Recommends - South */
+"RecommendsSouthTitle" = "Южные города";
+"RecommendsSouthFirstTitle" = "Астрахань";
+"RecommendsSouthFirstDescription" = "Древний город на юге России, расположенный в дельте Волги, в 1400 километрах к юго-востоку от Москвы.";
+
+"RecommendsSouthSecondTitle" = "Саратов";
+"RecommendsSouthSecondDescription" = "Находится напротив устья реки Саратовки и города Энгельса, в 858 км к юго-востоку от Москвы.";
+
+"RecommendsSouthThirdTitle" = "Краснодар";
+"RecommendsSouthThirdDescription" = "Расположен на правом берегу реки Кубань, в 1196 км к югу от Москвы.";
+
+/* Recommends - East */
+"RecommendsEastTitle" = "Восточные города";
+
+/* Recommends - West */
+"RecommendsWestTitle" = "Западные города";

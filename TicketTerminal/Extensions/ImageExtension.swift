@@ -109,6 +109,11 @@ extension Image {
             static let normal = Image("NavBarTrips")
             static let black = Image("NavBarTripsBlack")
         }
+        
+        enum Recommends {
+            static let normal = Image("NavBarRecommends")
+            static let black = Image("NavBarRecommendsBlack")
+        }
     }
     
     enum Language {
@@ -120,6 +125,26 @@ extension Image {
     enum Buy {
         static let switchIcon = Image("SwitchButtonIcon")
         static let removeDate = Image("RemoveDateIcon")
+    }
+    
+    enum Assistant {
+        enum Microphone {
+            static let normal = Image("AssistantMicrophone")
+            static let black = Image("AssistantMicrophoneBlack")
+        }
+        
+        enum Answering {
+            static let normal = Image("AssistantStatusAnswering")
+            static let black = Image("AssistantStatusAnsweringBlack")
+        }
+        
+        enum Listening {
+            static let normal = Image("AssistantStatusListening")
+        }
+        
+        enum None {
+            static let normal = Image("AssistantStatusNone")
+        }
     }
     
     enum Accessibility {

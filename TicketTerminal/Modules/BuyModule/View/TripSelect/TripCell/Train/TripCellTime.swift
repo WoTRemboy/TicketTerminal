@@ -18,18 +18,18 @@ struct TripCellTime: View {
     
     internal var body: some View {
         HStack {
-            dateTime(time: train.time0, date: train.date0)
+            dateTime(time: train.time0, date: train.date0, alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             arrowDuration
             
-            dateTime(time: train.time1, date: train.date1)
+            dateTime(time: train.time1, date: train.date1, alignment: .trailing)
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
     
-    private func dateTime(time: String, date: String) -> some View {
-        VStack(alignment: .leading) {
+    private func dateTime(time: String, date: String, alignment: HorizontalAlignment) -> some View {
+        VStack(alignment: alignment) {
             dateString(date)
             timeString(time)
         }
