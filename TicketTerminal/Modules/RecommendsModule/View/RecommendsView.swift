@@ -12,6 +12,10 @@ struct RecommendsView: View {
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
     @StateObject private var viewModel = RecommendsViewModel()
     
+    init(viewModel: RecommendsViewModel = RecommendsViewModel()) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     internal var body: some View {
         VStack(spacing: 0) {
             CustomNavBarView(type: .recommends)

@@ -36,7 +36,9 @@ struct TripsSelectorCell: View {
         return Group {
             if selected {
                 RoundedRectangle(cornerRadius: radius)
-                    .fill(Color.SymbolColors.red)
+                    .fill(Color.greyVariant(
+                        color: .SymbolColors.red,
+                        scheme: accessibilityManager.fontColor))
             } else {
                 Background(radius: radius,
                            scheme: accessibilityManager.fontColor)
