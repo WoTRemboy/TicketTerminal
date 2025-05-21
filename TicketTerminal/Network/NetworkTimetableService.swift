@@ -75,15 +75,15 @@ actor NetworkTimetableService {
         let servCls: String
     }
     
-    private func fetchTimetable(fromCode: Int, toCode: Int, date: String) async throws -> TimetableResponse {
-        guard let url = URLComponents(string: "https://pass.rzd.ru/timetable/public/ru") else {
+    private func fetchTimetable(fromCode: Int, toCode: Int, date: String, language: String) async throws -> TimetableResponse {
+        guard let url = URLComponents(string: "https://pass.rzd.ru/timetable/public/\(language)") else {
             throw URLError(.badURL)
         }
         
         var components = url
         components.queryItems = [
             URLQueryItem(name: "layer_id", value: "5827"),
-            URLQueryItem(name: "lang", value: "ru"),
+            URLQueryItem(name: "lang", value: language),
             URLQueryItem(name: "dir", value: "0"),
             URLQueryItem(name: "tfl", value: "3"),
             URLQueryItem(name: "checkSeats", value: "1"),
@@ -108,7 +108,7 @@ actor NetworkTimetableService {
         try await Task.sleep(nanoseconds: 2000000000)
         components.queryItems = [
             URLQueryItem(name: "layer_id", value: "5827"),
-            URLQueryItem(name: "lang", value: "ru"),
+            URLQueryItem(name: "lang", value: language),
             URLQueryItem(name: "rid", value: String(ridResponse.RID))
         ]
         
@@ -123,10 +123,10 @@ actor NetworkTimetableService {
         return timetable
     }
     
-    internal func fetchTimetableRequest(fromCode: Int, toCode: Int, date: String, completion: @escaping (Result<TimetableResponse, Error>) -> Void) {
+    internal func fetchTimetableRequest(fromCode: Int, toCode: Int, date: String, language: String, completion: @escaping (Result<TimetableResponse, Error>) -> Void) {
         Task {
             do {
-                let response = try await fetchTimetable(fromCode: fromCode, toCode: toCode, date: date)
+                let response = try await fetchTimetable(fromCode: fromCode, toCode: toCode, date: date, language: language)
                 DispatchQueue.main.async {
                     completion(.success(response))
                 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct TripSelectView: View {
     
     @EnvironmentObject private var accessibilityManager: AccessibilityManager
+    @EnvironmentObject private var localizationManager: LocalizationManager
+    
     @StateObject private var viewModel: BuyViewModel
     @Environment(\.dismiss) private var dismiss
 
@@ -44,7 +46,8 @@ struct TripSelectView: View {
                 await NetworkTimetableService.shared.fetchTimetableRequest(
                     fromCode: departureStation.code,
                     toCode: arrivalStation.code,
-                    date: dateString
+                    date: dateString,
+                    language: LocalizationManager.shared.networkServiceLanguage
                 ) { result in
                     switch result {
                     case .success(let response):
@@ -106,4 +109,5 @@ struct TripSelectView: View {
 #Preview {
     TripSelectView(viewModel: BuyViewModel())
         .environmentObject(AccessibilityManager())
+        .environmentObject(LocalizationManager())
 }
