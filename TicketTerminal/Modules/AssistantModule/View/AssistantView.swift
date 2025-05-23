@@ -14,6 +14,7 @@ struct AssistantView: View {
     
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var isPulsing = false
+    @State private var transcript: String = "..."
     
     private let namespace: Namespace.ID
     
@@ -22,20 +23,54 @@ struct AssistantView: View {
     }
     
     internal var body: some View {
-        VStack(spacing: 0) {
-            CustomNavBarView(type: .assistant)
-                .padding(.top)
+        NavigationStack {
+            VStack(spacing: 0) {
+                CustomNavBarView(type: .assistant)
+                    .padding(.top)
+                
+                requestStatus
+                    .padding(.bottom, 100)
+                
+                Spacer()
+                speakBlock
+            }
             
-            requestStatus
-                .padding(.top, 100)
-           
-            Spacer()
-            speakBlock
+            .overlay(alignment: .topTrailing) {
+                hiddenButtons
+            }
+            .background(background)
         }
         .navigationTransition(.zoom(
             sourceID: Texts.NamespaceID.Assistant.zoomTransition,
             in: namespace))
-        .background(background)
+    }
+    
+    private var hiddenButtons: some View {
+        VStack {
+            buyButton
+            recommendButton
+        }
+    }
+    
+    private var buyButton: some View {
+        CustomNavLink(destination: TripSelectView(viewModel: viewModelSetup())) {
+            Rectangle()
+                .fill(Color.whiteVariant(
+                    color: .BackColors.backPage,
+                    scheme: accessibilityManager.fontColor))
+                .frame(width: 100, height: 100)
+        }
+    }
+    
+    private var recommendButton: some View {
+        CustomNavLink(destination: RecommendsView(viewModel: recommendsViewModelSetup())) {
+            Rectangle()
+                .fill(Color.whiteVariant(
+                    color: .BackColors.backPage,
+                    scheme: accessibilityManager.fontColor))
+                .frame(width: 100, height: 100)
+
+        }
     }
     
     private var background: some View {
@@ -81,13 +116,15 @@ struct AssistantView: View {
                     value: isPulsing
                 )
         }
+        .frame(maxHeight: .infinity)
         .animation(.easeInOut(duration: 0.3), value: viewModel.requestStatus)
+        .padding(.horizontal, 20)
     }
     
     private var speakBlock: some View {
         HStack(spacing: 22) {
             speakButton
-            Text(speechRecognizer.transcript)
+            Text(transcript)
                 .font(.scalable(
                     size: 40,
                     weight: .semibold,
@@ -146,7 +183,29 @@ struct AssistantView: View {
     private func endRecording() {
         speechRecognizer.stopTranscribing()
         print("Stopped:", speechRecognizer.transcript)
+        transcript = speechRecognizer.transcript
         viewModel.sendMessage(message: speechRecognizer.transcript)
+    }
+    
+    private func viewModelSetup() -> BuyViewModel {
+        let destViewModel = BuyViewModel()
+        destViewModel.selectedDepartureDate = .getDate("23.05.2025")
+        destViewModel.selectedDepartureStation = NetworkStationService.Station(
+            name: Texts.Buy.Placeholder.Station.second.localized,
+            code: 2000000,
+            S: 7, L: 6)
+        destViewModel.selectedArrivalStation = NetworkStationService.Station(
+            name: Texts.Buy.Placeholder.Station.seventh.localized,
+            code: 2064130,
+            S: 5, L: 5)
+        return destViewModel
+    }
+    
+    private func recommendsViewModelSetup() -> RecommendsViewModel {
+        let destViewModel = RecommendsViewModel()
+        destViewModel.selectedDate = .getDate("28.05.2025") ?? .now
+        destViewModel.selectedSet = .south
+        return destViewModel
     }
 }
 
