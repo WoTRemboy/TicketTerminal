@@ -34,43 +34,18 @@ struct AssistantView: View {
                 Spacer()
                 speakBlock
             }
-            
-            .overlay(alignment: .topTrailing) {
-                hiddenButtons
-            }
             .background(background)
+            .navigationDestination(item: $viewModel.activeRoute) { route in
+                CustomNavBarContainerView {
+                    destinationView(for: route)
+                }
+                .navigationBarHidden(true)
+                .enableFullSwipePop(true)
+            }
         }
         .navigationTransition(.zoom(
             sourceID: Texts.NamespaceID.Assistant.zoomTransition,
             in: namespace))
-    }
-    
-    private var hiddenButtons: some View {
-        VStack {
-            buyButton
-            recommendButton
-        }
-    }
-    
-    private var buyButton: some View {
-        CustomNavLink(destination: TripSelectView(viewModel: viewModelSetup())) {
-            Rectangle()
-                .fill(Color.whiteVariant(
-                    color: .BackColors.backPage,
-                    scheme: accessibilityManager.fontColor))
-                .frame(width: 100, height: 100)
-        }
-    }
-    
-    private var recommendButton: some View {
-        CustomNavLink(destination: RecommendsView(viewModel: recommendsViewModelSetup())) {
-            Rectangle()
-                .fill(Color.whiteVariant(
-                    color: .BackColors.backPage,
-                    scheme: accessibilityManager.fontColor))
-                .frame(width: 100, height: 100)
-
-        }
     }
     
     private var background: some View {
@@ -185,6 +160,16 @@ struct AssistantView: View {
         print("Stopped:", speechRecognizer.transcript)
         transcript = speechRecognizer.transcript
         viewModel.sendMessage(message: speechRecognizer.transcript)
+    }
+
+    @ViewBuilder
+    private func destinationView(for route: AssistantRoute) -> some View {
+        switch route {
+        case .ticketPurchase:
+            TripSelectView(viewModel: viewModelSetup())
+        case .recommendations:
+            RecommendsView(viewModel: recommendsViewModelSetup())
+        }
     }
     
     private func viewModelSetup() -> BuyViewModel {

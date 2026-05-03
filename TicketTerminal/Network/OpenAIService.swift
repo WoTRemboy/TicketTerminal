@@ -74,21 +74,52 @@ struct Arguments: Decodable {
     let unit: String?
 }
 
-let getCurrentWeatherFunction =  Function(name: "get_current_weather",
-                                          description: "Get the current weather in a given location",
-                                          parameters: Parameters(
-                                            type: "object",
-                                            properties: ["location":
-                                                            Property(
-                                                                type: "integer",
-                                                                description: "The city and state, e.g. San Francisco, CA"),
-                                                        "unit":
-                                                            Property(
-                                                                type: "string",
-                                                                description: "The unit of measurement, e.g. fahrenheit or celsius")
-                                                        ],
-                                            required: ["location"]
-                                        )
+struct TicketPurchaseArguments: Decodable {
+    let departureDate: String?
+}
+
+struct RecommendationsArguments: Decodable {
+    let direction: String?
+    let travelDate: String?
+}
+
+struct AssistantFunctionResult {
+    let responseText: String
+    let route: AssistantRoute?
+}
+
+let openTicketPurchaseFunction = Function(
+    name: "open_ticket_purchase",
+    description: "Open the in-app train ticket purchase flow.",
+    parameters: Parameters(
+        type: "object",
+        properties: [
+            "departureDate": Property(
+                type: "string",
+                description: "Optional departure date in dd.MM.yyyy format if the user mentioned it."
+            )
+        ],
+        required: []
+    )
+)
+
+let openRecommendationsFunction = Function(
+    name: "open_recommendations",
+    description: "Open the in-app travel recommendations screen.",
+    parameters: Parameters(
+        type: "object",
+        properties: [
+            "direction": Property(
+                type: "string",
+                description: "Optional preferred direction such as north, south, east, or west."
+            ),
+            "travelDate": Property(
+                type: "string",
+                description: "Optional travel date in dd.MM.yyyy format if the user mentioned it."
+            )
+        ],
+        required: []
+    )
 )
 
 class OpenAIService {
@@ -103,7 +134,7 @@ class OpenAIService {
             messages = [systemMessage] + messages.filter { $0.role != "system" }
         }
         messages.append(message)
-        let functions: [Function] = [getCurrentWeatherFunction]
+        let functions: [Function] = [openTicketPurchaseFunction, openRecommendationsFunction]
         let parameters = OpenAIParameters(
             model: "gpt-4.1-2025-04-14",
             messages: messages,
@@ -139,22 +170,28 @@ class OpenAIService {
         }
     }
 
-    func handleFunctionCall(functionCall: FunctionCall, completion: @escaping (Result<String, Error>) -> Void) {
+    func handleFunctionCall(functionCall: FunctionCall, completion: @escaping (Result<AssistantFunctionResult, Error>) -> Void) {
         self.messages.append(OpenAIMessage(role: "assistant", content: "", function_call: functionCall))
 
-        let availableFunctions: [String: (String, String?) -> String] = ["get_current_weather": getCurrentWeather]
+        let jsonData = functionCall.arguments.data(using: .utf8) ?? Data("{}".utf8)
 
-        if let functionToCall = availableFunctions[functionCall.name],
-           let jsonData = functionCall.arguments.data(using: .utf8) {
-            do {
-                let arguments = try JSONDecoder().decode(Arguments.self, from: jsonData)
-                let functionResponse = functionToCall(arguments.location, arguments.unit)
-                completion(.success(functionResponse))
-            } catch {
+        do {
+            switch functionCall.name {
+            case "open_ticket_purchase":
+                let arguments = try JSONDecoder().decode(TicketPurchaseArguments.self, from: jsonData)
+                completion(.success(openTicketPurchase(arguments: arguments)))
+            case "open_recommendations":
+                let arguments = try JSONDecoder().decode(RecommendationsArguments.self, from: jsonData)
+                completion(.success(openRecommendations(arguments: arguments)))
+            default:
+                let error = NSError(
+                    domain: "",
+                    code: 0,
+                    userInfo: [NSLocalizedDescriptionKey: "Function not found or supported."]
+                )
                 completion(.failure(error))
             }
-        } else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Function not found or supported."])
+        } catch {
             completion(.failure(error))
         }
     }
@@ -166,15 +203,18 @@ class OpenAIService {
     }
 }
 
-func getCurrentWeather(location: String, unit: String?) -> String {
-    let weatherInfo: [String: Any] = [
-        "location": location,
-        "temperature": "72",
-        "unit": unit ?? "fahrenheit",
-        "forecast": ["sunny", "windy"],
-    ]
-    let jsonData = try? JSONSerialization.data(withJSONObject: weatherInfo, options: .prettyPrinted)
-    return String(data: jsonData!, encoding: .utf8)!
+private func openTicketPurchase(arguments: TicketPurchaseArguments) -> AssistantFunctionResult {
+    AssistantFunctionResult(
+        responseText: Texts.Assistant.ticketPurchaseResponse(for: LocalizationManager.shared.selectedLanguage),
+        route: .ticketPurchase
+    )
+}
+
+private func openRecommendations(arguments: RecommendationsArguments) -> AssistantFunctionResult {
+    AssistantFunctionResult(
+        responseText: Texts.Assistant.recommendationsResponse(for: LocalizationManager.shared.selectedLanguage),
+        route: .recommendations
+    )
 }
 
 
