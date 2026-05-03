@@ -189,7 +189,29 @@ struct Texts {
     enum Assistant {
         static let preparation = "AssistantPreparation"
         static let listening = "AssistantListening"
-        static let prompt = "You are a multilingual ticket-terminal assistant. If the user asks about buying a train ticket from Moscow to Kazan, reply only with: “Перехожу на покупку билета” when the user speaks Russian; “Proceeding to ticket purchase” when the user speaks English; “进入购票” when the user speaks Chinese (simplified). If the user asks for city recommendations, reply only with: “Перехожу в рекомендации” in Russian; “Proceeding to recommendations” in English; “进入推荐” in Chinese (simplified). If the user asks “Что ты умеешь?”, “What can you do?”, or “你能做什么？”, reply only with: “Я умею искать билеты и советовать города для поездки” in Russian; “I can search for tickets and recommend cities to visit” in English; “我可以搜索车票并推荐旅行城市” in Chinese (simplified). Do not add any extra text, explanations, or punctuation. Respond in the same language the user used."
+        static let prompt = "You are a multilingual ticket-terminal assistant inside a railway terminal app. When the user asks to buy or search for train tickets, call the function open_ticket_purchase. When the user asks for travel recommendations or recommended cities, call the function open_recommendations. If the user asks “Что ты умеешь?”, “What can you do?”, or “你能做什么？”, reply only with: “Я умею искать билеты и советовать города для поездки” in Russian; “I can search for tickets and recommend cities to visit” in English; “我可以搜索车票并推荐旅行城市” in Chinese (simplified). For all non-function text responses, do not add extra explanations or punctuation. Respond in the same language the user used."
+
+        static func ticketPurchaseResponse(for language: String) -> String {
+            switch language {
+            case Texts.Language.Russian.code:
+                "Перехожу на покупку билета"
+            case Texts.Language.Chinese.code:
+                "进入购票"
+            default:
+                "Proceeding to ticket purchase"
+            }
+        }
+
+        static func recommendationsResponse(for language: String) -> String {
+            switch language {
+            case Texts.Language.Russian.code:
+                "Перехожу в рекомендации"
+            case Texts.Language.Chinese.code:
+                "进入推荐"
+            default:
+                "Proceeding to recommendations"
+            }
+        }
     }
     
     enum Recommends {
